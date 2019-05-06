@@ -1,0 +1,31 @@
+<!--pages/QRcode/index.wxml-->
+  <image class='QRcode_pic' src='../images/juxing.jpg'></image>
+<view class='QRcode'>
+  <image class='QRcode_pic01' src='../images/juxing01.jpg'></image>
+  <view class='QRcode01'>
+    <view class='QRcode04'>
+      <!-- <image class='QRcode_pic02' src='../images/pic03_09.jpg'></image> -->
+       <view wx:if="{{member[0].avatarUrl == null}}" ><image class='QRcode_pic02' src='../images/tou.png'></image> </view>
+  <view wx:if="{{member[0].avatarUrl != null && member[0].avatarUrl.length > 88}}" >
+    <image class='QRcode_pic02' src='{{member[0].avatarUrl}}'></image> 
+  </view>
+  <view wx:if="{{member[0].avatarUrl != null && member[0].avatarUrll.length < 88}}" >
+    <image class='QRcode_pic02' src='{{url}}/imgfile/{{member[0].avatarUrl}}'></image> 
+  </view>
+    </view>
+    <text class='QRcode02'>{{member[0].username}}</text>
+    <view class='QRcode06 QRcode04'>
+      <!-- <image class='QRcode_pic03' src='../images/piccc_03.jpg'></image> -->
+       <image class='QRcode_pic03' bindload="imageLoad" bindlongtap="longTap" src='{{url}}/imgfile/{{img}}'></image>
+    </view>
+    <text class='QRcode02'>同修炼，共传承</text>
+    <button class='QRcode_btn'  open-type="share">分享</button>
+    <text class='QRcode05 QRcode02'>长按保存图片</text>
+  </view>
+</view> 
+  <!-- <text class='baocun'>长按图片保存到相册</text>      -->
+ 
+  <!-- <view class='QRcode'>
+    <image bindtap="multipleTap" bindlongtap="longTap" bindtouchstart="touchStart" bindtouchend="touchEnd" class='QRcode_pic01' 
+    src='{{url}}/imgfile/{{img}}' bindload="imageLoad"></image>
+  </view>    -->

@@ -1,0 +1,3 @@
+/* pages/course/index.wxss */
+.pic07{ box-sizing: border-box; padding: 5px 10px;}
+.pic06{ width: 100%}

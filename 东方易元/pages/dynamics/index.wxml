@@ -1,0 +1,14 @@
+<!--pages/dynamics/index.wxml-->
+<view class='warp'>
+ <navigator  wx:for="{{companynews}}" url='../Dynamic/index?id={{item.id}}'>
+  <view class="weui-cell01 weui-cell">
+    <view class="weui-cell__bd01 weui-cell__bd">
+      <view class='title01'>{{item.title}}</view>
+      <view class='time01'>{{item.createTime}}</view>
+    </view>
+    <view class="weui-cell__hd" style="position: relative;margin-left: 10px;">
+      <image src="{{url}}/imgfile/{{item.pictureNum}}" style="width: 186rpx; height: 140rpx; display: block"/>
+    </view>
+  </view>
+  </navigator>
+</view>

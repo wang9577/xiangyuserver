@@ -1,0 +1,35 @@
+/* pages/Return/index.wxss */
+.Retu{ padding: 15px 0;}
+.Retu{ line-height: 56rpx;}
+.Retu_pic{ width: 56rpx; height: 56rpx; border-radius: 50%; margin-right: 16rpx;}
+.Retu01{ width: 30%;}
+.Retu02{ width: 35%;}
+.Retu02{ overflow: hidden; height: 56rpx; text-overflow:ellipsis; white-space: nowrap;}
+.mask{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  z-index: 9000;
+  opacity: 0.7;
+}
+ 
+.modalDlg{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding:25px 25px 15px 25px;
+}
+.act_pic04{ width: 12px; height: 12px; position: absolute; right: 25px}
+.wenzi01,.wenzi02{ float: left; width: 100%; color: #333; padding: 20rpx 0;}
+.wenzi01{ font-size: 16px; font-weight: 600;}
+.wenzi02{ font-size: 14px;}
+.wenzi01,.wenzi02{ line-height: 44rpx;}

@@ -1,0 +1,162 @@
+introd            2-东方易元
+
+Video             3-视频展播
+
+feedback          5-髓友反馈
+
+activity          7-活动
+
+dynamics          12-公司动态
+
+details           4-视频详情
+
+Branch            14-分馆介绍 
+
+Branchdet         15-分馆详情
+
+course            16-课程
+
+Small             17-课程-详情-小关
+
+second            18-课程-详情-中
+
+mark              19-课程-详情-大关
+
+wife              20-课程-详情-夫妻
+
+Dynamic           13-动态详情
+
+Feedback01        6-反馈详情
+
+activities        8-活动详情
+
+Message           23-消息
+
+Release           24-发布
+
+register          25-注册
+
+Understanding     21-感悟
+
+Salesperson       29-业务员个人中心 1-未登录 
+
+Salesperson01     29-业务员个人中心 1-业务员个人中心 
+
+performance       29-业务员个人中心 2-总业绩明细
+
+month             29-业务员个人中心 3-本月业绩明细
+
+income            29-业务员个人中心 4-客户收益
+
+members           29-业务员个人中心 5-我的会员
+
+Indirect          29-业务员个人中心 6-间接介绍
+
+Coach             28-教练个人中心 1-教练个人中心
+
+Coach01           28-教练个人中心 1-未登录
+
+Basic             28-教练个人中心 41-基本情况
+
+Health            28-教练个人中心 42-健康指标
+
+care              28-教练个人中心 46-保健与建议
+ 
+Sub               28-教练个人中心 44-亚健康状态
+
+examination       28-教练个人中心 45-健康体检
+
+Unhealthy         28-教练个人中心 43-非健康状态
+
+Tutorship         28-教练个人中心 16-辅导提成
+
+cadets            28-教练个人中心 6-我的学员
+
+Student           28-教练个人中心 7-学员档案
+
+reservation       28-教练个人中心 12-学员预约
+
+Return            28-教练个人中心 13-回访记录
+
+AddReturn         28-教练个人中心 15-添加回访记录
+
+itinerary         28-教练个人中心 11-发布行程
+
+journey           28-教练个人中心 10-我的行程
+
+Send              28-教练个人中心 2-发短信
+
+Select            28-教练个人中心 3-选择模板
+
+Confirm           28-教练个人中心 5-确认发短信
+
+Selectmembers     28-教练个人中心 4-选择会员
+
+Puka              26-普卡个人中心 1-个人中心
+
+Puka01            26-普卡个人中心 1-未登录
+
+balance           26-普卡个人中心 2-余额
+
+Recharge          26-普卡个人中心 3-充值
+
+Profit            26-普卡个人中心 4-收益
+
+course01          26-普卡个人中心 5-我的课程
+
+Practice          26-普卡个人中心 6-练功记录
+
+Addrecord         26-普卡个人中心 7-添加练功记录
+
+Pukaactivities    26-普卡个人中心 8-我的活动
+
+feeling           26-普卡个人中心 9-我的感悟
+
+certificate       26-普卡个人中心 10-证书
+
+Pukafeedback      26-普卡个人中心 26-反馈
+
+Inheritance       26-普卡个人中心 13-传承脉络
+
+archives          26-普卡个人中心 15-健康档案
+
+PukaBasic         26-普卡个人中心 16-基本情况
+
+Pukahealth        26-普卡个人中心 17-健康指标
+
+nothealthy        26-普卡个人中心 18-非健康状态
+ 
+physical          26-普卡个人中心 20-健康体检
+
+condition         26-普卡个人中心 19-亚健康状态
+
+suggestions       26-普卡个人中心 21-保健与建议
+
+Service           26-普卡个人中心 21-联系客服
+
+Service01         27-渠道商个人中心 5-联系客服
+
+bank              26-普卡个人中心 30-绑定银行卡
+
+Mybank            26-普卡个人中心 31-我的银行卡
+
+Mycoach           26-普卡个人中心 22-我的教练
+
+Myconsultant      26-普卡个人中心 24-健康顾问
+
+appointment       26-普卡个人中心 23-预约教练
+
+MCenter           26-普卡个人中心 27-会员中心
+
+Membership        27-渠道商个人中心 2-会员中心
+
+Quotas            27-渠道商个人中心 4-额度明细
+
+Channelpersonal   27-渠道商个人中心 1-渠道商个人中心 
+
+Channelpersonal01 27-渠道商个人中心 1-未登录 
+
+QRcode            26-普卡个人中心 29-二维码
+
+
+quanyi            26-普卡个人中心 会员权益

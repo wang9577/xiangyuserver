@@ -1,0 +1,21 @@
+<!--pages/Mybank/index.wxml-->
+<view class='dyna'>
+  <view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{items}}" wx:for-item="item"  wx:key="">
+    <!--<view class="content">{{item.content}}</view>-->
+    <view class="content">
+      <view class='bank01'>
+        <text class='bank03'>{{item.bank}}</text>
+        <text class='bank04'>储蓄卡</text>
+      </view>
+      <text class='bank02'>***  ****  **** 229</text>
+    </view>
+    <view class="del" bindtap="submit" data-index="{{item.id}}"><view class='jian01'></view><text class='bank05'>解绑</text></view>
+  </view>
+  <navigator class='addedd' url='../bank/index?userId={{userId}}'>+添加银行卡</navigator>
+</view>
+<view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modalDlg" wx:if="{{showModal}}">
+  <image class='act_pic04' bindtap="go" src="../images/close.png"/>
+  <text class='wenzi'>确定解除绑定吗?</text>
+  <button class='btn04' bindtap="go">确定</button>
+</view>

@@ -1,0 +1,178 @@
+10:29:21.693 [main] INFO  com.dfyy.DfyyiApplication - Starting DfyyiApplication on J8OLZL6NNF7KJCK with PID 2244 (D:\idea-wps\dfyy\target\classes started by Administrator in D:\idea-wps\dfyy)
+10:29:21.729 [main] DEBUG com.dfyy.DfyyiApplication - Running with Spring Boot v1.5.10.RELEASE, Spring v4.3.14.RELEASE
+10:29:21.729 [main] INFO  com.dfyy.DfyyiApplication - The following profiles are active: druid
+10:29:22.377 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.6.Final
+10:29:26.889 [main] INFO  org.apache.shiro.cache.ehcache.EhCacheManager - Cache with name 'com.dfyy.framework.shiro.realm.UserRealm.authorizationCache' does not yet exist.  Creating now.
+10:29:26.891 [main] INFO  org.apache.shiro.cache.ehcache.EhCacheManager - Added EhCache named [com.dfyy.framework.shiro.realm.UserRealm.authorizationCache]
+10:29:29.088 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+10:29:30.371 [main] INFO  org.apache.shiro.cache.ehcache.EhCacheManager - Using existing EHCache named [loginRecordCache]
+10:29:32.328 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+10:29:32.330 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.27
+10:29:32.496 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+10:29:33.450 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+10:29:33.479 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+10:29:33.480 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.0 created.
+10:29:33.532 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'dfyyScheduler' with instanceId 'J8OLZL6NNF7KJCK1535509773456'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 20 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+10:29:33.532 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'dfyyScheduler' initialized from an externally provided properties instance.
+10:29:33.533 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.0
+10:29:33.536 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@3eac2e8a
+10:29:33.663 [main] DEBUG com.dfyy.project.monitor.job.dao.IJobDao.selectJobAll - ==>  Preparing: SELECT job_id, job_name, job_group, method_name, params, cron_expression, status, create_by, create_time FROM sys_job 
+10:29:33.905 [main] DEBUG com.dfyy.project.monitor.job.dao.IJobDao.selectJobAll - ==> Parameters: 
+10:29:34.201 [main] DEBUG com.dfyy.project.monitor.job.dao.IJobDao.selectJobAll - <==      Total: 2
+10:29:39.157 [main] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+10:29:41.344 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+10:29:41.363 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+10:29:41.376 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+10:29:41.408 [main] INFO  com.dfyy.DfyyiApplication - Started DfyyiApplication in 20.582 seconds (JVM running for 27.203)
+10:29:42.893 [Quartz Scheduler [dfyyScheduler]] INFO  org.quartz.core.QuartzScheduler - Scheduler dfyyScheduler_$_J8OLZL6NNF7KJCK1535509773456 started.
+10:52:44.846 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+10:52:44.913 [http-nio-8080-exec-1] INFO  org.apache.shiro.session.mgt.AbstractValidatingSessionManager - Enabling session validation scheduler...
+10:52:44.913 [http-nio-8080-exec-1] DEBUG com.dfyy.framework.shiro.web.session.SpringSessionValidationScheduler - Scheduling session validation job using Spring Scheduler with session validation interval of [600000]ms...
+10:52:44.914 [http-nio-8080-exec-1] DEBUG com.dfyy.framework.shiro.web.session.SpringSessionValidationScheduler - Session validation job successfully scheduled with Spring Scheduler.
+10:52:44.933 [http-nio-8080-exec-1] INFO  org.apache.shiro.cache.ehcache.EhCacheManager - Using existing EHCache named [shiro-activeSessionCache]
+10:52:45.915 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+10:52:45.942 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+10:52:45.945 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2018-08-29 10:22:45(String)
+10:52:45.983 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 0
+10:52:45.985 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. No sessions were stopped.
+10:52:56.464 [http-nio-8080-exec-5] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserByName - ==>  Preparing: select u.user_id, u.dept_id, u.login_name, u.user_name, u.email, u.phonenumber, u.sex, u.avatar, u.password, u.salt, u.status, u.refuse_des, u.create_time, d.dept_id, d.parent_id, d.dept_name, d.order_num, d.status as dept_status from sys_user u left join sys_dept d on u.dept_id = d.dept_id left join sys_user_role ur on u.user_id = ur.user_id where u.login_name = ? 
+10:52:56.467 [http-nio-8080-exec-5] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserByName - ==> Parameters: admin(String)
+10:52:56.486 [http-nio-8080-exec-8] INFO  sys-user - [127.0.0.1][][Error][* 必须填写]
+10:52:56.498 [http-nio-8080-exec-8] DEBUG com.dfyy.project.monitor.logininfor.dao.ILogininforDao.insertLogininfor - ==>  Preparing: insert into sys_logininfor (login_name, status, ipaddr, browser, os, msg) values (?, ?, ?, ?, ?, ?) 
+10:52:56.502 [http-nio-8080-exec-8] DEBUG com.dfyy.project.monitor.logininfor.dao.ILogininforDao.insertLogininfor - ==> Parameters: null, 1(String), 127.0.0.1(String), Chrome(String), Windows 7(String), * 必须填写(String)
+10:52:56.508 [http-nio-8080-exec-5] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserByName - <==      Total: 1
+10:52:56.513 [http-nio-8080-exec-5] INFO  sys-user - [127.0.0.1][admin][Success][登录成功]
+10:52:56.514 [http-nio-8080-exec-5] DEBUG com.dfyy.project.monitor.logininfor.dao.ILogininforDao.insertLogininfor - ==>  Preparing: insert into sys_logininfor (login_name, status, ipaddr, browser, os, msg) values (?, ?, ?, ?, ?, ?) 
+10:52:56.516 [http-nio-8080-exec-5] DEBUG com.dfyy.project.monitor.logininfor.dao.ILogininforDao.insertLogininfor - ==> Parameters: admin(String), 0(String), 127.0.0.1(String), Chrome(String), Windows 7(String), 登录成功(String)
+10:52:56.539 [http-nio-8080-exec-8] DEBUG com.dfyy.project.monitor.logininfor.dao.ILogininforDao.insertLogininfor - <==    Updates: 1
+10:52:56.555 [http-nio-8080-exec-5] DEBUG com.dfyy.project.monitor.logininfor.dao.ILogininforDao.insertLogininfor - <==    Updates: 1
+10:52:57.911 [http-nio-8080-exec-6] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenusByUserId - ==>  Preparing: select distinct m.menu_id, m.parent_id, m.menu_name, m.url, m.perms , m.menu_type, m.icon, m.order_num, m.create_time from sys_menu m left join sys_role_menu rm on m.menu_id = rm.menu_id left join sys_user_role ur on rm.role_id = ur.role_id where ur.user_id = ? and m.menu_type in ('M', 'C') and m.visible = 0 order by m.order_num 
+10:52:57.912 [http-nio-8080-exec-6] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenusByUserId - ==> Parameters: 1(Long)
+10:52:57.957 [http-nio-8080-exec-6] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenusByUserId - <==      Total: 15
+10:52:58.216 [http-nio-8080-exec-9] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - ==>  Preparing: replace into sys_user_online(sessionId, login_name, dept_name, ipaddr, browser, os, status, start_timestsamp, last_access_time, expire_time) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:52:58.261 [http-nio-8080-exec-9] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - ==> Parameters: 6ec922a1-2f34-48ca-b60a-81ba9bb1cca0(String), admin(String), 研发一部(String), 127.0.0.1(String), Chrome(String), Windows 7(String), on_line(String), 2018-08-29 10:52:44.923(Timestamp), 2018-08-29 10:52:58.214(Timestamp), 1800000(Long)
+10:52:58.299 [http-nio-8080-exec-9] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - <==    Updates: 1
+10:53:00.174 [http-nio-8080-exec-2] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesByUserId - ==>  Preparing: SELECT r.role_id, r.role_name, r.role_key FROM sys_user u LEFT JOIN sys_user_role ur ON u.user_id = ur.user_id LEFT JOIN sys_role r ON ur.role_id = r.role_id WHERE ur.user_id = ? 
+10:53:00.175 [http-nio-8080-exec-2] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesByUserId - ==> Parameters: 1(Long)
+10:53:00.214 [http-nio-8080-exec-2] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesByUserId - <==      Total: 1
+10:53:00.215 [http-nio-8080-exec-2] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectPermsByUserId - ==>  Preparing: select distinct m.perms from sys_menu m left join sys_role_menu rm on m.menu_id = rm.menu_id left join sys_user_role ur on rm.role_id = ur.role_id where ur.user_id = ? 
+10:53:00.218 [http-nio-8080-exec-2] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectPermsByUserId - ==> Parameters: 1(Long)
+10:53:00.258 [http-nio-8080-exec-2] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectPermsByUserId - <==      Total: 72
+10:53:01.321 [http-nio-8080-exec-8] DEBUG com.dfyy.project.system.dept.dao.IDeptDao.selectDeptAll - ==>  Preparing: select dept_id, parent_id, dept_name, order_num, leader, phone, email, status, create_by, create_time from sys_dept 
+10:53:01.322 [http-nio-8080-exec-8] DEBUG com.dfyy.project.system.dept.dao.IDeptDao.selectDeptAll - ==> Parameters: 
+10:53:01.362 [http-nio-8080-exec-8] DEBUG com.dfyy.project.system.dept.dao.IDeptDao.selectDeptAll - <==      Total: 7
+10:53:01.414 [http-nio-8080-exec-7] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList_COUNT - ==>  Preparing: SELECT count(0) FROM sys_user 
+10:53:01.415 [http-nio-8080-exec-7] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList_COUNT - ==> Parameters: 
+10:53:01.454 [http-nio-8080-exec-7] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList_COUNT - <==      Total: 1
+10:53:01.457 [http-nio-8080-exec-7] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList - ==>  Preparing: SELECT user_id, dept_id, login_name, user_name, email, phonenumber, password, sex, avatar, salt, user_type, status, refuse_des, create_by, create_time FROM sys_user order by create_time desc LIMIT ? 
+10:53:01.459 [http-nio-8080-exec-7] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList - ==> Parameters: 10(Integer)
+10:53:01.501 [http-nio-8080-exec-7] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList - <==      Total: 10
+10:53:02.352 [http-nio-8080-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - ==>  Preparing: SELECT count(0) FROM sys_role 
+10:53:02.353 [http-nio-8080-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - ==> Parameters: 
+10:53:02.391 [http-nio-8080-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - <==      Total: 1
+10:53:02.392 [http-nio-8080-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - ==>  Preparing: SELECT role_id, role_name, role_key, role_sort, status, create_time, remark FROM sys_role order by role_sort asc LIMIT ? 
+10:53:02.393 [http-nio-8080-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - ==> Parameters: 10(Integer)
+10:53:02.432 [http-nio-8080-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - <==      Total: 6
+10:53:03.149 [http-nio-8080-exec-10] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==>  Preparing: select menu_id, menu_name, parent_id, order_num, url, menu_type, visible, perms, icon, create_by, create_time from sys_menu 
+10:53:03.151 [http-nio-8080-exec-10] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==> Parameters: 
+10:53:03.201 [http-nio-8080-exec-10] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - <==      Total: 74
+10:53:32.492 [http-nio-8080-exec-8] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuById - ==>  Preparing: SELECT t.menu_id, t.parent_id, t.menu_name, t.order_num, t.url, t.menu_type, t.visible, t.perms, t.icon, t.remark, (SELECT menu_name FROM sys_menu WHERE menu_id = t.parent_id) parent_name FROM sys_menu t where t.menu_id = ? 
+10:53:32.495 [http-nio-8080-exec-8] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuById - ==> Parameters: 1(Long)
+10:53:32.535 [http-nio-8080-exec-8] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuById - <==      Total: 1
+10:53:32.618 [http-nio-8080-exec-8] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:53:32.620 [http-nio-8080-exec-8] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 菜单管理-修改菜单(String), com.dfyy.project.system.menu.controller.MenuController.edit()(String), web(String), admin(String), 研发一部(String), /system/menu/edit/1(String), 127.0.0.1(String), {}(String), 0(Integer), null
+10:53:32.661 [http-nio-8080-exec-8] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+10:53:39.247 [http-nio-8080-exec-4] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuById - ==>  Preparing: SELECT t.menu_id, t.parent_id, t.menu_name, t.order_num, t.url, t.menu_type, t.visible, t.perms, t.icon, t.remark, (SELECT menu_name FROM sys_menu WHERE menu_id = t.parent_id) parent_name FROM sys_menu t where t.menu_id = ? 
+10:53:39.247 [http-nio-8080-exec-4] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuById - ==> Parameters: 18(Long)
+10:53:39.323 [http-nio-8080-exec-4] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuById - <==      Total: 1
+10:53:39.324 [http-nio-8080-exec-4] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:53:39.325 [http-nio-8080-exec-4] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 菜单管理-修改菜单(String), com.dfyy.project.system.menu.controller.MenuController.edit()(String), web(String), admin(String), 研发一部(String), /system/menu/edit/18(String), 127.0.0.1(String), {}(String), 0(Integer), null
+10:53:39.364 [http-nio-8080-exec-4] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+10:53:42.239 [http-nio-8080-exec-10] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuById - ==>  Preparing: SELECT t.menu_id, t.parent_id, t.menu_name, t.order_num, t.url, t.menu_type, t.visible, t.perms, t.icon, t.remark, (SELECT menu_name FROM sys_menu WHERE menu_id = t.parent_id) parent_name FROM sys_menu t where t.menu_id = ? 
+10:53:42.240 [http-nio-8080-exec-10] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuById - ==> Parameters: 20(Long)
+10:53:42.278 [http-nio-8080-exec-10] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuById - <==      Total: 1
+10:53:42.280 [http-nio-8080-exec-10] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:53:42.281 [http-nio-8080-exec-10] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 菜单管理-修改菜单(String), com.dfyy.project.system.menu.controller.MenuController.edit()(String), web(String), admin(String), 研发一部(String), /system/menu/edit/20(String), 127.0.0.1(String), {}(String), 0(Integer), null
+10:53:42.320 [http-nio-8080-exec-10] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+10:53:49.784 [http-nio-8080-exec-6] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuById - ==>  Preparing: SELECT t.menu_id, t.parent_id, t.menu_name, t.order_num, t.url, t.menu_type, t.visible, t.perms, t.icon, t.remark, (SELECT menu_name FROM sys_menu WHERE menu_id = t.parent_id) parent_name FROM sys_menu t where t.menu_id = ? 
+10:53:49.785 [http-nio-8080-exec-6] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuById - ==> Parameters: 6(Long)
+10:53:49.820 [http-nio-8080-exec-6] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuById - <==      Total: 1
+10:53:49.821 [http-nio-8080-exec-6] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:53:49.823 [http-nio-8080-exec-6] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 菜单管理-修改菜单(String), com.dfyy.project.system.menu.controller.MenuController.edit()(String), web(String), admin(String), 研发一部(String), /system/menu/edit/6(String), 127.0.0.1(String), {}(String), 0(Integer), null
+10:53:49.856 [http-nio-8080-exec-6] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+10:53:54.799 [http-nio-8080-exec-2] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuById - ==>  Preparing: SELECT t.menu_id, t.parent_id, t.menu_name, t.order_num, t.url, t.menu_type, t.visible, t.perms, t.icon, t.remark, (SELECT menu_name FROM sys_menu WHERE menu_id = t.parent_id) parent_name FROM sys_menu t where t.menu_id = ? 
+10:53:54.800 [http-nio-8080-exec-2] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuById - ==> Parameters: 10(Long)
+10:53:54.875 [http-nio-8080-exec-2] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuById - <==      Total: 1
+10:53:54.876 [http-nio-8080-exec-2] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:53:54.877 [http-nio-8080-exec-2] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 菜单管理-修改菜单(String), com.dfyy.project.system.menu.controller.MenuController.edit()(String), web(String), admin(String), 研发一部(String), /system/menu/edit/10(String), 127.0.0.1(String), {}(String), 0(Integer), null
+10:53:54.915 [http-nio-8080-exec-2] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+10:53:59.428 [http-nio-8080-exec-8] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - ==>  Preparing: replace into sys_user_online(sessionId, login_name, dept_name, ipaddr, browser, os, status, start_timestsamp, last_access_time, expire_time) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:53:59.429 [http-nio-8080-exec-8] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - ==> Parameters: 6ec922a1-2f34-48ca-b60a-81ba9bb1cca0(String), admin(String), 研发一部(String), 127.0.0.1(String), Chrome(String), Windows 7(String), on_line(String), 2018-08-29 10:52:44.923(Timestamp), 2018-08-29 10:53:59.427(Timestamp), 1800000(Long)
+10:53:59.467 [http-nio-8080-exec-8] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - <==    Updates: 2
+10:53:59.471 [http-nio-8080-exec-8] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuById - ==>  Preparing: SELECT t.menu_id, t.parent_id, t.menu_name, t.order_num, t.url, t.menu_type, t.visible, t.perms, t.icon, t.remark, (SELECT menu_name FROM sys_menu WHERE menu_id = t.parent_id) parent_name FROM sys_menu t where t.menu_id = ? 
+10:53:59.472 [http-nio-8080-exec-8] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuById - ==> Parameters: 2(Long)
+10:53:59.510 [http-nio-8080-exec-8] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuById - <==      Total: 1
+10:53:59.511 [http-nio-8080-exec-8] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:53:59.512 [http-nio-8080-exec-8] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 菜单管理-修改菜单(String), com.dfyy.project.system.menu.controller.MenuController.edit()(String), web(String), admin(String), 研发一部(String), /system/menu/edit/2(String), 127.0.0.1(String), {}(String), 0(Integer), null
+10:53:59.550 [http-nio-8080-exec-8] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+10:54:05.937 [http-nio-8080-exec-5] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuById - ==>  Preparing: SELECT t.menu_id, t.parent_id, t.menu_name, t.order_num, t.url, t.menu_type, t.visible, t.perms, t.icon, t.remark, (SELECT menu_name FROM sys_menu WHERE menu_id = t.parent_id) parent_name FROM sys_menu t where t.menu_id = ? 
+10:54:05.938 [http-nio-8080-exec-5] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuById - ==> Parameters: 70(Long)
+10:54:06.012 [http-nio-8080-exec-5] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuById - <==      Total: 1
+10:54:06.014 [http-nio-8080-exec-5] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:54:06.014 [http-nio-8080-exec-5] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 菜单管理-修改菜单(String), com.dfyy.project.system.menu.controller.MenuController.edit()(String), web(String), admin(String), 研发一部(String), /system/menu/edit/70(String), 127.0.0.1(String), {}(String), 0(Integer), null
+10:54:06.053 [http-nio-8080-exec-5] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+10:54:14.551 [http-nio-8080-exec-3] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuById - ==>  Preparing: SELECT t.menu_id, t.parent_id, t.menu_name, t.order_num, t.url, t.menu_type, t.visible, t.perms, t.icon, t.remark, (SELECT menu_name FROM sys_menu WHERE menu_id = t.parent_id) parent_name FROM sys_menu t where t.menu_id = ? 
+10:54:14.551 [http-nio-8080-exec-3] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuById - ==> Parameters: 72(Long)
+10:54:14.589 [http-nio-8080-exec-3] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuById - <==      Total: 1
+10:54:14.590 [http-nio-8080-exec-3] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:54:14.591 [http-nio-8080-exec-3] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 菜单管理-修改菜单(String), com.dfyy.project.system.menu.controller.MenuController.edit()(String), web(String), admin(String), 研发一部(String), /system/menu/edit/72(String), 127.0.0.1(String), {}(String), 0(Integer), null
+10:54:14.630 [http-nio-8080-exec-3] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+10:54:19.310 [http-nio-8080-exec-4] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuById - ==>  Preparing: SELECT t.menu_id, t.parent_id, t.menu_name, t.order_num, t.url, t.menu_type, t.visible, t.perms, t.icon, t.remark, (SELECT menu_name FROM sys_menu WHERE menu_id = t.parent_id) parent_name FROM sys_menu t where t.menu_id = ? 
+10:54:19.311 [http-nio-8080-exec-4] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuById - ==> Parameters: 73(Long)
+10:54:19.350 [http-nio-8080-exec-4] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuById - <==      Total: 1
+10:54:19.352 [http-nio-8080-exec-4] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:54:19.353 [http-nio-8080-exec-4] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 菜单管理-修改菜单(String), com.dfyy.project.system.menu.controller.MenuController.edit()(String), web(String), admin(String), 研发一部(String), /system/menu/edit/73(String), 127.0.0.1(String), {}(String), 0(Integer), null
+10:54:19.391 [http-nio-8080-exec-4] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+10:54:22.920 [http-nio-8080-exec-10] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuById - ==>  Preparing: SELECT t.menu_id, t.parent_id, t.menu_name, t.order_num, t.url, t.menu_type, t.visible, t.perms, t.icon, t.remark, (SELECT menu_name FROM sys_menu WHERE menu_id = t.parent_id) parent_name FROM sys_menu t where t.menu_id = ? 
+10:54:22.921 [http-nio-8080-exec-10] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuById - ==> Parameters: 74(Long)
+10:54:22.995 [http-nio-8080-exec-10] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuById - <==      Total: 1
+10:54:22.996 [http-nio-8080-exec-10] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:54:22.996 [http-nio-8080-exec-10] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 菜单管理-修改菜单(String), com.dfyy.project.system.menu.controller.MenuController.edit()(String), web(String), admin(String), 研发一部(String), /system/menu/edit/74(String), 127.0.0.1(String), {}(String), 0(Integer), null
+10:54:23.035 [http-nio-8080-exec-10] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+10:54:30.524 [http-nio-8080-exec-6] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.checkMenuNameUnique - ==>  Preparing: select t.menu_id, t.parent_id, t.menu_name, t.order_num, t.url, t.menu_type, t.visible, t.perms, t.icon, t.remark from sys_menu t where menu_name=? 
+10:54:30.525 [http-nio-8080-exec-6] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.checkMenuNameUnique - ==> Parameters: 订单修改(String)
+10:54:30.563 [http-nio-8080-exec-6] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.checkMenuNameUnique - <==      Total: 1
+10:54:42.209 [http-nio-8080-exec-7] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - ==>  Preparing: SELECT count(0) FROM information_schema.tables WHERE table_comment <> '' AND table_schema = (SELECT database()) 
+10:54:42.214 [http-nio-8080-exec-7] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - ==> Parameters: 
+10:54:42.289 [http-nio-8080-exec-7] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - <==      Total: 1
+10:54:42.292 [http-nio-8080-exec-7] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - ==>  Preparing: SELECT table_name, table_comment, create_time, update_time FROM information_schema.tables WHERE table_comment <> '' AND table_schema = (SELECT database()) order by create_time desc LIMIT ? 
+10:54:42.292 [http-nio-8080-exec-7] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - ==> Parameters: 10(Integer)
+10:54:42.334 [http-nio-8080-exec-7] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - <==      Total: 10
+10:54:49.511 [http-nio-8080-exec-9] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - ==>  Preparing: SELECT count(0) FROM information_schema.tables WHERE table_comment <> '' AND table_schema = (SELECT database()) 
+10:54:49.512 [http-nio-8080-exec-9] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - ==> Parameters: 
+10:54:49.551 [http-nio-8080-exec-9] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - <==      Total: 1
+10:54:49.553 [http-nio-8080-exec-9] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - ==>  Preparing: SELECT table_name, table_comment, create_time, update_time FROM information_schema.tables WHERE table_comment <> '' AND table_schema = (SELECT database()) order by create_time desc LIMIT ?, ? 
+10:54:49.554 [http-nio-8080-exec-9] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - ==> Parameters: 10(Integer), 10(Integer)
+10:54:49.596 [http-nio-8080-exec-9] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - <==      Total: 10
+10:54:51.192 [http-nio-8080-exec-1] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - ==>  Preparing: SELECT count(0) FROM information_schema.tables WHERE table_comment <> '' AND table_schema = (SELECT database()) 
+10:54:51.192 [http-nio-8080-exec-1] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - ==> Parameters: 
+10:54:51.267 [http-nio-8080-exec-1] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - <==      Total: 1
+10:54:51.269 [http-nio-8080-exec-1] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - ==>  Preparing: SELECT table_name, table_comment, create_time, update_time FROM information_schema.tables WHERE table_comment <> '' AND table_schema = (SELECT database()) order by create_time desc LIMIT ? 
+10:54:51.270 [http-nio-8080-exec-1] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - ==> Parameters: 10(Integer)
+10:54:51.310 [http-nio-8080-exec-1] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - <==      Total: 10
+10:54:56.732 [http-nio-8080-exec-5] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableByName - ==>  Preparing: select table_name, table_comment, create_time, update_time from information_schema.tables where table_comment <> '' and table_schema = (select database()) and table_name = ? 
+10:54:56.734 [http-nio-8080-exec-5] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableByName - ==> Parameters: coach(String)
+10:54:56.772 [http-nio-8080-exec-5] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableByName - <==      Total: 1
+10:54:56.774 [http-nio-8080-exec-5] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableColumnsByName - ==>  Preparing: select column_name, data_type, column_comment from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+10:54:56.774 [http-nio-8080-exec-5] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableColumnsByName - ==> Parameters: coach(String)
+10:54:56.813 [http-nio-8080-exec-5] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableColumnsByName - <==      Total: 7
+10:54:57.057 [http-nio-8080-exec-5] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:54:57.058 [http-nio-8080-exec-5] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统工具(String), 代码生成-生成代码(String), com.dfyy.project.tool.gen.controller.GenController.genCode()(String), web(String), admin(String), 研发一部(String), /tool/gen/genCode/coach(String), 127.0.0.1(String), {}(String), 0(Integer), null
+10:54:57.096 [http-nio-8080-exec-5] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1

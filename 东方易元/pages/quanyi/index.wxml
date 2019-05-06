@@ -1,0 +1,6 @@
+<!--pages/quanyi/index.wxml-->
+<import src="../wxParse/wxParse.wxml"/>
+<view class="wxParse">
+  <template is="wxParse" data="{{wxParseData:quanYi.nodes}}"/>
+</view>
+

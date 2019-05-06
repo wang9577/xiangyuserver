@@ -1,0 +1,8 @@
+<!--pages/tologin/index.wxml-->
+<image class='QRcode_pic' mode='widthFix' src='../images/bggg.jpg'></image>
+<view class='yonghu'>
+  <text class='yonghu01'>用户授权</text>
+  <text class='yonghu02'>东方易元申请获取</text>
+  <text class='yonghu02'>您的公开信息（昵称、头像）</text>
+</view>
+<button  open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" class='shouquan'>授权登录</button>

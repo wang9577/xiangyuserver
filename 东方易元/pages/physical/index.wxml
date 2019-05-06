@@ -1,0 +1,51 @@
+<!--pages/physical/index.wxml-->
+<view class="weui-cell weui-cell_access">
+  <view class="weui-cell__bd" name="inspectTime">体检时间</view>
+  <view class="weui-cell__ft">
+    <input class="weui-input"  bindinput='getInspectTime'
+    placeholder="{{physical.healthy.inspectTime == null?'请输入':physical.healthy.inspectTime}}"/>
+  </view>
+</view>
+<view class="weui-cell weui-cell_access">
+  <view class="weui-cell__bd" name="inspectMechanism">体检机构</view>
+  <view class="weui-cell__ft">
+    <input class="weui-input"  bindinput='getInspectMechanism'
+    placeholder="{{physical.healthy.inspectMechanism == null?'请输入':physical.healthy.inspectMechanism}}"/>
+  </view>
+</view>
+<view class="weui-cell weui-cell_access" style='border-bottom: none;'>
+  <view class="weui-cell__bd" name="inspectProject">体检项目</view>
+  <view class="weui-cell__ft">
+    <input class="weui-input" bindinput='getInspectProject'
+     placeholder="{{physical.healthy.inspectProject == null?'请输入':physical.healthy.inspectProject}}"/>
+  </view>
+</view>
+<view class="weui-cell weui-cell_access" style='border-bottom: none;'>
+  <view class="weui-cell__bd" name="inspectResult">体检结果</view>
+</view>
+<view class='jieshao'>
+  <input class="weui-input" bindinput='getInspectResult'
+  placeholder="{{physical.healthy.inspectResult == null?'请输入您的体检结果':physical.healthy.inspectResult}}"/>
+</view>
+<view class="weui-cell weui-cell_access" style='border-bottom: none;'>
+  <view class="weui-cell__bd" name = "inspectMedicalImage">体检报告上传</view>
+</view>
+<view class='pian'>
+  <view class="weui-uploader__files" id="uploaderFiles">
+      <block wx:for="{{files}}" wx:key="*this">
+        <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+          <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+        </view>
+      </block>
+      <!-- <view class="weui-uploader__file">
+        <image class="weui-uploader__img" src="../images/pic02_07.jpg" mode="aspectFill" />
+        <image class='guanbi' src="../images/delete.png"></image>
+      </view> -->
+    </view>
+    <view class="weui-uploader__input-box">
+      <view class="weui-uploader__input" bindtap="chooseImage"></view>
+    </view>
+</view>
+<view class="weui-btn-area">
+  <button class="weui-btn_warn"  bindtap='save'>保存</button>
+</view>

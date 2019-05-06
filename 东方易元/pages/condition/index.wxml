@@ -1,0 +1,51 @@
+<!--pages/condition/index.wxml-->
+<view class="weui-cell weui-cell_access">
+  <view class="weui-cell__bd" name="yjkDiseaseName">疾病名称</view>
+  <view class="weui-cell__ft">
+    <input class="weui-input"  bindinput='getYjkDiseaseName'
+    placeholder="{{condition.healthy.yjkDiseaseName == null?'请输入':condition.healthy.yjkDiseaseName}}"/>
+  </view>
+</view>
+<view class="weui-cell weui-cell_access">
+  <view class="weui-cell__bd" name="yjkDepartment">治疗单位</view>
+  <view class="weui-cell__ft">
+    <input class="weui-input"  bindinput='getYjkDepartment'
+     placeholder="{{condition.healthy.yjkDepartment == null?'请输入':condition.healthy.yjkDepartment}}"/>
+  </view>
+</view>
+<view class="weui-cell weui-cell_access" style='border-bottom: none;'>
+  <view class="weui-cell__bd" name ="yjkDiagnosticResults">临床表现</view>
+</view>
+<view class='jieshao'>
+  <input class="weui-input" bindinput='getYjkDiagnosticResults'
+  placeholder="{{condition.healthy.yjkDiagnosticResults == null?'请输入您的临床表现':condition.healthy.yjkDiagnosticResults}}"/>
+</view>
+<view class="weui-cell weui-cell_access" style='border-bottom: none;'>
+  <view class="weui-cell__bd" name ="yjkDoctorsOrder">医嘱</view>
+</view>
+<view class='jieshao'>
+  <input class="weui-input" bindinput='getYjkDoctorsOrder'
+   placeholder="{{condition.healthy.yjkDoctorsOrder == null?'请输入您的临床表现':condition.healthy.yjkDoctorsOrder}}"/>
+</view>
+<view class="weui-cell weui-cell_access" style='border-bottom: none;'>
+  <view class="weui-cell__bd">医学影像上传</view>
+</view>
+<view class='pian'>
+  <view class="weui-uploader__files" id="uploaderFiles">
+      <block wx:for="{{files}}" wx:key="*this">
+        <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+          <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+        </view>
+      </block>
+      <!-- <view class="weui-uploader__file">
+        <image class="weui-uploader__img" src="../images/pic02_07.jpg" mode="aspectFill" />
+        <image class='guanbi' src="../images/delete.png"></image>
+      </view> -->
+    </view>
+    <view class="weui-uploader__input-box">
+      <view class="weui-uploader__input" bindtap="chooseImage"></view>
+    </view>
+</view>
+<view class="weui-btn-area">
+  <button class="weui-btn_warn"  bindtap='save'>保存</button>
+</view>

@@ -1,0 +1,30 @@
+<!--pages/Basic/index.wxml-->
+<view class="weui-cell weui-cell_access">
+  <view class="weui-cell__bd">姓名</view>
+  <view class="weui-cell__ft weui-cell__ft_in-access">{{user.username}}</view>
+</view>
+<view class="weui-cell weui-cell_access">
+  <view class="weui-cell__bd">性别</view>
+  <view class="weui-cell__ft weui-cell__ft_in-access" wx:if="{{user.sex == 0}}">女</view>
+  <view class="weui-cell__ft weui-cell__ft_in-access" wx:if="{{user.sex == 1}}">男</view>
+</view>
+<view class="weui-cell weui-cell_access">
+  <view class="weui-cell__bd">出生日期</view>
+  <view class="weui-cell__ft weui-cell__ft_in-access">{{healthy.birthDate}}</view>
+</view>
+<view class="weui-cell weui-cell_access">
+  <view class="weui-cell__bd">身份证号</view>
+  <view class="weui-cell__ft weui-cell__ft_in-access">{{healthy.certificates}}</view>
+</view>
+<view class="weui-cell weui-cell_access">
+  <view class="weui-cell__bd">手机号</view>
+  <view class="weui-cell__ft weui-cell__ft_in-access">{{user.phoneNumber}}</view>
+</view>
+<view class="weui-cell weui-cell_access">
+  <view class="weui-cell__bd">地区</view>
+  <view class="weui-cell__ft weui-cell__ft_in-access">{{healthy.region}}</view>
+</view>
+<view class="weui-cell weui-cell_access">
+  <view class="weui-cell__bd">详细地址</view>
+  <view class="weui-cell__ft weui-cell__ft_in-access">{{healthy.address}}</view>
+</view>

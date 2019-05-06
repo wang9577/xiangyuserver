@@ -1,0 +1,135 @@
+<!--index.wxml-->
+<swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+    <block wx:for="{{picture}}">
+    <navigator url="{{item.url_type}}">
+      <swiper-item>
+        <image src="{{url}}/imgfile/{{item.img}}" mode='scaleToFill' class="slide-image"/>
+      </swiper-item>
+    </navigator>
+    </block>
+</swiper>
+<view class="page__bd">
+  <view class="weui-grids">
+    <navigator url="../introd/index" class="weui-grid" hover-class="weui-grid_active">
+      <image class="weui-grid__icon" src="../images/home-icon-df.png" />
+      <view class="weui-grid__label">东方易元</view>
+    </navigator>
+    <navigator url="../Video/index" class="weui-grid" hover-class="weui-grid_active">
+      <image class="weui-grid__icon" src="../images/home-icon-video.png" />
+      <view class="weui-grid__label">视频展播</view>
+    </navigator>
+    <navigator url="../activity/index" class="weui-grid" hover-class="weui-grid_active">
+      <image class="weui-grid__icon" src="../images/home-icon-activity.png" />
+      <view class="weui-grid__label">精选活动</view>
+    </navigator>
+    <navigator url="../Branch/index" class="weui-grid" hover-class="weui-grid_active">
+      <image class="weui-grid__icon" src="../images/home-icon-intro.png" />
+      <view class="weui-grid__label">分馆介绍</view>
+    </navigator>
+  </view>
+</view>
+<!--公司动态-->
+<view class='warp'>
+<navigator url='../dynamics/index'>
+  <view class="weui-cell02 weui-cell weui-cell_access">
+    <view class="weui-cell__bd">公司动态</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </view>
+  </navigator>
+  <navigator  wx:for="{{companynews}}" url='../Dynamic/index?id={{item.id}}'>
+  <view class="weui-cell01 weui-cell">
+    <view class="weui-cell__bd01 weui-cell__bd">
+      <view class='title01'>{{item.title}}</view>
+      <view class='time01'>{{item.createTime}}</view>
+    </view>
+    <view class="weui-cell__hd" style="position: relative;margin-left: 10px;">
+      <image src="{{url}}/imgfile/{{item.pictureNum}}" style="width: 186rpx; height: 140rpx; display: block"/>
+    </view>
+  </view>
+  </navigator>
+</view>
+<!--精选活动-->
+<view class='warp'>
+  <navigator url="../activity/index">
+  <view class="weui-cell02 weui-cell weui-cell_access">
+    <view class="weui-cell__bd">精选活动</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </view>
+  </navigator>
+  <view class="weui-grids04 weui-grids">
+    <navigator wx:for="{{activity}}" wx:for-item="j" url="../activities/index?id={{j.id}}" class="weui-grid" hover-class="weui-grid_active" >
+      <image class="weui-grid__icon" src="{{url}}/imgfile/{{j.picture}}" />
+      <block wx:if="{{j.activityStatus === 3}}">
+      <image class='pic02' src="../images/course-enter.png"></image>
+      </block>
+      <block wx:if="{{j.activityStatus === 5}}">
+      <image class='pic02' src="../images/course-progress.png"></image>
+      </block>
+      <text class='words01' wx:if="{{j.activityStatus === 3}}">报名中</text>
+      <text class='words01' wx:if="{{j.activityStatus === 5}}">进行中</text>
+      <view class="weui-grid__label">{{j.activityName}}</view>
+      <view class='adders'>
+        <view class='adders_left'>
+          <image class='pic' src='../images/position.png'></image>
+          <text class='words'>{{j.citys}}</text>
+          <image class='pic01' src='../images/piuc001_10.jpg'></image>
+          <text class='words'>{{j.activityTimes}}</text>
+        </view>
+        <text class='adders_right'>{{j.enroll}}人报名</text>
+      </view>
+    </navigator>
+  </view>
+</view>
+<!--视频展播-->
+<view class='warp'>
+  <navigator url="../Video/index">
+  <view class="weui-cell02 weui-cell weui-cell_access">
+    <view class="weui-cell__bd">视频展播</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </view>
+  </navigator>
+  <view class="weui-grids03 weui-grids">
+    <navigator wx:for="{{video}}" url="../details/index?id={{item.video_number}}" class="weui-grid" hover-class="weui-grid_active">
+      <image class="weui-grid__icon" src="{{url}}/imgfile/{{item.pictureurl}}" />
+      <view class="weui-grid__label">{{item.video_name}}</view>
+    </navigator>
+  </view>
+</view>
+<!--髓友反馈-->
+<view class='warp'>
+  <navigator url="../feedback/index">
+  <view class="weui-cell02 weui-cell weui-cell_access">
+    <view class="weui-cell__bd">髓友反馈</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </view>
+  </navigator>
+  <scroll-view class="recommend_scroll_x_box" scroll-x="true">
+    <view class="recommend_hot_box" wx:for="{{hotList}}" wx:for-item="h">
+    <navigator url="../details/index?id={{h.video_number}}">
+      <image src="{{url}}/imgfile/{{h.pictureurl}}" class="recommend_hot_image"></image>
+      <view class='zizi'>{{h.video_name}}</view>
+    </navigator>
+    </view>
+  </scroll-view>
+</view>
+<!--优秀导师-->
+<view class='warp'>
+  <view class="weui-cell02 weui-cell weui-cell_access">
+    <view class="weui-cell__bd">优秀导师</view>
+  </view>
+  <view class="weui-cell01 weui-cell" wx:for="{{coach}}">
+    <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+      <image src="{{url}}/imgfile/{{item.imageUrl}}" style="width: 186rpx; height: 180rpx; display: block; border-radius: 10rpx;"/>
+    </view>
+    <view class="weui-cell__bd02 weui-cell__bd">
+      <view class='title01'>{{item.name}}</view>
+      <view class='time02'>{{item.intro}}</view>
+    </view>
+  </view>
+</view>
+<view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modalDlg" wx:if="{{showModal}}">
+  <image class='act_pic04' bindtap="go" src="../images/close.png"/>
+  <text class='wenzi'>恭喜您完成{{certificate.course}}课程，再接再厉！</text>
+  <!-- <button class='btn04' bindtap="save">立刻领取证书</button> -->
+</view>

@@ -1,0 +1,55 @@
+<!--pages/Pukaactivities/index.wxml-->
+<view class='warp'>
+<view  wx:for="{{myActivity}}" wx:for-item="myActivity" class="weui-grids04 weui-grids">
+  <navigator url="" class="weui-grid" hover-class="weui-grid_active">
+    <image class="weui-grid__icon" src="../images/pic02_07.jpg" />
+    <image class='pic02' src="../images/course-enter.png"></image>
+     <view class='words01'  wx:if="{{myActivity.activity_status == 3}}"> <text >报名中 </text></view>
+     <view class='words01'  wx:if="{{myActivity.activity_status == 4}}"> <text >报名已截止 </text></view>
+     <view class='words01'  wx:if="{{myActivity.activity_status == 5}}"> <text >进行中 </text></view>
+     <view class='words01'  wx:if="{{myActivity.activity_status == 6}}"> <text >已结束 </text></view>
+    <!-- <text class='words01'>报名中</text> -->
+    <view class="weui-grid__label">{{myActivity.activity_name}}</view>
+    <view class='adders'>
+      <view class='adders_left'>
+        <image class='pic' src='../images/position.png'></image>
+        <text class='words'>{{myActivity.city}}</text>
+        <image class='pic01' src='../images/piuc001_10.jpg'></image>
+        <text class='words'>{{myActivity.activity_time}}</text>
+      </view>
+      <text class='adders_right'>{{myActivity.enrollNum}}人报名</text>
+    </view>
+  </navigator>
+
+  <!-- <navigator url="" class="weui-grid" hover-class="weui-grid_active">
+    <image class="weui-grid__icon" src="../images/pic02_07.jpg" />
+    <image class='pic02' src="../images/course-progress.png"></image>
+    <text class='words01'>进行中</text>
+    <view class="weui-grid__label">少林易元洗髓养生密训营</view>
+    <view class='adders'>
+      <view class='adders_left'>
+        <image class='pic' src='../images/position.png'></image>
+        <text class='words'>长沙</text>
+        <image class='pic01' src='../images/piuc001_10.jpg'></image>
+        <text class='words'>07 - 02</text>
+      </view>
+      <text class='adders_right'>177人报名</text>
+    </view>
+  </navigator>
+  <navigator url="" class="weui-grid" hover-class="weui-grid_active">
+    <image class="weui-grid__icon" src="../images/pic02_07.jpg" />
+    <image class='pic02' src="../images/course--over.png"></image>
+    <text class='words01'>已结束</text>
+    <view class="weui-grid__label">少林易元洗髓养生密训营</view>
+    <view class='adders'>
+      <view class='adders_left'>
+        <image class='pic' src='../images/position.png'></image>
+        <text class='words'>长沙</text>
+        <image class='pic01' src='../images/piuc001_10.jpg'></image>
+        <text class='words'>07 - 02</text>
+      </view>
+      <text class='adders_right'>177人报名</text>
+    </view>
+  </navigator> -->
+</view>
+</view>

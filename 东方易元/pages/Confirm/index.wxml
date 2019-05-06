@@ -1,0 +1,18 @@
+<!--pages/Confirm/index.wxml-->
+<view class="weui-cell">
+  <view class="weui-cell__hd">
+    <image src="../images/upload.png" class='send_pic'></image>
+  </view>
+  <view class="weui-cell__bd">选择会员</view>
+  <view class="weui-cell__ft">7人</view>
+</view>
+<view class="weui-cell" style=" border-bottom:none;">
+  <view class="weui-cell__bd">短信内容</view>
+  <view class="weui-cell__ft01 weui-cell__ft">选择模板</view>
+</view>
+<view class="weui-cell">
+  <text class='duanxin'>【东方易元】您已三天没有上传练功记录了，教练提醒您养生贵在坚持。</text>
+</view>
+<view class="weui-btn-area">
+  <button class="weui-btn_warn">确认发送</button>
+</view>

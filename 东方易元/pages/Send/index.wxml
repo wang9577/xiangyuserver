@@ -1,0 +1,15 @@
+<!--pages/Send/index.wxml-->
+<view class="weui-cell">
+  <view class="weui-cell__hd">
+    <image src="../images/upload.png" class='send_pic'></image>
+  </view>
+  <view class="weui-cell__bd">选择会员</view>
+  <view class="weui-cell__ft">0人</view>
+</view>
+<view class="weui-cell">
+  <view class="weui-cell__bd">短信内容</view>
+  <view class="weui-cell__ft01 weui-cell__ft">选择模板</view>
+</view>
+<view class="weui-btn-area">
+  <button class="weui-btn_warn">确认发送</button>
+</view>

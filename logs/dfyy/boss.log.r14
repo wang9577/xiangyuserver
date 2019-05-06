@@ -1,0 +1,933 @@
+09:21:31.571 [main] INFO  com.dfyy.DfyyiApplication - Starting DfyyiApplication on MS-20160329BWCW with PID 1928 (D:\ecl\eclipse\home\dfyy\target\classes started by Administrator in D:\ecl\eclipse\home\dfyy)
+09:21:31.581 [main] DEBUG com.dfyy.DfyyiApplication - Running with Spring Boot v1.5.10.RELEASE, Spring v4.3.14.RELEASE
+09:21:31.582 [main] INFO  com.dfyy.DfyyiApplication - The following profiles are active: druid
+09:21:32.134 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.6.Final
+09:21:33.693 [main] INFO  org.apache.shiro.cache.ehcache.EhCacheManager - Cache with name 'com.dfyy.framework.shiro.realm.UserRealm.authorizationCache' does not yet exist.  Creating now.
+09:21:33.694 [main] INFO  org.apache.shiro.cache.ehcache.EhCacheManager - Added EhCache named [com.dfyy.framework.shiro.realm.UserRealm.authorizationCache]
+09:21:35.099 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+09:21:35.555 [main] INFO  org.apache.shiro.cache.ehcache.EhCacheManager - Using existing EHCache named [loginRecordCache]
+09:21:36.715 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+09:21:36.716 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.27
+09:21:36.855 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+09:21:37.645 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+09:21:37.666 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+09:21:37.666 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.0 created.
+09:21:37.689 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'dfyyScheduler' with instanceId 'MS-20160329BWCW1535505697648'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 20 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+09:21:37.689 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'dfyyScheduler' initialized from an externally provided properties instance.
+09:21:37.689 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.0
+09:21:37.691 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@6181bc4a
+09:21:37.789 [main] DEBUG com.dfyy.project.monitor.job.dao.IJobDao.selectJobAll - ==>  Preparing: SELECT job_id, job_name, job_group, method_name, params, cron_expression, status, create_by, create_time FROM sys_job 
+09:21:37.929 [main] DEBUG com.dfyy.project.monitor.job.dao.IJobDao.selectJobAll - ==> Parameters: 
+09:21:37.983 [main] DEBUG com.dfyy.project.monitor.job.dao.IJobDao.selectJobAll - <==      Total: 2
+09:21:41.215 [main] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+09:21:42.419 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8085"]
+09:21:42.436 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8085"]
+09:21:42.489 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+09:21:42.530 [main] INFO  com.dfyy.DfyyiApplication - Started DfyyiApplication in 11.62 seconds (JVM running for 12.889)
+09:21:43.677 [Quartz Scheduler [dfyyScheduler]] INFO  org.quartz.core.QuartzScheduler - Scheduler dfyyScheduler_$_MS-20160329BWCW1535505697648 started.
+09:22:40.589 [http-nio-8085-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+09:22:40.754 [http-nio-8085-exec-1] INFO  org.apache.shiro.session.mgt.AbstractValidatingSessionManager - Enabling session validation scheduler...
+09:22:40.754 [http-nio-8085-exec-1] DEBUG com.dfyy.framework.shiro.web.session.SpringSessionValidationScheduler - Scheduling session validation job using Spring Scheduler with session validation interval of [600000]ms...
+09:22:40.755 [http-nio-8085-exec-1] DEBUG com.dfyy.framework.shiro.web.session.SpringSessionValidationScheduler - Session validation job successfully scheduled with Spring Scheduler.
+09:22:40.778 [http-nio-8085-exec-1] INFO  org.apache.shiro.cache.ehcache.EhCacheManager - Using existing EHCache named [shiro-activeSessionCache]
+09:22:41.782 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+09:22:41.815 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+09:22:41.842 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2018-08-29 08:52:41(String)
+09:22:41.912 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 0
+09:22:41.913 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. No sessions were stopped.
+09:22:48.157 [http-nio-8085-exec-5] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserByName - ==>  Preparing: select u.user_id, u.dept_id, u.login_name, u.user_name, u.email, u.phonenumber, u.sex, u.avatar, u.password, u.salt, u.status, u.refuse_des, u.create_time, d.dept_id, d.parent_id, d.dept_name, d.order_num, d.status as dept_status from sys_user u left join sys_dept d on u.dept_id = d.dept_id left join sys_user_role ur on u.user_id = ur.user_id where u.login_name = ? 
+09:22:48.159 [http-nio-8085-exec-5] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserByName - ==> Parameters: admin(String)
+09:22:48.172 [http-nio-8085-exec-2] INFO  sys-user - [0:0:0:0:0:0:0:1][][Error][* 必须填写]
+09:22:48.181 [http-nio-8085-exec-2] DEBUG com.dfyy.project.monitor.logininfor.dao.ILogininforDao.insertLogininfor - ==>  Preparing: insert into sys_logininfor (login_name, status, ipaddr, browser, os, msg) values (?, ?, ?, ?, ?, ?) 
+09:22:48.183 [http-nio-8085-exec-2] DEBUG com.dfyy.project.monitor.logininfor.dao.ILogininforDao.insertLogininfor - ==> Parameters: null, 1(String), 0:0:0:0:0:0:0:1(String), Chrome(String), Windows 7(String), * 必须填写(String)
+09:22:48.196 [http-nio-8085-exec-5] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserByName - <==      Total: 1
+09:22:48.206 [http-nio-8085-exec-5] INFO  sys-user - [0:0:0:0:0:0:0:1][admin][Success][登录成功]
+09:22:48.210 [http-nio-8085-exec-5] DEBUG com.dfyy.project.monitor.logininfor.dao.ILogininforDao.insertLogininfor - ==>  Preparing: insert into sys_logininfor (login_name, status, ipaddr, browser, os, msg) values (?, ?, ?, ?, ?, ?) 
+09:22:48.211 [http-nio-8085-exec-5] DEBUG com.dfyy.project.monitor.logininfor.dao.ILogininforDao.insertLogininfor - ==> Parameters: admin(String), 0(String), 0:0:0:0:0:0:0:1(String), Chrome(String), Windows 7(String), 登录成功(String)
+09:22:48.217 [http-nio-8085-exec-2] DEBUG com.dfyy.project.monitor.logininfor.dao.ILogininforDao.insertLogininfor - <==    Updates: 1
+09:22:48.247 [http-nio-8085-exec-5] DEBUG com.dfyy.project.monitor.logininfor.dao.ILogininforDao.insertLogininfor - <==    Updates: 1
+09:22:49.305 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenusByUserId - ==>  Preparing: select distinct m.menu_id, m.parent_id, m.menu_name, m.url, m.perms , m.menu_type, m.icon, m.order_num, m.create_time from sys_menu m left join sys_role_menu rm on m.menu_id = rm.menu_id left join sys_user_role ur on rm.role_id = ur.role_id where ur.user_id = ? and m.menu_type in ('M', 'C') and m.visible = 0 order by m.order_num 
+09:22:49.311 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenusByUserId - ==> Parameters: 1(Long)
+09:22:49.356 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenusByUserId - <==      Total: 13
+09:22:50.336 [http-nio-8085-exec-3] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - ==>  Preparing: replace into sys_user_online(sessionId, login_name, dept_name, ipaddr, browser, os, status, start_timestsamp, last_access_time, expire_time) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+09:22:50.356 [http-nio-8085-exec-3] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - ==> Parameters: 998884ae-1c4f-4df1-b815-b6c0b502fd51(String), admin(String), 研发一部(String), 0:0:0:0:0:0:0:1(String), Chrome(String), Windows 7(String), on_line(String), 2018-08-29 09:22:40.764(Timestamp), 2018-08-29 09:22:50.334(Timestamp), 1800000(Long)
+09:22:50.389 [http-nio-8085-exec-3] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - <==    Updates: 1
+09:22:52.866 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesByUserId - ==>  Preparing: SELECT r.role_id, r.role_name, r.role_key FROM sys_user u LEFT JOIN sys_user_role ur ON u.user_id = ur.user_id LEFT JOIN sys_role r ON ur.role_id = r.role_id WHERE ur.user_id = ? 
+09:22:52.867 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesByUserId - ==> Parameters: 1(Long)
+09:22:52.901 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesByUserId - <==      Total: 1
+09:22:52.903 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectPermsByUserId - ==>  Preparing: select distinct m.perms from sys_menu m left join sys_role_menu rm on m.menu_id = rm.menu_id left join sys_user_role ur on rm.role_id = ur.role_id where ur.user_id = ? 
+09:22:52.904 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectPermsByUserId - ==> Parameters: 1(Long)
+09:22:52.941 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectPermsByUserId - <==      Total: 67
+09:22:53.676 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - ==>  Preparing: SELECT count(0) FROM sys_role 
+09:22:53.677 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - ==> Parameters: 
+09:22:53.710 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - <==      Total: 1
+09:22:53.713 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - ==>  Preparing: SELECT role_id, role_name, role_key, role_sort, status, create_time, remark FROM sys_role order by role_sort asc LIMIT ? 
+09:22:53.715 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - ==> Parameters: 10(Integer)
+09:22:53.749 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - <==      Total: 2
+09:31:48.137 [http-nio-8085-exec-3] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - ==>  Preparing: replace into sys_user_online(sessionId, login_name, dept_name, ipaddr, browser, os, status, start_timestsamp, last_access_time, expire_time) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+09:31:48.141 [http-nio-8085-exec-3] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - ==> Parameters: 998884ae-1c4f-4df1-b815-b6c0b502fd51(String), admin(String), 研发一部(String), 0:0:0:0:0:0:0:1(String), Chrome(String), Windows 7(String), on_line(String), 2018-08-29 09:22:40.764(Timestamp), 2018-08-29 09:31:48.134(Timestamp), 1800000(Long)
+09:31:48.176 [http-nio-8085-exec-3] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - <==    Updates: 2
+09:31:48.203 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleById - ==>  Preparing: select role_id, role_name, role_key, role_sort, status, create_time, remark from sys_role u where u.role_id = ? 
+09:31:48.205 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleById - ==> Parameters: 2(Long)
+09:31:48.238 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleById - <==      Total: 1
+09:31:48.331 [http-nio-8085-exec-3] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+09:31:48.333 [http-nio-8085-exec-3] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 角色管理-修改角色(String), com.dfyy.project.system.role.controller.RoleController.edit()(String), web(String), admin(String), 研发一部(String), /system/role/edit/2(String), 0:0:0:0:0:0:0:1(String), {}(String), 0(Integer), null
+09:31:48.366 [http-nio-8085-exec-3] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+09:31:48.859 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==>  Preparing: select menu_id, menu_name, parent_id, order_num, url, menu_type, visible, perms, icon, create_by, create_time from sys_menu 
+09:31:48.865 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==> Parameters: 
+09:31:48.937 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - <==      Total: 69
+09:31:48.939 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuTree - ==>  Preparing: select concat(m.menu_id, m.perms) as perms from sys_menu m left join sys_role_menu rm on m.menu_id = rm.menu_id where rm.role_id = ? order by m.parent_id, m.order_num 
+09:31:48.943 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuTree - ==> Parameters: 2(Long)
+09:31:48.978 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuTree - <==      Total: 0
+09:32:09.920 [http-nio-8085-exec-2] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleById - ==>  Preparing: select role_id, role_name, role_key, role_sort, status, create_time, remark from sys_role u where u.role_id = ? 
+09:32:09.921 [http-nio-8085-exec-2] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleById - ==> Parameters: 1(Long)
+09:32:09.957 [http-nio-8085-exec-2] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleById - <==      Total: 1
+09:32:09.960 [http-nio-8085-exec-2] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+09:32:09.961 [http-nio-8085-exec-2] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 角色管理-修改角色(String), com.dfyy.project.system.role.controller.RoleController.edit()(String), web(String), admin(String), 研发一部(String), /system/role/edit/1(String), 0:0:0:0:0:0:0:1(String), {}(String), 0(Integer), null
+09:32:09.995 [http-nio-8085-exec-2] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+09:32:10.090 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==>  Preparing: select menu_id, menu_name, parent_id, order_num, url, menu_type, visible, perms, icon, create_by, create_time from sys_menu 
+09:32:10.090 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==> Parameters: 
+09:32:10.153 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - <==      Total: 69
+09:32:10.155 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuTree - ==>  Preparing: select concat(m.menu_id, m.perms) as perms from sys_menu m left join sys_role_menu rm on m.menu_id = rm.menu_id where rm.role_id = ? order by m.parent_id, m.order_num 
+09:32:10.156 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuTree - ==> Parameters: 1(Long)
+09:32:10.196 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuTree - <==      Total: 69
+09:32:23.005 [http-nio-8085-exec-5] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleById - ==>  Preparing: select role_id, role_name, role_key, role_sort, status, create_time, remark from sys_role u where u.role_id = ? 
+09:32:23.006 [http-nio-8085-exec-5] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleById - ==> Parameters: 2(Long)
+09:32:23.039 [http-nio-8085-exec-5] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleById - <==      Total: 1
+09:32:23.042 [http-nio-8085-exec-5] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+09:32:23.043 [http-nio-8085-exec-5] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 角色管理-修改角色(String), com.dfyy.project.system.role.controller.RoleController.edit()(String), web(String), admin(String), 研发一部(String), /system/role/edit/2(String), 0:0:0:0:0:0:0:1(String), {}(String), 0(Integer), null
+09:32:23.077 [http-nio-8085-exec-5] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+09:32:23.165 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==>  Preparing: select menu_id, menu_name, parent_id, order_num, url, menu_type, visible, perms, icon, create_by, create_time from sys_menu 
+09:32:23.165 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==> Parameters: 
+09:32:23.223 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - <==      Total: 69
+09:32:23.226 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuTree - ==>  Preparing: select concat(m.menu_id, m.perms) as perms from sys_menu m left join sys_role_menu rm on m.menu_id = rm.menu_id where rm.role_id = ? order by m.parent_id, m.order_num 
+09:32:23.227 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuTree - ==> Parameters: 2(Long)
+09:32:23.260 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuTree - <==      Total: 0
+09:32:30.769 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.role.dao.IRoleDao.checkRoleNameUnique - ==>  Preparing: select role_id, role_name, role_key, role_sort, status, create_time from sys_role where role_name=? 
+09:32:30.772 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.role.dao.IRoleDao.checkRoleNameUnique - ==> Parameters: 普通角色(String)
+09:32:30.837 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.role.dao.IRoleDao.checkRoleNameUnique - <==      Total: 1
+09:32:30.917 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.role.dao.IRoleDao.updateRole - ==>  Preparing: update sys_role SET role_name = ?, role_key = ?, role_sort = ?, status = ?, remark = ?, update_by = ?, update_time = sysdate() where 1=1 and role_id = ? 
+09:32:30.919 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.role.dao.IRoleDao.updateRole - ==> Parameters: 普通角色(String), common(String), 2(String), 0(Integer), 教练(String), admin(String), 2(Long)
+09:32:30.952 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.role.dao.IRoleDao.updateRole - <==    Updates: 1
+09:32:30.953 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.role.dao.IRoleMenuDao.deleteRoleMenuByRoleId - ==>  Preparing: delete from sys_role_menu where role_id=? 
+09:32:30.954 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.role.dao.IRoleMenuDao.deleteRoleMenuByRoleId - ==> Parameters: 2(Long)
+09:32:30.987 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.role.dao.IRoleMenuDao.deleteRoleMenuByRoleId - <==    Updates: 177
+09:32:30.994 [http-nio-8085-exec-10] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+09:32:30.997 [http-nio-8085-exec-10] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 角色管理-保存角色(String), com.dfyy.project.system.role.controller.RoleController.save()(String), web(String), admin(String), 研发一部(String), /system/role/save(String), 0:0:0:0:0:0:0:1(String), {"roleId":["2"],"roleName":["普通角色"],"roleKey":["common"],"roleSort":["2"],"status":["0"],"remark":["教练"],"menuIds":[""]}(String), 0(Integer), null
+09:32:31.031 [http-nio-8085-exec-10] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+09:32:32.030 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - ==>  Preparing: SELECT count(0) FROM sys_role 
+09:32:32.031 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - ==> Parameters: 
+09:32:32.063 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - <==      Total: 1
+09:32:32.065 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - ==>  Preparing: SELECT role_id, role_name, role_key, role_sort, status, create_time, remark FROM sys_role order by role_sort asc LIMIT ? 
+09:32:32.066 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - ==> Parameters: 10(Integer)
+09:32:32.100 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - <==      Total: 2
+09:32:33.889 [http-nio-8085-exec-2] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleById - ==>  Preparing: select role_id, role_name, role_key, role_sort, status, create_time, remark from sys_role u where u.role_id = ? 
+09:32:33.892 [http-nio-8085-exec-2] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleById - ==> Parameters: 2(Long)
+09:32:33.927 [http-nio-8085-exec-2] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleById - <==      Total: 1
+09:32:33.929 [http-nio-8085-exec-2] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+09:32:33.930 [http-nio-8085-exec-2] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 角色管理-修改角色(String), com.dfyy.project.system.role.controller.RoleController.edit()(String), web(String), admin(String), 研发一部(String), /system/role/edit/2(String), 0:0:0:0:0:0:0:1(String), {}(String), 0(Integer), null
+09:32:33.964 [http-nio-8085-exec-2] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+09:32:34.066 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==>  Preparing: select menu_id, menu_name, parent_id, order_num, url, menu_type, visible, perms, icon, create_by, create_time from sys_menu 
+09:32:34.069 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==> Parameters: 
+09:32:34.107 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - <==      Total: 69
+09:32:34.111 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuTree - ==>  Preparing: select concat(m.menu_id, m.perms) as perms from sys_menu m left join sys_role_menu rm on m.menu_id = rm.menu_id where rm.role_id = ? order by m.parent_id, m.order_num 
+09:32:34.111 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuTree - ==> Parameters: 2(Long)
+09:32:34.144 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuTree - <==      Total: 0
+09:32:36.596 [http-nio-8085-exec-5] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleById - ==>  Preparing: select role_id, role_name, role_key, role_sort, status, create_time, remark from sys_role u where u.role_id = ? 
+09:32:36.598 [http-nio-8085-exec-5] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleById - ==> Parameters: 1(Long)
+09:32:36.635 [http-nio-8085-exec-5] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleById - <==      Total: 1
+09:32:36.638 [http-nio-8085-exec-5] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+09:32:36.640 [http-nio-8085-exec-5] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 角色管理-修改角色(String), com.dfyy.project.system.role.controller.RoleController.edit()(String), web(String), admin(String), 研发一部(String), /system/role/edit/1(String), 0:0:0:0:0:0:0:1(String), {}(String), 0(Integer), null
+09:32:36.676 [http-nio-8085-exec-5] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+09:32:36.757 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==>  Preparing: select menu_id, menu_name, parent_id, order_num, url, menu_type, visible, perms, icon, create_by, create_time from sys_menu 
+09:32:36.759 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==> Parameters: 
+09:32:36.800 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - <==      Total: 69
+09:32:36.807 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuTree - ==>  Preparing: select concat(m.menu_id, m.perms) as perms from sys_menu m left join sys_role_menu rm on m.menu_id = rm.menu_id where rm.role_id = ? order by m.parent_id, m.order_num 
+09:32:36.810 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuTree - ==> Parameters: 1(Long)
+09:32:36.847 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuTree - <==      Total: 69
+09:32:39.958 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleById - ==>  Preparing: select role_id, role_name, role_key, role_sort, status, create_time, remark from sys_role u where u.role_id = ? 
+09:32:39.960 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleById - ==> Parameters: 2(Long)
+09:32:40.000 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleById - <==      Total: 1
+09:32:40.002 [http-nio-8085-exec-8] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+09:32:40.004 [http-nio-8085-exec-8] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 角色管理-修改角色(String), com.dfyy.project.system.role.controller.RoleController.edit()(String), web(String), admin(String), 研发一部(String), /system/role/edit/2(String), 0:0:0:0:0:0:0:1(String), {}(String), 0(Integer), null
+09:32:40.038 [http-nio-8085-exec-8] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+09:32:40.120 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==>  Preparing: select menu_id, menu_name, parent_id, order_num, url, menu_type, visible, perms, icon, create_by, create_time from sys_menu 
+09:32:40.121 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==> Parameters: 
+09:32:40.158 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - <==      Total: 69
+09:32:40.160 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuTree - ==>  Preparing: select concat(m.menu_id, m.perms) as perms from sys_menu m left join sys_role_menu rm on m.menu_id = rm.menu_id where rm.role_id = ? order by m.parent_id, m.order_num 
+09:32:40.161 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuTree - ==> Parameters: 2(Long)
+09:32:40.194 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuTree - <==      Total: 0
+09:32:41.760 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+09:32:41.762 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+09:32:41.763 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2018-08-29 09:02:41(String)
+09:32:41.796 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 0
+09:32:41.796 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. No sessions were stopped.
+09:32:45.535 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.role.dao.IRoleDao.checkRoleNameUnique - ==>  Preparing: select role_id, role_name, role_key, role_sort, status, create_time from sys_role where role_name=? 
+09:32:45.536 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.role.dao.IRoleDao.checkRoleNameUnique - ==> Parameters: 普通角色(String)
+09:32:45.569 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.role.dao.IRoleDao.checkRoleNameUnique - <==      Total: 1
+09:32:45.619 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleDao.updateRole - ==>  Preparing: update sys_role SET role_name = ?, role_key = ?, role_sort = ?, status = ?, remark = ?, update_by = ?, update_time = sysdate() where 1=1 and role_id = ? 
+09:32:45.619 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleDao.updateRole - ==> Parameters: 普通角色(String), common(String), 2(String), 0(Integer), 普通角色(String), admin(String), 2(Long)
+09:32:45.652 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleDao.updateRole - <==    Updates: 1
+09:32:45.653 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleMenuDao.deleteRoleMenuByRoleId - ==>  Preparing: delete from sys_role_menu where role_id=? 
+09:32:45.654 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleMenuDao.deleteRoleMenuByRoleId - ==> Parameters: 2(Long)
+09:32:45.686 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleMenuDao.deleteRoleMenuByRoleId - <==    Updates: 0
+09:32:45.688 [http-nio-8085-exec-9] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+09:32:45.690 [http-nio-8085-exec-9] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 角色管理-保存角色(String), com.dfyy.project.system.role.controller.RoleController.save()(String), web(String), admin(String), 研发一部(String), /system/role/save(String), 0:0:0:0:0:0:0:1(String), {"roleId":["2"],"roleName":["普通角色"],"roleKey":["common"],"roleSort":["2"],"status":["0"],"remark":["普通角色"],"menuIds":[""]}(String), 0(Integer), null
+09:32:45.723 [http-nio-8085-exec-9] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+09:32:46.600 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - ==>  Preparing: SELECT count(0) FROM sys_role 
+09:32:46.601 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - ==> Parameters: 
+09:32:46.634 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - <==      Total: 1
+09:32:46.635 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - ==>  Preparing: SELECT role_id, role_name, role_key, role_sort, status, create_time, remark FROM sys_role order by role_sort asc LIMIT ? 
+09:32:46.636 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - ==> Parameters: 10(Integer)
+09:32:46.668 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - <==      Total: 2
+09:34:28.914 [http-nio-8085-exec-4] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - ==>  Preparing: replace into sys_user_online(sessionId, login_name, dept_name, ipaddr, browser, os, status, start_timestsamp, last_access_time, expire_time) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+09:34:28.920 [http-nio-8085-exec-4] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - ==> Parameters: 998884ae-1c4f-4df1-b815-b6c0b502fd51(String), admin(String), 研发一部(String), 0:0:0:0:0:0:0:1(String), Chrome(String), Windows 7(String), on_line(String), 2018-08-29 09:22:40.764(Timestamp), 2018-08-29 09:34:28.908(Timestamp), 1800000(Long)
+09:34:28.953 [http-nio-8085-exec-4] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - <==    Updates: 2
+09:34:28.963 [http-nio-8085-exec-4] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+09:34:28.964 [http-nio-8085-exec-4] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 角色管理-新增角色(String), com.dfyy.project.system.role.controller.RoleController.add()(String), web(String), admin(String), 研发一部(String), /system/role/add(String), 0:0:0:0:0:0:0:1(String), {}(String), 0(Integer), null
+09:34:28.998 [http-nio-8085-exec-4] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+09:34:29.295 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==>  Preparing: select menu_id, menu_name, parent_id, order_num, url, menu_type, visible, perms, icon, create_by, create_time from sys_menu 
+09:34:29.296 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==> Parameters: 
+09:34:29.334 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - <==      Total: 69
+09:34:53.266 [http-nio-8085-exec-3] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+09:34:53.268 [http-nio-8085-exec-3] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 角色管理-新增角色(String), com.dfyy.project.system.role.controller.RoleController.add()(String), web(String), admin(String), 研发一部(String), /system/role/add(String), 0:0:0:0:0:0:0:1(String), {}(String), 0(Integer), null
+09:34:53.302 [http-nio-8085-exec-3] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+09:34:53.380 [http-nio-8085-exec-2] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==>  Preparing: select menu_id, menu_name, parent_id, order_num, url, menu_type, visible, perms, icon, create_by, create_time from sys_menu 
+09:34:53.381 [http-nio-8085-exec-2] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==> Parameters: 
+09:34:53.427 [http-nio-8085-exec-2] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - <==      Total: 69
+09:35:17.513 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.role.dao.IRoleDao.checkRoleNameUnique - ==>  Preparing: select role_id, role_name, role_key, role_sort, status, create_time from sys_role where role_name=? 
+09:35:17.515 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.role.dao.IRoleDao.checkRoleNameUnique - ==> Parameters: 张家坡(String)
+09:35:17.553 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.role.dao.IRoleDao.checkRoleNameUnique - <==      Total: 0
+09:35:36.792 [http-nio-8085-exec-4] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - ==>  Preparing: replace into sys_user_online(sessionId, login_name, dept_name, ipaddr, browser, os, status, start_timestsamp, last_access_time, expire_time) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+09:35:36.794 [http-nio-8085-exec-4] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - ==> Parameters: 998884ae-1c4f-4df1-b815-b6c0b502fd51(String), admin(String), 研发一部(String), 0:0:0:0:0:0:0:1(String), Chrome(String), Windows 7(String), on_line(String), 2018-08-29 09:22:40.764(Timestamp), 2018-08-29 09:35:36.79(Timestamp), 1800000(Long)
+09:35:36.827 [http-nio-8085-exec-4] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - <==    Updates: 2
+09:35:37.097 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList_COUNT - ==>  Preparing: SELECT count(0) FROM sys_user 
+09:35:37.099 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList_COUNT - ==> Parameters: 
+09:35:37.139 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList_COUNT - <==      Total: 1
+09:35:37.141 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList - ==>  Preparing: SELECT user_id, dept_id, login_name, user_name, email, phonenumber, password, sex, avatar, salt, user_type, status, refuse_des, create_by, create_time FROM sys_user order by create_time desc LIMIT ? 
+09:35:37.142 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList - ==> Parameters: 10(Integer)
+09:35:37.143 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.dept.dao.IDeptDao.selectDeptAll - ==>  Preparing: select dept_id, parent_id, dept_name, order_num, leader, phone, email, status, create_by, create_time from sys_dept 
+09:35:37.143 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.dept.dao.IDeptDao.selectDeptAll - ==> Parameters: 
+09:35:37.177 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.dept.dao.IDeptDao.selectDeptAll - <==      Total: 7
+09:35:37.178 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList - <==      Total: 10
+09:35:49.451 [http-nio-8085-exec-5] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList_COUNT - ==>  Preparing: SELECT count(0) FROM sys_user 
+09:35:49.452 [http-nio-8085-exec-5] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList_COUNT - ==> Parameters: 
+09:35:49.495 [http-nio-8085-exec-5] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList_COUNT - <==      Total: 1
+09:35:49.496 [http-nio-8085-exec-5] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList - ==>  Preparing: SELECT user_id, dept_id, login_name, user_name, email, phonenumber, password, sex, avatar, salt, user_type, status, refuse_des, create_by, create_time FROM sys_user order by create_time desc LIMIT ?, ? 
+09:35:49.498 [http-nio-8085-exec-5] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList - ==> Parameters: 10(Integer), 10(Integer)
+09:35:49.532 [http-nio-8085-exec-5] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList - <==      Total: 3
+09:35:54.587 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList_COUNT - ==>  Preparing: SELECT count(0) FROM sys_user 
+09:35:54.587 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList_COUNT - ==> Parameters: 
+09:35:54.625 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList_COUNT - <==      Total: 1
+09:35:54.630 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList - ==>  Preparing: SELECT user_id, dept_id, login_name, user_name, email, phonenumber, password, sex, avatar, salt, user_type, status, refuse_des, create_by, create_time FROM sys_user order by create_time desc LIMIT ? 
+09:35:54.630 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList - ==> Parameters: 10(Integer)
+09:35:54.667 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList - <==      Total: 10
+09:42:41.765 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+09:42:41.766 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+09:42:41.766 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2018-08-29 09:12:41(String)
+09:42:41.798 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 0
+09:42:41.798 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. No sessions were stopped.
+09:43:35.193 [http-nio-8085-exec-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - ==>  Preparing: replace into sys_user_online(sessionId, login_name, dept_name, ipaddr, browser, os, status, start_timestsamp, last_access_time, expire_time) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+09:43:35.195 [http-nio-8085-exec-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - ==> Parameters: 998884ae-1c4f-4df1-b815-b6c0b502fd51(String), admin(String), 研发一部(String), 0:0:0:0:0:0:0:1(String), Chrome(String), Windows 7(String), on_line(String), 2018-08-29 09:22:40.764(Timestamp), 2018-08-29 09:43:35.192(Timestamp), 1800000(Long)
+09:43:35.229 [http-nio-8085-exec-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - <==    Updates: 2
+09:43:35.236 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserById - ==>  Preparing: select u.user_id, u.dept_id, u.login_name, u.user_name, u.email, u.phonenumber, u.sex, u.avatar, u.password, u.salt, u.status, u.refuse_des, u.create_time, d.dept_id, d.parent_id, d.dept_name, d.order_num, d.status as dept_status from sys_user u left join sys_dept d on u.dept_id = d.dept_id left join sys_user_role ur on u.user_id = ur.user_id where u.user_id = ? 
+09:43:35.242 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserById - ==> Parameters: 101(Long)
+09:43:35.278 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserById - <==      Total: 1
+09:43:35.281 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesByUserId - ==>  Preparing: SELECT r.role_id, r.role_name, r.role_key FROM sys_user u LEFT JOIN sys_user_role ur ON u.user_id = ur.user_id LEFT JOIN sys_role r ON ur.role_id = r.role_id WHERE ur.user_id = ? 
+09:43:35.284 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesByUserId - ==> Parameters: 101(Long)
+09:43:35.320 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesByUserId - <==      Total: 1
+09:43:35.321 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - ==>  Preparing: SELECT role_id, role_name, role_key, role_sort, status, create_time, remark FROM sys_role 
+09:43:35.322 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - ==> Parameters: 
+09:43:35.356 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - <==      Total: 2
+09:43:35.357 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostsByUserId - ==>  Preparing: SELECT p.post_id, p.post_name, p.post_code FROM sys_user u LEFT JOIN sys_user_post up ON u.user_id = up.user_id LEFT JOIN sys_post p ON up.post_id = p.post_id WHERE up.user_id = ? 
+09:43:35.359 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostsByUserId - ==> Parameters: 101(Long)
+09:43:35.391 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostsByUserId - <==      Total: 1
+09:43:35.393 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - ==>  Preparing: SELECT * FROM sys_post 
+09:43:35.394 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - ==> Parameters: 
+09:43:35.427 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - <==      Total: 4
+09:43:35.429 [http-nio-8085-exec-1] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+09:43:35.429 [http-nio-8085-exec-1] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 用户管理-修改用户(String), com.dfyy.project.system.user.controller.UserController.edit()(String), web(String), admin(String), 研发一部(String), /system/user/edit/101(String), 0:0:0:0:0:0:0:1(String), {}(String), 0(Integer), null
+09:43:35.462 [http-nio-8085-exec-1] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+09:44:30.311 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList_COUNT - ==>  Preparing: SELECT count(0) FROM sys_user 
+09:44:30.313 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList_COUNT - ==> Parameters: 
+09:44:30.379 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList_COUNT - <==      Total: 1
+09:44:30.383 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList - ==>  Preparing: SELECT user_id, dept_id, login_name, user_name, email, phonenumber, password, sex, avatar, salt, user_type, status, refuse_des, create_by, create_time FROM sys_user order by create_time desc LIMIT ?, ? 
+09:44:30.385 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList - ==> Parameters: 10(Integer), 10(Integer)
+09:44:30.421 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList - <==      Total: 3
+09:44:31.924 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList_COUNT - ==>  Preparing: SELECT count(0) FROM sys_user 
+09:44:31.925 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList_COUNT - ==> Parameters: 
+09:44:31.957 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList_COUNT - <==      Total: 1
+09:44:31.959 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList - ==>  Preparing: SELECT user_id, dept_id, login_name, user_name, email, phonenumber, password, sex, avatar, salt, user_type, status, refuse_des, create_by, create_time FROM sys_user order by create_time desc LIMIT ? 
+09:44:31.960 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList - ==> Parameters: 10(Integer)
+09:44:31.995 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList - <==      Total: 10
+09:44:34.680 [http-nio-8085-exec-2] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserById - ==>  Preparing: select u.user_id, u.dept_id, u.login_name, u.user_name, u.email, u.phonenumber, u.sex, u.avatar, u.password, u.salt, u.status, u.refuse_des, u.create_time, d.dept_id, d.parent_id, d.dept_name, d.order_num, d.status as dept_status from sys_user u left join sys_dept d on u.dept_id = d.dept_id left join sys_user_role ur on u.user_id = ur.user_id where u.user_id = ? 
+09:44:34.682 [http-nio-8085-exec-2] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserById - ==> Parameters: 3(Long)
+09:44:34.717 [http-nio-8085-exec-2] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserById - <==      Total: 1
+09:44:34.722 [http-nio-8085-exec-2] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesByUserId - ==>  Preparing: SELECT r.role_id, r.role_name, r.role_key FROM sys_user u LEFT JOIN sys_user_role ur ON u.user_id = ur.user_id LEFT JOIN sys_role r ON ur.role_id = r.role_id WHERE ur.user_id = ? 
+09:44:34.723 [http-nio-8085-exec-2] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesByUserId - ==> Parameters: 3(Long)
+09:44:34.756 [http-nio-8085-exec-2] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesByUserId - <==      Total: 0
+09:44:34.758 [http-nio-8085-exec-2] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - ==>  Preparing: SELECT role_id, role_name, role_key, role_sort, status, create_time, remark FROM sys_role 
+09:44:34.758 [http-nio-8085-exec-2] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - ==> Parameters: 
+09:44:34.791 [http-nio-8085-exec-2] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - <==      Total: 2
+09:44:34.793 [http-nio-8085-exec-2] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostsByUserId - ==>  Preparing: SELECT p.post_id, p.post_name, p.post_code FROM sys_user u LEFT JOIN sys_user_post up ON u.user_id = up.user_id LEFT JOIN sys_post p ON up.post_id = p.post_id WHERE up.user_id = ? 
+09:44:34.793 [http-nio-8085-exec-2] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostsByUserId - ==> Parameters: 3(Long)
+09:44:34.826 [http-nio-8085-exec-2] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostsByUserId - <==      Total: 0
+09:44:34.828 [http-nio-8085-exec-2] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - ==>  Preparing: SELECT * FROM sys_post 
+09:44:34.829 [http-nio-8085-exec-2] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - ==> Parameters: 
+09:44:34.862 [http-nio-8085-exec-2] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - <==      Total: 4
+09:44:34.864 [http-nio-8085-exec-2] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+09:44:34.865 [http-nio-8085-exec-2] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 用户管理-修改用户(String), com.dfyy.project.system.user.controller.UserController.edit()(String), web(String), admin(String), 研发一部(String), /system/user/edit/3(String), 0:0:0:0:0:0:0:1(String), {}(String), 0(Integer), null
+09:44:34.899 [http-nio-8085-exec-2] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+09:44:42.454 [http-nio-8085-exec-6] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - ==>  Preparing: replace into sys_user_online(sessionId, login_name, dept_name, ipaddr, browser, os, status, start_timestsamp, last_access_time, expire_time) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+09:44:42.456 [http-nio-8085-exec-6] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - ==> Parameters: 998884ae-1c4f-4df1-b815-b6c0b502fd51(String), admin(String), 研发一部(String), 0:0:0:0:0:0:0:1(String), Chrome(String), Windows 7(String), on_line(String), 2018-08-29 09:22:40.764(Timestamp), 2018-08-29 09:44:42.453(Timestamp), 1800000(Long)
+09:44:42.490 [http-nio-8085-exec-6] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - <==    Updates: 2
+09:44:42.537 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.user.dao.IUserDao.updateUser - ==>  Preparing: update sys_user SET dept_id = ?, user_name = ?, email = ?, phonenumber = ?, sex = ?, status = ?, update_by = ?, update_time = sysdate() where 1=1 and user_id = ? 
+09:44:42.540 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.user.dao.IUserDao.updateUser - ==> Parameters: 106(Long), 刘一(String), ry@163.com(String), 15888888888(String), 0(String), 0(Integer), admin(String), 3(Long)
+09:44:42.572 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.user.dao.IUserDao.updateUser - <==    Updates: 1
+09:44:42.573 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.user.dao.IUserRoleDao.deleteUserRoleByUserId - ==>  Preparing: delete from sys_user_role where user_id=? 
+09:44:42.574 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.user.dao.IUserRoleDao.deleteUserRoleByUserId - ==> Parameters: 3(Long)
+09:44:42.606 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.user.dao.IUserRoleDao.deleteUserRoleByUserId - <==    Updates: 0
+09:44:42.609 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.user.dao.IUserRoleDao.batchUserRole - ==>  Preparing: insert into sys_user_role(user_id, role_id) values (?,?) 
+09:44:42.610 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.user.dao.IUserRoleDao.batchUserRole - ==> Parameters: 3(Long), 2(Long)
+09:44:42.642 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.user.dao.IUserRoleDao.batchUserRole - <==    Updates: 1
+09:44:42.643 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.user.dao.IUserPostDao.deleteUserPostByUserId - ==>  Preparing: delete from sys_user_post where user_id=? 
+09:44:42.644 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.user.dao.IUserPostDao.deleteUserPostByUserId - ==> Parameters: 3(Long)
+09:44:42.676 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.user.dao.IUserPostDao.deleteUserPostByUserId - <==    Updates: 0
+09:44:42.677 [http-nio-8085-exec-6] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+09:44:42.678 [http-nio-8085-exec-6] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 部门管理-保存部门(String), com.dfyy.project.system.user.controller.UserController.save()(String), web(String), admin(String), 研发一部(String), /system/user/save(String), 0:0:0:0:0:0:0:1(String), {"userId":["3"],"deptId":["106"],"userName":["刘一"],"email":["ry@163.com"],"phonenumber":["15888888888"],"sex":["0"],"status":["0"],"roleIds":["2"],"postIds":[""]}(String), 0(Integer), null
+09:44:42.711 [http-nio-8085-exec-6] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+09:44:43.698 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.dept.dao.IDeptDao.selectDeptAll - ==>  Preparing: select dept_id, parent_id, dept_name, order_num, leader, phone, email, status, create_by, create_time from sys_dept 
+09:44:43.698 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.dept.dao.IDeptDao.selectDeptAll - ==> Parameters: 
+09:44:43.730 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList_COUNT - ==>  Preparing: SELECT count(0) FROM sys_user 
+09:44:43.730 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList_COUNT - ==> Parameters: 
+09:44:43.733 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.dept.dao.IDeptDao.selectDeptAll - <==      Total: 7
+09:44:43.763 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList_COUNT - <==      Total: 1
+09:44:43.765 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList - ==>  Preparing: SELECT user_id, dept_id, login_name, user_name, email, phonenumber, password, sex, avatar, salt, user_type, status, refuse_des, create_by, create_time FROM sys_user order by create_time desc LIMIT ? 
+09:44:43.765 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList - ==> Parameters: 10(Integer)
+09:44:43.801 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList - <==      Total: 10
+09:44:53.774 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserById - ==>  Preparing: select u.user_id, u.dept_id, u.login_name, u.user_name, u.email, u.phonenumber, u.sex, u.avatar, u.password, u.salt, u.status, u.refuse_des, u.create_time, d.dept_id, d.parent_id, d.dept_name, d.order_num, d.status as dept_status from sys_user u left join sys_dept d on u.dept_id = d.dept_id left join sys_user_role ur on u.user_id = ur.user_id where u.user_id = ? 
+09:44:53.776 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserById - ==> Parameters: 3(Long)
+09:44:53.811 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserById - <==      Total: 1
+09:44:53.813 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesByUserId - ==>  Preparing: SELECT r.role_id, r.role_name, r.role_key FROM sys_user u LEFT JOIN sys_user_role ur ON u.user_id = ur.user_id LEFT JOIN sys_role r ON ur.role_id = r.role_id WHERE ur.user_id = ? 
+09:44:53.814 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesByUserId - ==> Parameters: 3(Long)
+09:44:53.848 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesByUserId - <==      Total: 1
+09:44:53.852 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - ==>  Preparing: SELECT role_id, role_name, role_key, role_sort, status, create_time, remark FROM sys_role 
+09:44:53.852 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - ==> Parameters: 
+09:44:53.886 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - <==      Total: 2
+09:44:53.887 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostsByUserId - ==>  Preparing: SELECT p.post_id, p.post_name, p.post_code FROM sys_user u LEFT JOIN sys_user_post up ON u.user_id = up.user_id LEFT JOIN sys_post p ON up.post_id = p.post_id WHERE up.user_id = ? 
+09:44:53.888 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostsByUserId - ==> Parameters: 3(Long)
+09:44:53.920 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostsByUserId - <==      Total: 0
+09:44:53.921 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - ==>  Preparing: SELECT * FROM sys_post 
+09:44:53.922 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - ==> Parameters: 
+09:44:53.955 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - <==      Total: 4
+09:44:53.957 [http-nio-8085-exec-10] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+09:44:53.958 [http-nio-8085-exec-10] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 用户管理-修改用户(String), com.dfyy.project.system.user.controller.UserController.edit()(String), web(String), admin(String), 研发一部(String), /system/user/edit/3(String), 0:0:0:0:0:0:0:1(String), {}(String), 0(Integer), null
+09:44:53.992 [http-nio-8085-exec-10] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+09:45:13.318 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - ==>  Preparing: SELECT role_id, role_name, role_key, role_sort, status, create_time, remark FROM sys_role 
+09:45:13.319 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - ==> Parameters: 
+09:45:13.354 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - <==      Total: 2
+09:45:13.357 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - ==>  Preparing: SELECT * FROM sys_post 
+09:45:13.358 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - ==> Parameters: 
+09:45:13.394 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - <==      Total: 4
+09:45:13.395 [http-nio-8085-exec-8] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+09:45:13.398 [http-nio-8085-exec-8] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 用户管理-新增用户(String), com.dfyy.project.system.user.controller.UserController.add()(String), web(String), admin(String), 研发一部(String), /system/user/add(String), 0:0:0:0:0:0:0:1(String), {}(String), 0(Integer), null
+09:45:13.435 [http-nio-8085-exec-8] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+09:45:46.085 [http-nio-8085-exec-6] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - ==>  Preparing: replace into sys_user_online(sessionId, login_name, dept_name, ipaddr, browser, os, status, start_timestsamp, last_access_time, expire_time) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+09:45:46.085 [http-nio-8085-exec-6] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - ==> Parameters: 998884ae-1c4f-4df1-b815-b6c0b502fd51(String), admin(String), 研发一部(String), 0:0:0:0:0:0:0:1(String), Chrome(String), Windows 7(String), on_line(String), 2018-08-29 09:22:40.764(Timestamp), 2018-08-29 09:45:46.084(Timestamp), 1800000(Long)
+09:45:46.119 [http-nio-8085-exec-6] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - <==    Updates: 2
+09:45:46.123 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - ==>  Preparing: SELECT role_id, role_name, role_key, role_sort, status, create_time, remark FROM sys_role 
+09:45:46.126 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - ==> Parameters: 
+09:45:46.163 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - <==      Total: 2
+09:45:46.166 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - ==>  Preparing: SELECT * FROM sys_post 
+09:45:46.166 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - ==> Parameters: 
+09:45:46.199 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - <==      Total: 4
+09:45:46.200 [http-nio-8085-exec-6] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+09:45:46.203 [http-nio-8085-exec-6] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 用户管理-新增用户(String), com.dfyy.project.system.user.controller.UserController.add()(String), web(String), admin(String), 研发一部(String), /system/user/add(String), 0:0:0:0:0:0:0:1(String), {}(String), 0(Integer), null
+09:45:46.236 [http-nio-8085-exec-6] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+09:45:56.832 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==>  Preparing: select menu_id, menu_name, parent_id, order_num, url, menu_type, visible, perms, icon, create_by, create_time from sys_menu 
+09:45:56.832 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==> Parameters: 
+09:45:56.868 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - <==      Total: 70
+09:47:44.444 [http-nio-8085-exec-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - ==>  Preparing: replace into sys_user_online(sessionId, login_name, dept_name, ipaddr, browser, os, status, start_timestsamp, last_access_time, expire_time) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+09:47:44.445 [http-nio-8085-exec-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - ==> Parameters: 998884ae-1c4f-4df1-b815-b6c0b502fd51(String), admin(String), 研发一部(String), 0:0:0:0:0:0:0:1(String), Chrome(String), Windows 7(String), on_line(String), 2018-08-29 09:22:40.764(Timestamp), 2018-08-29 09:47:44.443(Timestamp), 1800000(Long)
+09:47:44.479 [http-nio-8085-exec-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - <==    Updates: 2
+09:47:44.486 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - ==>  Preparing: SELECT role_id, role_name, role_key, role_sort, status, create_time, remark FROM sys_role 
+09:47:44.486 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - ==> Parameters: 
+09:47:44.519 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - <==      Total: 2
+09:47:44.520 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - ==>  Preparing: SELECT * FROM sys_post 
+09:47:44.521 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - ==> Parameters: 
+09:47:44.554 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - <==      Total: 4
+09:47:44.555 [http-nio-8085-exec-1] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+09:47:44.556 [http-nio-8085-exec-1] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 用户管理-新增用户(String), com.dfyy.project.system.user.controller.UserController.add()(String), web(String), admin(String), 研发一部(String), /system/user/add(String), 0:0:0:0:0:0:0:1(String), {}(String), 0(Integer), null
+09:47:44.589 [http-nio-8085-exec-1] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+09:52:41.769 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+09:52:41.770 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+09:52:41.770 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2018-08-29 09:22:41(String)
+09:52:41.802 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 0
+09:52:41.802 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. No sessions were stopped.
+10:02:41.772 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+10:02:41.775 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+10:02:41.776 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2018-08-29 09:32:41(String)
+10:02:41.809 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 0
+10:02:41.810 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. No sessions were stopped.
+10:09:16.950 [http-nio-8085-exec-3] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - ==>  Preparing: replace into sys_user_online(sessionId, login_name, dept_name, ipaddr, browser, os, status, start_timestsamp, last_access_time, expire_time) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:09:16.954 [http-nio-8085-exec-3] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - ==> Parameters: 998884ae-1c4f-4df1-b815-b6c0b502fd51(String), admin(String), 研发一部(String), 0:0:0:0:0:0:0:1(String), Chrome(String), Windows 7(String), on_line(String), 2018-08-29 09:22:40.764(Timestamp), 2018-08-29 10:09:16.948(Timestamp), 1800000(Long)
+10:09:17.020 [http-nio-8085-exec-3] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - <==    Updates: 2
+10:09:17.027 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserById - ==>  Preparing: select u.user_id, u.dept_id, u.login_name, u.user_name, u.email, u.phonenumber, u.sex, u.avatar, u.password, u.salt, u.status, u.refuse_des, u.create_time, d.dept_id, d.parent_id, d.dept_name, d.order_num, d.status as dept_status from sys_user u left join sys_dept d on u.dept_id = d.dept_id left join sys_user_role ur on u.user_id = ur.user_id where u.user_id = ? 
+10:09:17.029 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserById - ==> Parameters: 3(Long)
+10:09:17.064 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserById - <==      Total: 1
+10:09:17.065 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesByUserId - ==>  Preparing: SELECT r.role_id, r.role_name, r.role_key FROM sys_user u LEFT JOIN sys_user_role ur ON u.user_id = ur.user_id LEFT JOIN sys_role r ON ur.role_id = r.role_id WHERE ur.user_id = ? 
+10:09:17.066 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesByUserId - ==> Parameters: 3(Long)
+10:09:17.099 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesByUserId - <==      Total: 1
+10:09:17.101 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - ==>  Preparing: SELECT role_id, role_name, role_key, role_sort, status, create_time, remark FROM sys_role 
+10:09:17.103 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - ==> Parameters: 
+10:09:17.138 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - <==      Total: 2
+10:09:17.140 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostsByUserId - ==>  Preparing: SELECT p.post_id, p.post_name, p.post_code FROM sys_user u LEFT JOIN sys_user_post up ON u.user_id = up.user_id LEFT JOIN sys_post p ON up.post_id = p.post_id WHERE up.user_id = ? 
+10:09:17.141 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostsByUserId - ==> Parameters: 3(Long)
+10:09:17.174 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostsByUserId - <==      Total: 0
+10:09:17.175 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - ==>  Preparing: SELECT * FROM sys_post 
+10:09:17.176 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - ==> Parameters: 
+10:09:17.210 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - <==      Total: 4
+10:09:17.211 [http-nio-8085-exec-3] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:09:17.211 [http-nio-8085-exec-3] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 用户管理-修改用户(String), com.dfyy.project.system.user.controller.UserController.edit()(String), web(String), admin(String), 研发一部(String), /system/user/edit/3(String), 0:0:0:0:0:0:0:1(String), {}(String), 0(Integer), null
+10:09:17.244 [http-nio-8085-exec-3] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+10:09:24.622 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserById - ==>  Preparing: select u.user_id, u.dept_id, u.login_name, u.user_name, u.email, u.phonenumber, u.sex, u.avatar, u.password, u.salt, u.status, u.refuse_des, u.create_time, d.dept_id, d.parent_id, d.dept_name, d.order_num, d.status as dept_status from sys_user u left join sys_dept d on u.dept_id = d.dept_id left join sys_user_role ur on u.user_id = ur.user_id where u.user_id = ? 
+10:09:24.624 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserById - ==> Parameters: 101(Long)
+10:09:24.658 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserById - <==      Total: 1
+10:09:24.661 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesByUserId - ==>  Preparing: SELECT r.role_id, r.role_name, r.role_key FROM sys_user u LEFT JOIN sys_user_role ur ON u.user_id = ur.user_id LEFT JOIN sys_role r ON ur.role_id = r.role_id WHERE ur.user_id = ? 
+10:09:24.662 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesByUserId - ==> Parameters: 101(Long)
+10:09:24.694 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesByUserId - <==      Total: 1
+10:09:24.695 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - ==>  Preparing: SELECT role_id, role_name, role_key, role_sort, status, create_time, remark FROM sys_role 
+10:09:24.696 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - ==> Parameters: 
+10:09:24.728 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - <==      Total: 2
+10:09:24.730 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostsByUserId - ==>  Preparing: SELECT p.post_id, p.post_name, p.post_code FROM sys_user u LEFT JOIN sys_user_post up ON u.user_id = up.user_id LEFT JOIN sys_post p ON up.post_id = p.post_id WHERE up.user_id = ? 
+10:09:24.730 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostsByUserId - ==> Parameters: 101(Long)
+10:09:24.763 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostsByUserId - <==      Total: 1
+10:09:24.764 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - ==>  Preparing: SELECT * FROM sys_post 
+10:09:24.765 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - ==> Parameters: 
+10:09:24.798 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - <==      Total: 4
+10:09:24.799 [http-nio-8085-exec-1] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:09:24.801 [http-nio-8085-exec-1] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 用户管理-修改用户(String), com.dfyy.project.system.user.controller.UserController.edit()(String), web(String), admin(String), 研发一部(String), /system/user/edit/101(String), 0:0:0:0:0:0:0:1(String), {}(String), 0(Integer), null
+10:09:24.834 [http-nio-8085-exec-1] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+10:09:46.217 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserById - ==>  Preparing: select u.user_id, u.dept_id, u.login_name, u.user_name, u.email, u.phonenumber, u.sex, u.avatar, u.password, u.salt, u.status, u.refuse_des, u.create_time, d.dept_id, d.parent_id, d.dept_name, d.order_num, d.status as dept_status from sys_user u left join sys_dept d on u.dept_id = d.dept_id left join sys_user_role ur on u.user_id = ur.user_id where u.user_id = ? 
+10:09:46.218 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserById - ==> Parameters: 8(Long)
+10:09:46.254 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserById - <==      Total: 1
+10:09:46.256 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesByUserId - ==>  Preparing: SELECT r.role_id, r.role_name, r.role_key FROM sys_user u LEFT JOIN sys_user_role ur ON u.user_id = ur.user_id LEFT JOIN sys_role r ON ur.role_id = r.role_id WHERE ur.user_id = ? 
+10:09:46.257 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesByUserId - ==> Parameters: 8(Long)
+10:09:46.290 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesByUserId - <==      Total: 0
+10:09:46.290 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - ==>  Preparing: SELECT role_id, role_name, role_key, role_sort, status, create_time, remark FROM sys_role 
+10:09:46.291 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - ==> Parameters: 
+10:09:46.324 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - <==      Total: 2
+10:09:46.326 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostsByUserId - ==>  Preparing: SELECT p.post_id, p.post_name, p.post_code FROM sys_user u LEFT JOIN sys_user_post up ON u.user_id = up.user_id LEFT JOIN sys_post p ON up.post_id = p.post_id WHERE up.user_id = ? 
+10:09:46.327 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostsByUserId - ==> Parameters: 8(Long)
+10:09:46.359 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostsByUserId - <==      Total: 0
+10:09:46.361 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - ==>  Preparing: SELECT * FROM sys_post 
+10:09:46.362 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - ==> Parameters: 
+10:09:46.396 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - <==      Total: 4
+10:09:46.398 [http-nio-8085-exec-9] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:09:46.399 [http-nio-8085-exec-9] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 用户管理-修改用户(String), com.dfyy.project.system.user.controller.UserController.edit()(String), web(String), admin(String), 研发一部(String), /system/user/edit/8(String), 0:0:0:0:0:0:0:1(String), {}(String), 0(Integer), null
+10:09:46.432 [http-nio-8085-exec-9] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+10:10:17.089 [http-nio-8085-exec-3] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - ==>  Preparing: replace into sys_user_online(sessionId, login_name, dept_name, ipaddr, browser, os, status, start_timestsamp, last_access_time, expire_time) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:10:17.090 [http-nio-8085-exec-3] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - ==> Parameters: 998884ae-1c4f-4df1-b815-b6c0b502fd51(String), admin(String), 研发一部(String), 0:0:0:0:0:0:0:1(String), Chrome(String), Windows 7(String), on_line(String), 2018-08-29 09:22:40.764(Timestamp), 2018-08-29 10:10:17.088(Timestamp), 1800000(Long)
+10:10:17.124 [http-nio-8085-exec-3] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - <==    Updates: 2
+10:10:17.129 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - ==>  Preparing: SELECT role_id, role_name, role_key, role_sort, status, create_time, remark FROM sys_role 
+10:10:17.130 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - ==> Parameters: 
+10:10:17.163 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - <==      Total: 2
+10:10:17.164 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - ==>  Preparing: SELECT * FROM sys_post 
+10:10:17.166 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - ==> Parameters: 
+10:10:17.202 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - <==      Total: 4
+10:10:17.203 [http-nio-8085-exec-3] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:10:17.204 [http-nio-8085-exec-3] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 用户管理-新增用户(String), com.dfyy.project.system.user.controller.UserController.add()(String), web(String), admin(String), 研发一部(String), /system/user/add(String), 0:0:0:0:0:0:0:1(String), {}(String), 0(Integer), null
+10:10:17.238 [http-nio-8085-exec-3] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+10:10:32.246 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - ==>  Preparing: SELECT role_id, role_name, role_key, role_sort, status, create_time, remark FROM sys_role 
+10:10:32.247 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - ==> Parameters: 
+10:10:32.280 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - <==      Total: 2
+10:10:32.281 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - ==>  Preparing: SELECT * FROM sys_post 
+10:10:32.282 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - ==> Parameters: 
+10:10:32.315 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - <==      Total: 4
+10:10:32.317 [http-nio-8085-exec-4] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:10:32.317 [http-nio-8085-exec-4] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 用户管理-新增用户(String), com.dfyy.project.system.user.controller.UserController.add()(String), web(String), admin(String), 研发一部(String), /system/user/add(String), 0:0:0:0:0:0:0:1(String), {}(String), 0(Integer), null
+10:10:32.351 [http-nio-8085-exec-4] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+10:11:16.627 [http-nio-8085-exec-1] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:11:16.628 [http-nio-8085-exec-1] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 角色管理-新增角色(String), com.dfyy.project.system.role.controller.RoleController.add()(String), web(String), admin(String), 研发一部(String), /system/role/add(String), 0:0:0:0:0:0:0:1(String), {}(String), 0(Integer), null
+10:11:16.662 [http-nio-8085-exec-1] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+10:11:16.785 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==>  Preparing: select menu_id, menu_name, parent_id, order_num, url, menu_type, visible, perms, icon, create_by, create_time from sys_menu 
+10:11:16.787 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==> Parameters: 
+10:11:16.828 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - <==      Total: 74
+10:11:27.174 [http-nio-8085-exec-10] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - ==>  Preparing: replace into sys_user_online(sessionId, login_name, dept_name, ipaddr, browser, os, status, start_timestsamp, last_access_time, expire_time) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:11:27.178 [http-nio-8085-exec-10] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - ==> Parameters: 998884ae-1c4f-4df1-b815-b6c0b502fd51(String), admin(String), 研发一部(String), 0:0:0:0:0:0:0:1(String), Chrome(String), Windows 7(String), on_line(String), 2018-08-29 09:22:40.764(Timestamp), 2018-08-29 10:11:27.173(Timestamp), 1800000(Long)
+10:11:27.213 [http-nio-8085-exec-10] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - <==    Updates: 2
+10:11:27.215 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.role.dao.IRoleDao.checkRoleNameUnique - ==>  Preparing: select role_id, role_name, role_key, role_sort, status, create_time from sys_role where role_name=? 
+10:11:27.216 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.role.dao.IRoleDao.checkRoleNameUnique - ==> Parameters: 业务员(String)
+10:11:27.249 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.role.dao.IRoleDao.checkRoleNameUnique - <==      Total: 0
+10:11:42.673 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.role.dao.IRoleDao.insertRole - ==>  Preparing: insert into sys_role( role_name, role_key, role_sort, remark, create_by, create_time )values( ?, ?, ?, ?, ?, sysdate() ) 
+10:11:42.675 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.role.dao.IRoleDao.insertRole - ==> Parameters: 业务员(String), salesman(String), 3(String), 业务员(String), admin(String)
+10:11:42.715 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.role.dao.IRoleDao.insertRole - <==    Updates: 1
+10:11:42.717 [http-nio-8085-exec-6] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:11:42.718 [http-nio-8085-exec-6] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 角色管理-保存角色(String), com.dfyy.project.system.role.controller.RoleController.save()(String), web(String), admin(String), 研发一部(String), /system/role/save(String), 0:0:0:0:0:0:0:1(String), {"roleName":["业务员"],"roleKey":["salesman"],"roleSort":["3"],"status":["0"],"remark":["业务员"],"menuIds":[""]}(String), 0(Integer), null
+10:11:42.751 [http-nio-8085-exec-6] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+10:11:43.721 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - ==>  Preparing: SELECT count(0) FROM sys_role 
+10:11:43.722 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - ==> Parameters: 
+10:11:43.753 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - <==      Total: 1
+10:11:43.755 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - ==>  Preparing: SELECT role_id, role_name, role_key, role_sort, status, create_time, remark FROM sys_role order by role_sort asc LIMIT ? 
+10:11:43.756 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - ==> Parameters: 10(Integer)
+10:11:43.788 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - <==      Total: 3
+10:11:50.395 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - ==>  Preparing: SELECT role_id, role_name, role_key, role_sort, status, create_time, remark FROM sys_role 
+10:11:50.397 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - ==> Parameters: 
+10:11:50.431 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - <==      Total: 3
+10:11:50.436 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - ==>  Preparing: SELECT * FROM sys_post 
+10:11:50.437 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - ==> Parameters: 
+10:11:50.469 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - <==      Total: 4
+10:11:50.470 [http-nio-8085-exec-7] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:11:50.471 [http-nio-8085-exec-7] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 用户管理-新增用户(String), com.dfyy.project.system.user.controller.UserController.add()(String), web(String), admin(String), 研发一部(String), /system/user/add(String), 0:0:0:0:0:0:0:1(String), {}(String), 0(Integer), null
+10:11:50.504 [http-nio-8085-exec-7] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+10:12:28.423 [http-nio-8085-exec-10] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - ==>  Preparing: replace into sys_user_online(sessionId, login_name, dept_name, ipaddr, browser, os, status, start_timestsamp, last_access_time, expire_time) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:12:28.427 [http-nio-8085-exec-10] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - ==> Parameters: 998884ae-1c4f-4df1-b815-b6c0b502fd51(String), admin(String), 研发一部(String), 0:0:0:0:0:0:0:1(String), Chrome(String), Windows 7(String), on_line(String), 2018-08-29 09:22:40.764(Timestamp), 2018-08-29 10:12:28.422(Timestamp), 1800000(Long)
+10:12:28.462 [http-nio-8085-exec-10] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - <==    Updates: 2
+10:12:28.466 [http-nio-8085-exec-10] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:12:28.468 [http-nio-8085-exec-10] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 角色管理-新增角色(String), com.dfyy.project.system.role.controller.RoleController.add()(String), web(String), admin(String), 研发一部(String), /system/role/add(String), 0:0:0:0:0:0:0:1(String), {}(String), 0(Integer), null
+10:12:28.502 [http-nio-8085-exec-10] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+10:12:28.612 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==>  Preparing: select menu_id, menu_name, parent_id, order_num, url, menu_type, visible, perms, icon, create_by, create_time from sys_menu 
+10:12:28.612 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==> Parameters: 
+10:12:28.654 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - <==      Total: 74
+10:12:35.279 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.role.dao.IRoleDao.checkRoleNameUnique - ==>  Preparing: select role_id, role_name, role_key, role_sort, status, create_time from sys_role where role_name=? 
+10:12:35.280 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.role.dao.IRoleDao.checkRoleNameUnique - ==> Parameters: 教练(String)
+10:12:35.313 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.role.dao.IRoleDao.checkRoleNameUnique - <==      Total: 0
+10:12:41.777 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+10:12:41.779 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+10:12:41.779 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2018-08-29 09:42:41(String)
+10:12:41.813 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 0
+10:12:41.814 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. No sessions were stopped.
+10:12:46.317 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleDao.insertRole - ==>  Preparing: insert into sys_role( role_name, role_key, role_sort, remark, create_by, create_time )values( ?, ?, ?, ?, ?, sysdate() ) 
+10:12:46.318 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleDao.insertRole - ==> Parameters: 教练(String), coach(String), 4(String), 教练(String), admin(String)
+10:12:46.350 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleDao.insertRole - <==    Updates: 1
+10:12:46.352 [http-nio-8085-exec-9] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:12:46.352 [http-nio-8085-exec-9] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 角色管理-保存角色(String), com.dfyy.project.system.role.controller.RoleController.save()(String), web(String), admin(String), 研发一部(String), /system/role/save(String), 0:0:0:0:0:0:0:1(String), {"roleName":["教练"],"roleKey":["coach"],"roleSort":["4"],"status":["0"],"remark":["教练"],"menuIds":[""]}(String), 0(Integer), null
+10:12:46.385 [http-nio-8085-exec-9] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+10:12:47.273 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - ==>  Preparing: SELECT count(0) FROM sys_role 
+10:12:47.274 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - ==> Parameters: 
+10:12:47.307 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - <==      Total: 1
+10:12:47.309 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - ==>  Preparing: SELECT role_id, role_name, role_key, role_sort, status, create_time, remark FROM sys_role order by role_sort asc LIMIT ? 
+10:12:47.310 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - ==> Parameters: 10(Integer)
+10:12:47.342 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - <==      Total: 4
+10:12:48.771 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleById - ==>  Preparing: select role_id, role_name, role_key, role_sort, status, create_time, remark from sys_role u where u.role_id = ? 
+10:12:48.773 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleById - ==> Parameters: 1(Long)
+10:12:48.807 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleById - <==      Total: 1
+10:12:48.809 [http-nio-8085-exec-7] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:12:48.810 [http-nio-8085-exec-7] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 角色管理-修改角色(String), com.dfyy.project.system.role.controller.RoleController.edit()(String), web(String), admin(String), 研发一部(String), /system/role/edit/1(String), 0:0:0:0:0:0:0:1(String), {}(String), 0(Integer), null
+10:12:48.844 [http-nio-8085-exec-7] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+10:12:48.971 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==>  Preparing: select menu_id, menu_name, parent_id, order_num, url, menu_type, visible, perms, icon, create_by, create_time from sys_menu 
+10:12:48.972 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==> Parameters: 
+10:12:49.009 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - <==      Total: 74
+10:12:49.011 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuTree - ==>  Preparing: select concat(m.menu_id, m.perms) as perms from sys_menu m left join sys_role_menu rm on m.menu_id = rm.menu_id where rm.role_id = ? order by m.parent_id, m.order_num 
+10:12:49.012 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuTree - ==> Parameters: 1(Long)
+10:12:49.047 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuTree - <==      Total: 74
+10:12:53.722 [http-nio-8085-exec-2] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleById - ==>  Preparing: select role_id, role_name, role_key, role_sort, status, create_time, remark from sys_role u where u.role_id = ? 
+10:12:53.724 [http-nio-8085-exec-2] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleById - ==> Parameters: 2(Long)
+10:12:53.758 [http-nio-8085-exec-2] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleById - <==      Total: 1
+10:12:53.762 [http-nio-8085-exec-2] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:12:53.763 [http-nio-8085-exec-2] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 角色管理-修改角色(String), com.dfyy.project.system.role.controller.RoleController.edit()(String), web(String), admin(String), 研发一部(String), /system/role/edit/2(String), 0:0:0:0:0:0:0:1(String), {}(String), 0(Integer), null
+10:12:53.798 [http-nio-8085-exec-2] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+10:12:53.877 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==>  Preparing: select menu_id, menu_name, parent_id, order_num, url, menu_type, visible, perms, icon, create_by, create_time from sys_menu 
+10:12:53.878 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==> Parameters: 
+10:12:53.916 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - <==      Total: 74
+10:12:53.918 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuTree - ==>  Preparing: select concat(m.menu_id, m.perms) as perms from sys_menu m left join sys_role_menu rm on m.menu_id = rm.menu_id where rm.role_id = ? order by m.parent_id, m.order_num 
+10:12:53.918 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuTree - ==> Parameters: 2(Long)
+10:12:53.951 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuTree - <==      Total: 0
+10:12:57.970 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleById - ==>  Preparing: select role_id, role_name, role_key, role_sort, status, create_time, remark from sys_role u where u.role_id = ? 
+10:12:57.972 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleById - ==> Parameters: 4(Long)
+10:12:58.007 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleById - <==      Total: 1
+10:12:58.011 [http-nio-8085-exec-4] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:12:58.012 [http-nio-8085-exec-4] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 角色管理-修改角色(String), com.dfyy.project.system.role.controller.RoleController.edit()(String), web(String), admin(String), 研发一部(String), /system/role/edit/4(String), 0:0:0:0:0:0:0:1(String), {}(String), 0(Integer), null
+10:12:58.045 [http-nio-8085-exec-4] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+10:12:58.133 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==>  Preparing: select menu_id, menu_name, parent_id, order_num, url, menu_type, visible, perms, icon, create_by, create_time from sys_menu 
+10:12:58.133 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==> Parameters: 
+10:12:58.170 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - <==      Total: 74
+10:12:58.171 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuTree - ==>  Preparing: select concat(m.menu_id, m.perms) as perms from sys_menu m left join sys_role_menu rm on m.menu_id = rm.menu_id where rm.role_id = ? order by m.parent_id, m.order_num 
+10:12:58.172 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuTree - ==> Parameters: 4(Long)
+10:12:58.204 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuTree - <==      Total: 0
+10:13:02.922 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleDao.checkRoleNameUnique - ==>  Preparing: select role_id, role_name, role_key, role_sort, status, create_time from sys_role where role_name=? 
+10:13:02.923 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleDao.checkRoleNameUnique - ==> Parameters: 业务员(String)
+10:13:02.956 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleDao.checkRoleNameUnique - <==      Total: 1
+10:13:03.002 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.role.dao.IRoleDao.updateRole - ==>  Preparing: update sys_role SET role_name = ?, role_key = ?, role_sort = ?, status = ?, remark = ?, update_by = ?, update_time = sysdate() where 1=1 and role_id = ? 
+10:13:03.004 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.role.dao.IRoleDao.updateRole - ==> Parameters: 业务员(String), salesman(String), 3(String), 1(Integer), 业务员(String), admin(String), 4(Long)
+10:13:03.037 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.role.dao.IRoleDao.updateRole - <==    Updates: 1
+10:13:03.039 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.role.dao.IRoleMenuDao.deleteRoleMenuByRoleId - ==>  Preparing: delete from sys_role_menu where role_id=? 
+10:13:03.040 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.role.dao.IRoleMenuDao.deleteRoleMenuByRoleId - ==> Parameters: 4(Long)
+10:13:03.073 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.role.dao.IRoleMenuDao.deleteRoleMenuByRoleId - <==    Updates: 0
+10:13:03.075 [http-nio-8085-exec-3] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:13:03.077 [http-nio-8085-exec-3] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 角色管理-保存角色(String), com.dfyy.project.system.role.controller.RoleController.save()(String), web(String), admin(String), 研发一部(String), /system/role/save(String), 0:0:0:0:0:0:0:1(String), {"roleId":["4"],"roleName":["业务员"],"roleKey":["salesman"],"roleSort":["3"],"status":["1"],"remark":["业务员"],"menuIds":[""]}(String), 0(Integer), null
+10:13:03.110 [http-nio-8085-exec-3] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+10:13:04.015 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - ==>  Preparing: SELECT count(0) FROM sys_role 
+10:13:04.015 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - ==> Parameters: 
+10:13:04.048 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - <==      Total: 1
+10:13:04.050 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - ==>  Preparing: SELECT role_id, role_name, role_key, role_sort, status, create_time, remark FROM sys_role order by role_sort asc LIMIT ? 
+10:13:04.051 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - ==> Parameters: 10(Integer)
+10:13:04.083 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - <==      Total: 4
+10:13:07.172 [http-nio-8085-exec-5] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - ==>  Preparing: SELECT role_id, role_name, role_key, role_sort, status, create_time, remark FROM sys_role 
+10:13:07.173 [http-nio-8085-exec-5] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - ==> Parameters: 
+10:13:07.209 [http-nio-8085-exec-5] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - <==      Total: 4
+10:13:07.211 [http-nio-8085-exec-5] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - ==>  Preparing: SELECT * FROM sys_post 
+10:13:07.211 [http-nio-8085-exec-5] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - ==> Parameters: 
+10:13:07.245 [http-nio-8085-exec-5] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - <==      Total: 4
+10:13:07.246 [http-nio-8085-exec-5] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:13:07.247 [http-nio-8085-exec-5] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 用户管理-新增用户(String), com.dfyy.project.system.user.controller.UserController.add()(String), web(String), admin(String), 研发一部(String), /system/user/add(String), 0:0:0:0:0:0:0:1(String), {}(String), 0(Integer), null
+10:13:07.286 [http-nio-8085-exec-5] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+10:13:10.739 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenusByUserId - ==>  Preparing: select distinct m.menu_id, m.parent_id, m.menu_name, m.url, m.perms , m.menu_type, m.icon, m.order_num, m.create_time from sys_menu m left join sys_role_menu rm on m.menu_id = rm.menu_id left join sys_user_role ur on rm.role_id = ur.role_id where ur.user_id = ? and m.menu_type in ('M', 'C') and m.visible = 0 order by m.order_num 
+10:13:10.742 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenusByUserId - ==> Parameters: 1(Long)
+10:13:10.778 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenusByUserId - <==      Total: 15
+10:13:13.435 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList_COUNT - ==>  Preparing: SELECT count(0) FROM sys_user 
+10:13:13.436 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList_COUNT - ==> Parameters: 
+10:13:13.440 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.dept.dao.IDeptDao.selectDeptAll - ==>  Preparing: select dept_id, parent_id, dept_name, order_num, leader, phone, email, status, create_by, create_time from sys_dept 
+10:13:13.441 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.dept.dao.IDeptDao.selectDeptAll - ==> Parameters: 
+10:13:13.468 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList_COUNT - <==      Total: 1
+10:13:13.470 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList - ==>  Preparing: SELECT user_id, dept_id, login_name, user_name, email, phonenumber, password, sex, avatar, salt, user_type, status, refuse_des, create_by, create_time FROM sys_user order by create_time desc LIMIT ? 
+10:13:13.471 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList - ==> Parameters: 10(Integer)
+10:13:13.477 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.dept.dao.IDeptDao.selectDeptAll - <==      Total: 7
+10:13:13.508 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList - <==      Total: 10
+10:13:14.534 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - ==>  Preparing: SELECT role_id, role_name, role_key, role_sort, status, create_time, remark FROM sys_role 
+10:13:14.535 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - ==> Parameters: 
+10:13:14.569 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - <==      Total: 4
+10:13:14.571 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - ==>  Preparing: SELECT * FROM sys_post 
+10:13:14.572 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - ==> Parameters: 
+10:13:14.607 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - <==      Total: 4
+10:13:14.609 [http-nio-8085-exec-4] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:13:14.610 [http-nio-8085-exec-4] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 用户管理-新增用户(String), com.dfyy.project.system.user.controller.UserController.add()(String), web(String), admin(String), 研发一部(String), /system/user/add(String), 0:0:0:0:0:0:0:1(String), {}(String), 0(Integer), null
+10:13:14.645 [http-nio-8085-exec-4] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+10:13:17.854 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - ==>  Preparing: SELECT role_id, role_name, role_key, role_sort, status, create_time, remark FROM sys_role 
+10:13:17.854 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - ==> Parameters: 
+10:13:17.889 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - <==      Total: 4
+10:13:17.890 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - ==>  Preparing: SELECT * FROM sys_post 
+10:13:17.890 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - ==> Parameters: 
+10:13:17.926 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - <==      Total: 4
+10:13:17.927 [http-nio-8085-exec-1] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:13:17.928 [http-nio-8085-exec-1] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 用户管理-新增用户(String), com.dfyy.project.system.user.controller.UserController.add()(String), web(String), admin(String), 研发一部(String), /system/user/add(String), 0:0:0:0:0:0:0:1(String), {}(String), 0(Integer), null
+10:13:17.961 [http-nio-8085-exec-1] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+10:13:20.343 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - ==>  Preparing: SELECT count(0) FROM sys_role 
+10:13:20.343 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - ==> Parameters: 
+10:13:20.376 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - <==      Total: 1
+10:13:20.378 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - ==>  Preparing: SELECT role_id, role_name, role_key, role_sort, status, create_time, remark FROM sys_role order by role_sort asc LIMIT ? 
+10:13:20.379 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - ==> Parameters: 10(Integer)
+10:13:20.412 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - <==      Total: 4
+10:13:23.318 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleById - ==>  Preparing: select role_id, role_name, role_key, role_sort, status, create_time, remark from sys_role u where u.role_id = ? 
+10:13:23.320 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleById - ==> Parameters: 4(Long)
+10:13:23.354 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleById - <==      Total: 1
+10:13:23.357 [http-nio-8085-exec-7] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:13:23.358 [http-nio-8085-exec-7] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 角色管理-修改角色(String), com.dfyy.project.system.role.controller.RoleController.edit()(String), web(String), admin(String), 研发一部(String), /system/role/edit/4(String), 0:0:0:0:0:0:0:1(String), {}(String), 0(Integer), null
+10:13:23.394 [http-nio-8085-exec-7] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+10:13:23.483 [http-nio-8085-exec-5] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==>  Preparing: select menu_id, menu_name, parent_id, order_num, url, menu_type, visible, perms, icon, create_by, create_time from sys_menu 
+10:13:23.484 [http-nio-8085-exec-5] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==> Parameters: 
+10:13:23.521 [http-nio-8085-exec-5] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - <==      Total: 74
+10:13:23.522 [http-nio-8085-exec-5] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuTree - ==>  Preparing: select concat(m.menu_id, m.perms) as perms from sys_menu m left join sys_role_menu rm on m.menu_id = rm.menu_id where rm.role_id = ? order by m.parent_id, m.order_num 
+10:13:23.523 [http-nio-8085-exec-5] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuTree - ==> Parameters: 4(Long)
+10:13:23.555 [http-nio-8085-exec-5] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuTree - <==      Total: 0
+10:13:25.427 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.role.dao.IRoleDao.checkRoleNameUnique - ==>  Preparing: select role_id, role_name, role_key, role_sort, status, create_time from sys_role where role_name=? 
+10:13:25.428 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.role.dao.IRoleDao.checkRoleNameUnique - ==> Parameters: 业务员(String)
+10:13:25.461 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.role.dao.IRoleDao.checkRoleNameUnique - <==      Total: 1
+10:13:25.513 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleDao.updateRole - ==>  Preparing: update sys_role SET role_name = ?, role_key = ?, role_sort = ?, status = ?, remark = ?, update_by = ?, update_time = sysdate() where 1=1 and role_id = ? 
+10:13:25.514 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleDao.updateRole - ==> Parameters: 业务员(String), salesman(String), 3(String), 0(Integer), 业务员(String), admin(String), 4(Long)
+10:13:25.546 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleDao.updateRole - <==    Updates: 1
+10:13:25.547 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleMenuDao.deleteRoleMenuByRoleId - ==>  Preparing: delete from sys_role_menu where role_id=? 
+10:13:25.548 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleMenuDao.deleteRoleMenuByRoleId - ==> Parameters: 4(Long)
+10:13:25.580 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleMenuDao.deleteRoleMenuByRoleId - <==    Updates: 0
+10:13:25.582 [http-nio-8085-exec-9] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:13:25.584 [http-nio-8085-exec-9] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 角色管理-保存角色(String), com.dfyy.project.system.role.controller.RoleController.save()(String), web(String), admin(String), 研发一部(String), /system/role/save(String), 0:0:0:0:0:0:0:1(String), {"roleId":["4"],"roleName":["业务员"],"roleKey":["salesman"],"roleSort":["3"],"status":["0"],"remark":["业务员"],"menuIds":[""]}(String), 0(Integer), null
+10:13:25.616 [http-nio-8085-exec-9] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+10:13:26.508 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - ==>  Preparing: SELECT count(0) FROM sys_role 
+10:13:26.508 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - ==> Parameters: 
+10:13:26.541 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - <==      Total: 1
+10:13:26.545 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - ==>  Preparing: SELECT role_id, role_name, role_key, role_sort, status, create_time, remark FROM sys_role order by role_sort asc LIMIT ? 
+10:13:26.546 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - ==> Parameters: 10(Integer)
+10:13:26.580 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - <==      Total: 4
+10:14:24.964 [http-nio-8085-exec-7] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - ==>  Preparing: replace into sys_user_online(sessionId, login_name, dept_name, ipaddr, browser, os, status, start_timestsamp, last_access_time, expire_time) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:14:24.965 [http-nio-8085-exec-7] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - ==> Parameters: 998884ae-1c4f-4df1-b815-b6c0b502fd51(String), admin(String), 研发一部(String), 0:0:0:0:0:0:0:1(String), Chrome(String), Windows 7(String), on_line(String), 2018-08-29 09:22:40.764(Timestamp), 2018-08-29 10:14:24.962(Timestamp), 1800000(Long)
+10:14:24.999 [http-nio-8085-exec-7] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - <==    Updates: 2
+10:14:25.003 [http-nio-8085-exec-7] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:14:25.004 [http-nio-8085-exec-7] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 角色管理-新增角色(String), com.dfyy.project.system.role.controller.RoleController.add()(String), web(String), admin(String), 研发一部(String), /system/role/add(String), 0:0:0:0:0:0:0:1(String), {}(String), 0(Integer), null
+10:14:25.038 [http-nio-8085-exec-7] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+10:14:25.144 [http-nio-8085-exec-5] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==>  Preparing: select menu_id, menu_name, parent_id, order_num, url, menu_type, visible, perms, icon, create_by, create_time from sys_menu 
+10:14:25.144 [http-nio-8085-exec-5] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==> Parameters: 
+10:14:25.183 [http-nio-8085-exec-5] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - <==      Total: 74
+10:14:29.352 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.role.dao.IRoleDao.checkRoleNameUnique - ==>  Preparing: select role_id, role_name, role_key, role_sort, status, create_time from sys_role where role_name=? 
+10:14:29.353 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.role.dao.IRoleDao.checkRoleNameUnique - ==> Parameters: 财务(String)
+10:14:29.386 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.role.dao.IRoleDao.checkRoleNameUnique - <==      Total: 0
+10:14:36.665 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleDao.insertRole - ==>  Preparing: insert into sys_role( role_name, role_key, role_sort, remark, create_by, create_time )values( ?, ?, ?, ?, ?, sysdate() ) 
+10:14:36.667 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleDao.insertRole - ==> Parameters: 财务(String), finance(String), 5(String), 财务(String), admin(String)
+10:14:36.708 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleDao.insertRole - <==    Updates: 1
+10:14:36.710 [http-nio-8085-exec-9] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:14:36.711 [http-nio-8085-exec-9] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 角色管理-保存角色(String), com.dfyy.project.system.role.controller.RoleController.save()(String), web(String), admin(String), 研发一部(String), /system/role/save(String), 0:0:0:0:0:0:0:1(String), {"roleName":["财务"],"roleKey":["finance"],"roleSort":["5"],"status":["0"],"remark":["财务"],"menuIds":[""]}(String), 0(Integer), null
+10:14:36.743 [http-nio-8085-exec-9] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+10:14:37.624 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - ==>  Preparing: SELECT count(0) FROM sys_role 
+10:14:37.624 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - ==> Parameters: 
+10:14:37.656 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - <==      Total: 1
+10:14:37.658 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - ==>  Preparing: SELECT role_id, role_name, role_key, role_sort, status, create_time, remark FROM sys_role order by role_sort asc LIMIT ? 
+10:14:37.658 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - ==> Parameters: 10(Integer)
+10:14:37.692 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - <==      Total: 5
+10:14:41.077 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleById - ==>  Preparing: select role_id, role_name, role_key, role_sort, status, create_time, remark from sys_role u where u.role_id = ? 
+10:14:41.078 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleById - ==> Parameters: 1(Long)
+10:14:41.142 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleById - <==      Total: 1
+10:14:41.143 [http-nio-8085-exec-1] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:14:41.144 [http-nio-8085-exec-1] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 角色管理-修改角色(String), com.dfyy.project.system.role.controller.RoleController.edit()(String), web(String), admin(String), 研发一部(String), /system/role/edit/1(String), 0:0:0:0:0:0:0:1(String), {}(String), 0(Integer), null
+10:14:41.178 [http-nio-8085-exec-1] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+10:14:41.288 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==>  Preparing: select menu_id, menu_name, parent_id, order_num, url, menu_type, visible, perms, icon, create_by, create_time from sys_menu 
+10:14:41.288 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==> Parameters: 
+10:14:41.325 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - <==      Total: 74
+10:14:41.327 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuTree - ==>  Preparing: select concat(m.menu_id, m.perms) as perms from sys_menu m left join sys_role_menu rm on m.menu_id = rm.menu_id where rm.role_id = ? order by m.parent_id, m.order_num 
+10:14:41.327 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuTree - ==> Parameters: 1(Long)
+10:14:41.362 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuTree - <==      Total: 74
+10:15:04.523 [http-nio-8085-exec-2] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:15:04.526 [http-nio-8085-exec-2] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 角色管理-新增角色(String), com.dfyy.project.system.role.controller.RoleController.add()(String), web(String), admin(String), 研发一部(String), /system/role/add(String), 0:0:0:0:0:0:0:1(String), {}(String), 0(Integer), null
+10:15:04.560 [http-nio-8085-exec-2] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+10:15:04.704 [http-nio-8085-exec-5] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==>  Preparing: select menu_id, menu_name, parent_id, order_num, url, menu_type, visible, perms, icon, create_by, create_time from sys_menu 
+10:15:04.705 [http-nio-8085-exec-5] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==> Parameters: 
+10:15:04.748 [http-nio-8085-exec-5] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - <==      Total: 74
+10:15:10.303 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.role.dao.IRoleDao.checkRoleNameUnique - ==>  Preparing: select role_id, role_name, role_key, role_sort, status, create_time from sys_role where role_name=? 
+10:15:10.305 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.role.dao.IRoleDao.checkRoleNameUnique - ==> Parameters: 分馆管理员(String)
+10:15:10.337 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.role.dao.IRoleDao.checkRoleNameUnique - <==      Total: 0
+10:15:18.167 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.role.dao.IRoleDao.insertRole - ==>  Preparing: insert into sys_role( role_name, role_key, role_sort, remark, create_by, create_time )values( ?, ?, ?, ?, ?, sysdate() ) 
+10:15:18.168 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.role.dao.IRoleDao.insertRole - ==> Parameters: 分馆管理员(String), branch(String), 6(String), 分馆管理员(String), admin(String)
+10:15:18.201 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.role.dao.IRoleDao.insertRole - <==    Updates: 1
+10:15:18.202 [http-nio-8085-exec-1] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:15:18.203 [http-nio-8085-exec-1] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 角色管理-保存角色(String), com.dfyy.project.system.role.controller.RoleController.save()(String), web(String), admin(String), 研发一部(String), /system/role/save(String), 0:0:0:0:0:0:0:1(String), {"roleName":["分馆管理员"],"roleKey":["branch"],"roleSort":["6"],"status":["0"],"remark":["分馆管理员"],"menuIds":[""]}(String), 0(Integer), null
+10:15:18.236 [http-nio-8085-exec-1] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+10:15:19.156 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - ==>  Preparing: SELECT count(0) FROM sys_role 
+10:15:19.157 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - ==> Parameters: 
+10:15:19.189 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - <==      Total: 1
+10:15:19.191 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - ==>  Preparing: SELECT role_id, role_name, role_key, role_sort, status, create_time, remark FROM sys_role order by role_sort asc LIMIT ? 
+10:15:19.192 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - ==> Parameters: 10(Integer)
+10:15:19.225 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - <==      Total: 6
+10:15:46.131 [http-nio-8085-exec-9] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - ==>  Preparing: replace into sys_user_online(sessionId, login_name, dept_name, ipaddr, browser, os, status, start_timestsamp, last_access_time, expire_time) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:15:46.132 [http-nio-8085-exec-9] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - ==> Parameters: 998884ae-1c4f-4df1-b815-b6c0b502fd51(String), admin(String), 研发一部(String), 0:0:0:0:0:0:0:1(String), Chrome(String), Windows 7(String), on_line(String), 2018-08-29 09:22:40.764(Timestamp), 2018-08-29 10:15:46.13(Timestamp), 1800000(Long)
+10:15:46.170 [http-nio-8085-exec-9] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - <==    Updates: 2
+10:15:46.174 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - ==>  Preparing: SELECT role_id, role_name, role_key, role_sort, status, create_time, remark FROM sys_role 
+10:15:46.175 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - ==> Parameters: 
+10:15:46.209 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesAll - <==      Total: 6
+10:15:46.210 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - ==>  Preparing: SELECT * FROM sys_post 
+10:15:46.211 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - ==> Parameters: 
+10:15:46.245 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.post.dao.IPostDao.selectPostAll - <==      Total: 4
+10:15:46.246 [http-nio-8085-exec-9] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:15:46.247 [http-nio-8085-exec-9] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 用户管理-新增用户(String), com.dfyy.project.system.user.controller.UserController.add()(String), web(String), admin(String), 研发一部(String), /system/user/add(String), 0:0:0:0:0:0:0:1(String), {}(String), 0(Integer), null
+10:15:46.279 [http-nio-8085-exec-9] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+10:22:41.781 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+10:22:41.784 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+10:22:41.785 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2018-08-29 09:52:41(String)
+10:22:41.848 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 0
+10:22:41.849 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. No sessions were stopped.
+10:23:45.991 [http-nio-8085-exec-2] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenusByUserId - ==>  Preparing: select distinct m.menu_id, m.parent_id, m.menu_name, m.url, m.perms , m.menu_type, m.icon, m.order_num, m.create_time from sys_menu m left join sys_role_menu rm on m.menu_id = rm.menu_id left join sys_user_role ur on rm.role_id = ur.role_id where ur.user_id = ? and m.menu_type in ('M', 'C') and m.visible = 0 order by m.order_num 
+10:23:45.994 [http-nio-8085-exec-2] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenusByUserId - ==> Parameters: 1(Long)
+10:23:46.030 [http-nio-8085-exec-2] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenusByUserId - <==      Total: 15
+10:23:46.134 [http-nio-8085-exec-3] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - ==>  Preparing: replace into sys_user_online(sessionId, login_name, dept_name, ipaddr, browser, os, status, start_timestsamp, last_access_time, expire_time) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:23:46.135 [http-nio-8085-exec-3] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - ==> Parameters: 998884ae-1c4f-4df1-b815-b6c0b502fd51(String), admin(String), 研发一部(String), 0:0:0:0:0:0:0:1(String), Chrome(String), Windows 7(String), on_line(String), 2018-08-29 09:22:40.764(Timestamp), 2018-08-29 10:23:46.133(Timestamp), 1800000(Long)
+10:23:46.170 [http-nio-8085-exec-3] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - <==    Updates: 2
+10:23:48.479 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesByUserId - ==>  Preparing: SELECT r.role_id, r.role_name, r.role_key FROM sys_user u LEFT JOIN sys_user_role ur ON u.user_id = ur.user_id LEFT JOIN sys_role r ON ur.role_id = r.role_id WHERE ur.user_id = ? 
+10:23:48.480 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesByUserId - ==> Parameters: 1(Long)
+10:23:48.513 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesByUserId - <==      Total: 1
+10:23:48.515 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectPermsByUserId - ==>  Preparing: select distinct m.perms from sys_menu m left join sys_role_menu rm on m.menu_id = rm.menu_id left join sys_user_role ur on rm.role_id = ur.role_id where ur.user_id = ? 
+10:23:48.516 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectPermsByUserId - ==> Parameters: 1(Long)
+10:23:48.550 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectPermsByUserId - <==      Total: 72
+10:23:48.909 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - ==>  Preparing: SELECT count(0) FROM sys_role 
+10:23:48.910 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - ==> Parameters: 
+10:23:48.942 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - <==      Total: 1
+10:23:48.944 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - ==>  Preparing: SELECT role_id, role_name, role_key, role_sort, status, create_time, remark FROM sys_role order by role_sort asc LIMIT ? 
+10:23:48.945 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - ==> Parameters: 10(Integer)
+10:23:48.977 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - <==      Total: 6
+10:23:57.223 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList_COUNT - ==>  Preparing: SELECT count(0) FROM sys_user 
+10:23:57.223 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList_COUNT - ==> Parameters: 
+10:23:57.256 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList_COUNT - <==      Total: 1
+10:23:57.260 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.dept.dao.IDeptDao.selectDeptAll - ==>  Preparing: select dept_id, parent_id, dept_name, order_num, leader, phone, email, status, create_by, create_time from sys_dept 
+10:23:57.262 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList - ==>  Preparing: SELECT user_id, dept_id, login_name, user_name, email, phonenumber, password, sex, avatar, salt, user_type, status, refuse_des, create_by, create_time FROM sys_user order by create_time desc LIMIT ? 
+10:23:57.262 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.dept.dao.IDeptDao.selectDeptAll - ==> Parameters: 
+10:23:57.262 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList - ==> Parameters: 10(Integer)
+10:23:57.296 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.dept.dao.IDeptDao.selectDeptAll - <==      Total: 7
+10:23:57.297 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList - <==      Total: 10
+10:24:19.103 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleById - ==>  Preparing: select role_id, role_name, role_key, role_sort, status, create_time, remark from sys_role u where u.role_id = ? 
+10:24:19.104 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleById - ==> Parameters: 7(Long)
+10:24:19.138 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleById - <==      Total: 1
+10:24:19.140 [http-nio-8085-exec-10] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:24:19.141 [http-nio-8085-exec-10] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 角色管理-修改角色(String), com.dfyy.project.system.role.controller.RoleController.edit()(String), web(String), admin(String), 研发一部(String), /system/role/edit/7(String), 0:0:0:0:0:0:0:1(String), {}(String), 0(Integer), null
+10:24:19.176 [http-nio-8085-exec-10] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+10:24:19.260 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==>  Preparing: select menu_id, menu_name, parent_id, order_num, url, menu_type, visible, perms, icon, create_by, create_time from sys_menu 
+10:24:19.260 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==> Parameters: 
+10:24:19.301 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - <==      Total: 74
+10:24:19.302 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuTree - ==>  Preparing: select concat(m.menu_id, m.perms) as perms from sys_menu m left join sys_role_menu rm on m.menu_id = rm.menu_id where rm.role_id = ? order by m.parent_id, m.order_num 
+10:24:19.303 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuTree - ==> Parameters: 7(Long)
+10:24:19.336 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuTree - <==      Total: 0
+10:24:21.529 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.role.dao.IRoleDao.checkRoleNameUnique - ==>  Preparing: select role_id, role_name, role_key, role_sort, status, create_time from sys_role where role_name=? 
+10:24:21.530 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.role.dao.IRoleDao.checkRoleNameUnique - ==> Parameters: 分馆管理员(String)
+10:24:21.563 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.role.dao.IRoleDao.checkRoleNameUnique - <==      Total: 1
+10:24:21.609 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.role.dao.IRoleDao.updateRole - ==>  Preparing: update sys_role SET role_name = ?, role_key = ?, role_sort = ?, status = ?, remark = ?, update_by = ?, update_time = sysdate() where 1=1 and role_id = ? 
+10:24:21.610 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.role.dao.IRoleDao.updateRole - ==> Parameters: 分馆管理员(String), branch(String), 6(String), 1(Integer), 分馆管理员(String), admin(String), 7(Long)
+10:24:21.643 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.role.dao.IRoleDao.updateRole - <==    Updates: 1
+10:24:21.644 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.role.dao.IRoleMenuDao.deleteRoleMenuByRoleId - ==>  Preparing: delete from sys_role_menu where role_id=? 
+10:24:21.644 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.role.dao.IRoleMenuDao.deleteRoleMenuByRoleId - ==> Parameters: 7(Long)
+10:24:21.677 [http-nio-8085-exec-3] DEBUG com.dfyy.project.system.role.dao.IRoleMenuDao.deleteRoleMenuByRoleId - <==    Updates: 0
+10:24:21.678 [http-nio-8085-exec-3] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:24:21.679 [http-nio-8085-exec-3] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 角色管理-保存角色(String), com.dfyy.project.system.role.controller.RoleController.save()(String), web(String), admin(String), 研发一部(String), /system/role/save(String), 0:0:0:0:0:0:0:1(String), {"roleId":["7"],"roleName":["分馆管理员"],"roleKey":["branch"],"roleSort":["6"],"status":["1"],"remark":["分馆管理员"],"menuIds":[""]}(String), 0(Integer), null
+10:24:21.711 [http-nio-8085-exec-3] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+10:24:22.641 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - ==>  Preparing: SELECT count(0) FROM sys_role 
+10:24:22.642 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - ==> Parameters: 
+10:24:22.674 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - <==      Total: 1
+10:24:22.676 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - ==>  Preparing: SELECT role_id, role_name, role_key, role_sort, status, create_time, remark FROM sys_role order by role_sort asc LIMIT ? 
+10:24:22.677 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - ==> Parameters: 10(Integer)
+10:24:22.710 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - <==      Total: 6
+10:24:30.363 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleById - ==>  Preparing: select role_id, role_name, role_key, role_sort, status, create_time, remark from sys_role u where u.role_id = ? 
+10:24:30.364 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleById - ==> Parameters: 7(Long)
+10:24:30.397 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleById - <==      Total: 1
+10:24:30.399 [http-nio-8085-exec-4] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:24:30.402 [http-nio-8085-exec-4] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 角色管理-修改角色(String), com.dfyy.project.system.role.controller.RoleController.edit()(String), web(String), admin(String), 研发一部(String), /system/role/edit/7(String), 0:0:0:0:0:0:0:1(String), {}(String), 0(Integer), null
+10:24:30.438 [http-nio-8085-exec-4] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+10:24:30.528 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==>  Preparing: select menu_id, menu_name, parent_id, order_num, url, menu_type, visible, perms, icon, create_by, create_time from sys_menu 
+10:24:30.529 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==> Parameters: 
+10:24:30.565 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - <==      Total: 74
+10:24:30.569 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuTree - ==>  Preparing: select concat(m.menu_id, m.perms) as perms from sys_menu m left join sys_role_menu rm on m.menu_id = rm.menu_id where rm.role_id = ? order by m.parent_id, m.order_num 
+10:24:30.570 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuTree - ==> Parameters: 7(Long)
+10:24:30.603 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuTree - <==      Total: 0
+10:24:32.227 [http-nio-8085-exec-2] DEBUG com.dfyy.project.system.role.dao.IRoleDao.checkRoleNameUnique - ==>  Preparing: select role_id, role_name, role_key, role_sort, status, create_time from sys_role where role_name=? 
+10:24:32.228 [http-nio-8085-exec-2] DEBUG com.dfyy.project.system.role.dao.IRoleDao.checkRoleNameUnique - ==> Parameters: 分馆管理员(String)
+10:24:32.261 [http-nio-8085-exec-2] DEBUG com.dfyy.project.system.role.dao.IRoleDao.checkRoleNameUnique - <==      Total: 1
+10:24:32.317 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.role.dao.IRoleDao.updateRole - ==>  Preparing: update sys_role SET role_name = ?, role_key = ?, role_sort = ?, status = ?, remark = ?, update_by = ?, update_time = sysdate() where 1=1 and role_id = ? 
+10:24:32.318 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.role.dao.IRoleDao.updateRole - ==> Parameters: 分馆管理员(String), branch(String), 6(String), 0(Integer), 分馆管理员(String), admin(String), 7(Long)
+10:24:32.350 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.role.dao.IRoleDao.updateRole - <==    Updates: 1
+10:24:32.351 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.role.dao.IRoleMenuDao.deleteRoleMenuByRoleId - ==>  Preparing: delete from sys_role_menu where role_id=? 
+10:24:32.351 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.role.dao.IRoleMenuDao.deleteRoleMenuByRoleId - ==> Parameters: 7(Long)
+10:24:32.383 [http-nio-8085-exec-10] DEBUG com.dfyy.project.system.role.dao.IRoleMenuDao.deleteRoleMenuByRoleId - <==    Updates: 0
+10:24:32.385 [http-nio-8085-exec-10] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:24:32.387 [http-nio-8085-exec-10] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 角色管理-保存角色(String), com.dfyy.project.system.role.controller.RoleController.save()(String), web(String), admin(String), 研发一部(String), /system/role/save(String), 0:0:0:0:0:0:0:1(String), {"roleId":["7"],"roleName":["分馆管理员"],"roleKey":["branch"],"roleSort":["6"],"status":["0"],"remark":["分馆管理员"],"menuIds":[""]}(String), 0(Integer), null
+10:24:32.419 [http-nio-8085-exec-10] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+10:24:33.343 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - ==>  Preparing: SELECT count(0) FROM sys_role 
+10:24:33.343 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - ==> Parameters: 
+10:24:33.376 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - <==      Total: 1
+10:24:33.378 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - ==>  Preparing: SELECT role_id, role_name, role_key, role_sort, status, create_time, remark FROM sys_role order by role_sort asc LIMIT ? 
+10:24:33.379 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - ==> Parameters: 10(Integer)
+10:24:33.412 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - <==      Total: 6
+10:24:59.831 [http-nio-8085-exec-9] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - ==>  Preparing: replace into sys_user_online(sessionId, login_name, dept_name, ipaddr, browser, os, status, start_timestsamp, last_access_time, expire_time) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:24:59.836 [http-nio-8085-exec-9] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - ==> Parameters: 998884ae-1c4f-4df1-b815-b6c0b502fd51(String), admin(String), 研发一部(String), 0:0:0:0:0:0:0:1(String), Chrome(String), Windows 7(String), on_line(String), 2018-08-29 09:22:40.764(Timestamp), 2018-08-29 10:24:59.83(Timestamp), 1800000(Long)
+10:24:59.871 [http-nio-8085-exec-9] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - <==    Updates: 2
+10:24:59.875 [http-nio-8085-exec-9] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:24:59.876 [http-nio-8085-exec-9] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统管理(String), 角色管理-新增角色(String), com.dfyy.project.system.role.controller.RoleController.add()(String), web(String), admin(String), 研发一部(String), /system/role/add(String), 0:0:0:0:0:0:0:1(String), {}(String), 0(Integer), null
+10:24:59.912 [http-nio-8085-exec-9] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+10:25:00.025 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==>  Preparing: select menu_id, menu_name, parent_id, order_num, url, menu_type, visible, perms, icon, create_by, create_time from sys_menu 
+10:25:00.026 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==> Parameters: 
+10:25:00.063 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - <==      Total: 74
+10:29:12.063 [http-nio-8085-exec-4] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - ==>  Preparing: SELECT count(0) FROM information_schema.tables WHERE table_comment <> '' AND table_schema = (SELECT database()) 
+10:29:12.068 [http-nio-8085-exec-4] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - ==> Parameters: 
+10:29:12.134 [http-nio-8085-exec-4] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - <==      Total: 1
+10:29:12.141 [http-nio-8085-exec-4] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - ==>  Preparing: SELECT table_name, table_comment, create_time, update_time FROM information_schema.tables WHERE table_comment <> '' AND table_schema = (SELECT database()) order by create_time desc LIMIT ? 
+10:29:12.143 [http-nio-8085-exec-4] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - ==> Parameters: 10(Integer)
+10:29:12.181 [http-nio-8085-exec-4] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - <==      Total: 10
+10:29:18.844 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535505697648_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535505697648) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+10:29:20.989 [http-nio-8085-exec-1] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - ==>  Preparing: SELECT count(0) FROM information_schema.tables WHERE table_comment <> '' AND table_schema = (SELECT database()) 
+10:29:20.991 [http-nio-8085-exec-1] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - ==> Parameters: 
+10:29:21.026 [http-nio-8085-exec-1] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - <==      Total: 1
+10:29:21.029 [http-nio-8085-exec-1] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - ==>  Preparing: SELECT table_name, table_comment, create_time, update_time FROM information_schema.tables WHERE table_comment <> '' AND table_schema = (SELECT database()) order by create_time desc LIMIT ?, ? 
+10:29:21.030 [http-nio-8085-exec-1] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - ==> Parameters: 10(Integer), 10(Integer)
+10:29:21.068 [http-nio-8085-exec-1] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - <==      Total: 10
+10:29:23.442 [http-nio-8085-exec-2] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - ==>  Preparing: SELECT count(0) FROM information_schema.tables WHERE table_comment <> '' AND table_schema = (SELECT database()) 
+10:29:23.443 [http-nio-8085-exec-2] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - ==> Parameters: 
+10:29:23.478 [http-nio-8085-exec-2] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - <==      Total: 1
+10:29:23.481 [http-nio-8085-exec-2] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - ==>  Preparing: SELECT table_name, table_comment, create_time, update_time FROM information_schema.tables WHERE table_comment <> '' AND table_schema = (SELECT database()) order by create_time desc LIMIT ?, ? 
+10:29:23.481 [http-nio-8085-exec-2] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - ==> Parameters: 20(Integer), 10(Integer)
+10:29:23.518 [http-nio-8085-exec-2] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - <==      Total: 10
+10:29:25.609 [http-nio-8085-exec-10] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - ==>  Preparing: SELECT count(0) FROM information_schema.tables WHERE table_comment <> '' AND table_schema = (SELECT database()) 
+10:29:25.610 [http-nio-8085-exec-10] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - ==> Parameters: 
+10:29:25.645 [http-nio-8085-exec-10] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - <==      Total: 1
+10:29:25.647 [http-nio-8085-exec-10] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - ==>  Preparing: SELECT table_name, table_comment, create_time, update_time FROM information_schema.tables WHERE table_comment <> '' AND table_schema = (SELECT database()) order by create_time desc LIMIT ?, ? 
+10:29:25.648 [http-nio-8085-exec-10] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - ==> Parameters: 30(Integer), 10(Integer)
+10:29:25.685 [http-nio-8085-exec-10] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - <==      Total: 10
+10:29:27.633 [http-nio-8085-exec-5] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - ==>  Preparing: SELECT count(0) FROM information_schema.tables WHERE table_comment <> '' AND table_schema = (SELECT database()) 
+10:29:27.634 [http-nio-8085-exec-5] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - ==> Parameters: 
+10:29:27.668 [http-nio-8085-exec-5] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - <==      Total: 1
+10:29:27.672 [http-nio-8085-exec-5] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - ==>  Preparing: SELECT table_name, table_comment, create_time, update_time FROM information_schema.tables WHERE table_comment <> '' AND table_schema = (SELECT database()) order by create_time desc LIMIT ?, ? 
+10:29:27.672 [http-nio-8085-exec-5] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - ==> Parameters: 40(Integer), 10(Integer)
+10:29:27.708 [http-nio-8085-exec-5] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - <==      Total: 10
+10:29:33.908 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535505697648_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535505697648) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+10:29:34.949 [http-nio-8085-exec-8] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableByName - ==>  Preparing: select table_name, table_comment, create_time, update_time from information_schema.tables where table_comment <> '' and table_schema = (select database()) and table_name = ? 
+10:29:34.955 [http-nio-8085-exec-8] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableByName - ==> Parameters: t_activity(String)
+10:29:34.987 [http-nio-8085-exec-8] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableByName - <==      Total: 1
+10:29:34.989 [http-nio-8085-exec-8] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableColumnsByName - ==>  Preparing: select column_name, data_type, column_comment from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+10:29:34.990 [http-nio-8085-exec-8] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableColumnsByName - ==> Parameters: t_activity(String)
+10:29:35.025 [http-nio-8085-exec-8] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableColumnsByName - <==      Total: 18
+10:29:35.323 [http-nio-8085-exec-8] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:29:35.324 [http-nio-8085-exec-8] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统工具(String), 代码生成-生成代码(String), com.dfyy.project.tool.gen.controller.GenController.genCode()(String), web(String), admin(String), 研发一部(String), /tool/gen/genCode/t_activity(String), 0:0:0:0:0:0:0:1(String), {}(String), 0(Integer), null
+10:29:35.359 [http-nio-8085-exec-8] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+10:29:48.971 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535505697648_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535505697648) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+10:30:04.037 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535505697648_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535505697648) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+10:30:16.110 [http-nio-8085-exec-6] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableByName - ==>  Preparing: select table_name, table_comment, create_time, update_time from information_schema.tables where table_comment <> '' and table_schema = (select database()) and table_name = ? 
+10:30:16.111 [http-nio-8085-exec-6] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableByName - ==> Parameters: t_activity(String)
+10:30:16.177 [http-nio-8085-exec-6] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableByName - <==      Total: 1
+10:30:16.178 [http-nio-8085-exec-6] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableColumnsByName - ==>  Preparing: select column_name, data_type, column_comment from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+10:30:16.179 [http-nio-8085-exec-6] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableColumnsByName - ==> Parameters: t_activity(String)
+10:30:16.213 [http-nio-8085-exec-6] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableColumnsByName - <==      Total: 18
+10:30:16.262 [http-nio-8085-exec-6] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:30:16.263 [http-nio-8085-exec-6] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - ==> Parameters: 系统工具(String), 代码生成-生成代码(String), com.dfyy.project.tool.gen.controller.GenController.genCode()(String), web(String), admin(String), 研发一部(String), /tool/gen/genCode/t_activity(String), 0:0:0:0:0:0:0:1(String), {}(String), 0(Integer), null
+10:30:16.298 [http-nio-8085-exec-6] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.insertOperlog - <==    Updates: 1
+10:30:19.103 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535505697648_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535505697648) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+10:30:34.168 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535505697648_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535505697648) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+10:30:49.232 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535505697648_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535505697648) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+10:31:04.328 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535505697648_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535505697648) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+10:31:19.392 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535505697648_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535505697648) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+10:31:34.469 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535505697648_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535505697648) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+10:31:49.533 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535505697648_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535505697648) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+10:32:04.599 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535505697648_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535505697648) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+10:32:19.694 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535505697648_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535505697648) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+10:32:34.759 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535505697648_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535505697648) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+10:32:41.785 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+10:32:41.788 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+10:32:41.789 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2018-08-29 10:02:41(String)
+10:32:41.825 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 2
+10:32:41.827 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineById - ==>  Preparing: select * from sys_user_online where sessionid = ? 
+10:32:41.829 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineById - ==> Parameters: 7927ec43-02cf-40f5-b6ba-1f02963438b3(String)
+10:32:41.863 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineById - <==      Total: 1
+10:32:41.865 [pool-2-thread-1] DEBUG com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Invalidated session with id [7927ec43-02cf-40f5-b6ba-1f02963438b3] (stopped)
+10:32:41.866 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineById - ==>  Preparing: select * from sys_user_online where sessionid = ? 
+10:32:41.867 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineById - ==> Parameters: 10b60a30-2d3f-47ba-80e2-65c9af73d743(String)
+10:32:41.900 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineById - <==      Total: 1
+10:32:41.901 [pool-2-thread-1] DEBUG com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Invalidated session with id [10b60a30-2d3f-47ba-80e2-65c9af73d743] (stopped)
+10:32:41.903 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineById - ==>  Preparing: select * from sys_user_online where sessionid = ? 
+10:32:41.903 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineById - ==> Parameters: 7927ec43-02cf-40f5-b6ba-1f02963438b3(String)
+10:32:41.937 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineById - <==      Total: 1
+10:32:41.938 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.deleteOnlineById - ==>  Preparing: delete from sys_user_online where sessionId = ? 
+10:32:41.939 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.deleteOnlineById - ==> Parameters: 7927ec43-02cf-40f5-b6ba-1f02963438b3(String)
+10:32:41.973 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.deleteOnlineById - <==    Updates: 1
+10:32:41.975 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineById - ==>  Preparing: select * from sys_user_online where sessionid = ? 
+10:32:41.975 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineById - ==> Parameters: 10b60a30-2d3f-47ba-80e2-65c9af73d743(String)
+10:32:42.008 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineById - <==      Total: 1
+10:32:42.010 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.deleteOnlineById - ==>  Preparing: delete from sys_user_online where sessionId = ? 
+10:32:42.011 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.deleteOnlineById - ==> Parameters: 10b60a30-2d3f-47ba-80e2-65c9af73d743(String)
+10:32:42.044 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.deleteOnlineById - <==    Updates: 1
+10:32:42.045 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. [2] sessions were stopped.
+10:32:49.856 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535505697648_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535505697648) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+10:33:04.921 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535505697648_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535505697648) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+10:33:20.016 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535505697648_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535505697648) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+10:33:35.080 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535505697648_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535505697648) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+10:33:50.145 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535505697648_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535505697648) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+10:34:05.210 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535505697648_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535505697648) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+10:34:20.274 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535505697648_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535505697648) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+10:34:35.339 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535505697648_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535505697648) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+10:34:50.404 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535505697648_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535505697648) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+10:35:05.500 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535505697648_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535505697648) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+10:35:20.566 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535505697648_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535505697648) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+10:35:35.662 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535505697648_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535505697648) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+10:35:50.727 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535505697648_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535505697648) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+10:36:05.823 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535505697648_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535505697648) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+10:36:20.888 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535505697648_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535505697648) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+10:36:35.952 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535505697648_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535505697648) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+10:36:51.049 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535505697648_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535505697648) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+10:37:06.113 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535505697648_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535505697648) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+10:37:21.177 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535505697648_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535505697648) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+10:37:36.242 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535505697648_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535505697648) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+10:37:51.308 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535505697648_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535505697648) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+10:38:06.373 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535505697648_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535505697648) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+10:38:21.438 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535505697648_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535505697648) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+10:38:36.535 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535505697648_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535505697648) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+10:38:51.612 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535505697648_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535505697648) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+10:39:06.709 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535505697648_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535505697648) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+10:39:21.774 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535505697648_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535505697648) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+10:39:36.839 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535505697648_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535505697648) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+10:39:51.904 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535505697648_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535505697648) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.

@@ -1,0 +1,24 @@
+<!--pages/balance/index.wxml-->
+<view class='Tutor'>
+  <text class='bala'>账户余额（元）</text>
+  <view class='bala01'>
+    <view class='bala02' wx:if="{{balance.advance != null}}">{{balance.advance}}</view>
+    <view class='bala02' wx:if="{{balance.advance == null}}">0.00</view>
+    <navigator class='bala03' url='../Recharge/index?grade={{grade}}'>充值</navigator>
+  </view>
+</view>
+<view class='Tutor03'>收支明细</view>
+<view class='Tutor04' wx:for="{{balance.myBalance}}" wx:for-item="balance">
+  <view class='Tutor05'>
+    <!-- <text class='Tutor07'>{{balance.type}}</text> -->
+    <view class='Tutor07' wx:if="{{balance.type == 2}}"><text>会员充值</text></view>
+     <view class='Tutor07' wx:if="{{balance.type == 3}}"><text>场馆服务费</text></view>
+      <view class='Tutor07' wx:if="{{balance.type == 4}}"><text>私教费</text></view>
+    <text class='Tutor08'>{{balance.create_time}}</text>
+  </view>
+  <view class='Tutor06'>
+  <view class='Tutor07' wx:if="{{balance.type == 2}}"><text>+{{balance.actual_money}}</text></view>
+  <view class='Tutor07' wx:if="{{balance.type != 2}}"><text>-{{balance.actual_money}}</text></view>
+  </view>
+</view>
+

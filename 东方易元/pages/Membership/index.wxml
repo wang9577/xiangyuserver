@@ -1,0 +1,232 @@
+<!--pages/Membership/index.wxml-->
+<import src="../wxParse/wxParse.wxml"/>
+<view class='Stud'>
+  <!--index.wxml-->
+  <view class="swiper-tab">
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">会员级别</view>
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">渠道等级</view>
+  </view>
+  <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight}}px" bindchange="bindChange">
+    <!-- 我是会员级别 -->
+    <swiper-item>
+    <view class='dyna'>
+   <view class='cent'>
+     <image class='cent_pic' mode="widthFix" src='../images/bg-vip.png'></image> 
+    <view class='cent01'>
+      <view class='cent02'>
+        <view class='cent02_left'>
+            <view wx:if="{{myCenter.myCenter.avatarUrl == null}}" ><image class='my_pic01' src='../images/bg-vip.png'></image> </view> 
+            <view wx:if="{{myCenter.myCenter.avatarUrl != null && myCenter.myCenter.avatarUrl.length > 88}}" >
+              <image class='my_pic01' src='{{myCenter.myCenter.avatarUrl}}'></image> 
+            </view>
+            <view wx:if="{{myCenter.myCenter.avatarUrl != null && myCenter.myCenter.avatarUrl.length < 88}}" >
+              <image class='my_pic01' src='{{url}}/imgfile/{{myCenter.myCenter.avatarUrl}}'></image> 
+            </view> 
+          <view class='you'>
+            <text class='name02'>{{myCenter.myCenter.username}}</text>
+            <text class='name03' wx:if="{{myCenter.myCenter.grade == 1}}">普卡卡会员</text>
+            <text class='name03' wx:if="{{myCenter.myCenter.grade == 2}}">黄金卡会员</text>
+            <text class='name03' wx:if="{{myCenter.myCenter.grade == 3}}">白金卡会员</text>
+            <text class='name03' wx:if="{{myCenter.myCenter.grade == 4}}">铂金卡会员</text>
+            <text class='name03' wx:if="{{myCenter.myCenter.grade == 5}}">黑金卡会员</text>
+          </view>
+        </view>
+        <view class='cent02_right'>
+          <navigator url="../quanyi/index" >
+          <image class='my_pic02' src='../images/pici01_03.jpg'></image>
+          <text class='cent04'>会员权益说明</text>
+          <image class='my_pic03' src='../images/pici02_06.jpg'></image>
+          </navigator>
+        </view>
+      </view>
+    </view>
+    <view class='cent03'>
+      <image class='cent_pic03' src='../images/pici03_11.jpg'></image>
+      <text class='cent05' wx:if="{{myCenter.myCenter.grade == 1}}">{{myCenter.myCenter.create_time}}获得普卡会员</text>
+      <text class='cent05' wx:if="{{myCenter.myCenter.grade == 2}}">{{myCenter.myCenter.create_time}}获得黄金卡会员</text>
+      <text class='cent05' wx:if="{{myCenter.myCenter.grade == 3}}">{{myCenter.myCenter.create_time}}获得白金卡会员</text>
+      <text class='cent05' wx:if="{{myCenter.myCenter.grade == 4}}">{{myCenter.myCenter.create_time}}获得铂金卡会员</text>
+      <text class='cent05' wx:if="{{myCenter.myCenter.grade == 5}}">{{myCenter.myCenter.create_time}}获得黑金卡会员</text>
+    </view>
+  </view>
+  <view class='hui'>
+    <view class='hui_bt'>
+      <image class='cent_pic04' src='../images/vip-rights.png'></image>
+      <!-- <text class='cent06'>黄金卡会员权益</text> -->
+      <text class='cent06' wx:if="{{myCenter.myCenter.grade == 1}}">普卡会员权益</text>
+      <text class='cent06' wx:if="{{myCenter.myCenter.grade == 2}}">黄金卡会员权益</text>
+      <text class='cent06' wx:if="{{myCenter.myCenter.grade == 3}}">白金卡会员权益</text>
+      <text class='cent06' wx:if="{{myCenter.myCenter.grade == 4}}">铂金卡会员权益</text>
+      <text class='cent06' wx:if="{{myCenter.myCenter.grade == 5}}">黑金卡会员权益</text>
+      <image class='cent_pic05 cent_pic04' src='../images/vip-rights.png'></image>
+    </view>
+    <view class='cent07'>
+     <template is="wxParse" data="{{wxParseData:quanYi.nodes}}"/>
+    </view>
+  </view>
+</view>
+</swiper-item>
+    <!-- 我是渠道等级 -->
+    <swiper-item>
+    <view class='dyna' style='margin-top:40rpx;'>
+        <!-- 灰线 -->
+        <view class='jour' wx:if="{{myCenter.myRank1 == null}}">
+          <view class='jour_left'>
+            <image class='jour_pic01' src='../images/yuan02_06.jpg'></image>
+            <text class='jour_nr'>V1</text>
+          </view>
+          <view class='jour_right'>
+            <view class='jour_01'>
+              <text class='qour_02'>1星渠道</text>
+              <image class='qour_pic01' src='../images/vip-lock.png'></image>
+            </view>
+          </view>
+        </view>
+        <!-- 红线 -->
+        <view class='jour' wx:if="{{myCenter.myRank1 != null}}">
+          <view class='jour_left'>
+            <image class='jour_pic01' src='../images/yuan01_03.jpg'></image>
+            <text class='jour_nr'>V1</text>
+          </view>
+          <view class='jour_01hover'>
+            <view class='jour_01'>
+              <text class='qour_02'>1星渠道</text>
+              <text class='qour_03'>{{myCenter.myRankTime1}}</text>
+            </view>
+          </view>
+        </view>
+        <!-- 灰线 -->
+        <view class='jour' wx:if="{{myCenter.myRank2 == null}}">
+          <view class='jour_left'>
+            <image class='jour_pic01' src='../images/yuan02_06.jpg'></image>
+            <text class='jour_nr'>V2</text>
+          </view>
+          <view class='jour_right'>
+            <view class='jour_01'>
+              <text class='qour_02'>2星渠道</text>
+              <image class='qour_pic01' src='../images/vip-lock.png'></image>
+            </view>
+          </view>
+        </view>
+        <!-- 红线 -->
+        <view class='jour' wx:if="{{myCenter.myRank2 != null}}">
+          <view class='jour_left'>
+            <image class='jour_pic01' src='../images/yuan01_03.jpg'></image>
+            <text class='jour_nr'>V2</text>
+          </view>
+          <view class='jour_01hover'>
+            <view class='jour_01'>
+              <text class='qour_02'>2星渠道</text>
+              <text class='qour_03'>{{myCenter.myRankTime2}}</text>
+            </view>
+          </view>
+        </view>
+        <!-- 灰线 -->
+        <view class='jour' wx:if="{{myCenter.myRank3 == null}}">
+          <view class='jour_left'>
+            <image class='jour_pic01' src='../images/yuan02_06.jpg'></image>
+            <text class='jour_nr'>V3</text>
+          </view>
+          <view class='jour_right'>
+            <view class='jour_01'>
+              <text class='qour_02'>3星渠道</text>
+              <image class='qour_pic01' src='../images/vip-lock.png'></image>
+            </view>
+          </view>
+        </view>
+        <!-- 红线 -->
+        <view class='jour' wx:if="{{myCenter.myRank3 != null}}">
+          <view class='jour_left'>
+            <image class='jour_pic01' src='../images/yuan01_03.jpg'></image>
+            <text class='jour_nr'>V3</text>
+          </view>
+          <view class='jour_01hover'>
+            <view class='jour_01'>
+              <text class='qour_02'>3星渠道</text>
+              <text class='qour_03'>{{myCenter.myRankTime3}}</text>
+            </view>
+          </view>
+        </view>
+        <!-- 灰线 -->
+        <view class='jour' wx:if="{{myCenter.myRank4 == null}}">
+          <view class='jour_left'>
+            <image class='jour_pic01' src='../images/yuan02_06.jpg'></image>
+            <text class='jour_nr'>V4</text>
+          </view>
+          <view class='jour_right'>
+            <view class='jour_01'>
+              <text class='qour_02'>4星渠道</text>
+              <image class='qour_pic01' src='../images/vip-lock.png'></image>
+            </view>
+          </view>
+        </view>
+        <!-- 红线 -->
+        <view class='jour' wx:if="{{myCenter.myRank4 != null}}">
+          <view class='jour_left'>
+            <image class='jour_pic01' src='../images/yuan01_03.jpg'></image>
+            <text class='jour_nr'>V4</text>
+          </view>
+          <view class='jour_01hover'>
+            <view class='jour_01'>
+              <text class='qour_02'>4星渠道</text>
+              <text class='qour_03'>{{myCenter.myRankTime4}}</text>
+            </view>
+          </view>
+        </view>
+        <!-- 灰线 -->
+        <view class='jour' wx:if="{{myCenter.myRank5 == null}}">
+          <view class='jour_left'>
+            <image class='jour_pic01' src='../images/yuan02_06.jpg'></image>
+            <text class='jour_nr'>V5</text>
+          </view>
+          <view class='jour_right'>
+            <view class='jour_01'>
+              <text class='qour_02'>5星渠道</text>
+              <image class='qour_pic01' src='../images/vip-lock.png'></image>
+            </view>
+          </view>
+        </view>
+        <!-- 红线 -->
+        <view class='jour' wx:if="{{myCenter.myRank5 != null}}">
+          <view class='jour_left'>
+            <image class='jour_pic01' src='../images/yuan01_03.jpg'></image>
+            <text class='jour_nr'>V5</text>
+          </view>
+          <view class='jour_01hover'>
+            <view class='jour_01'>
+              <text class='qour_02'>5星渠道</text>
+              <text class='qour_03'>{{myCenter.myRankTime5}}</text>
+            </view>
+          </view>
+        </view>
+        <!-- 灰线 -->
+        <view class='jour'  wx:if="{{myCenter.myRank6 == null}}">
+          <view class='jour_left'>
+            <image class='jour_pic01' src='../images/yuan02_06.jpg'></image>
+            <text class='jour_nr'>V6</text>
+          </view>
+          <view class='jour_right' style='border-left: 0rpx solid #eee;'>
+            <view class='jour_01'>
+              <text class='qour_02'>6星渠道</text>
+              <image class='qour_pic01' src='../images/vip-lock.png'></image>
+            </view>
+          </view>
+        </view>
+        <!-- 红线 -->
+        <view class='jour'  wx:if="{{myCenter.myRank6 != null}}">
+          <view class='jour_left'>
+            <image class='jour_pic01' src='../images/yuan01_03.jpg'></image>
+            <text class='jour_nr'>V6</text>
+          </view>
+          <view class='jour_01hover' style='border-left: 0rpx solid #eee;'>
+            <view class='jour_01'>
+              <text class='qour_02'>6星渠道</text>
+              <text class='qour_03'>{{myCenter.myRankTime6}}</text>
+            </view>
+          </view>
+        </view>
+        <navigator class='zce' url='../quanyi01/index'>渠道政策说明</navigator>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>

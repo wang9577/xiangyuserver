@@ -1,0 +1,25 @@
+<!--pages/Practice/index.wxml-->
+<view class='record'>
+  <view class='Pract'>{{practiceName}}</view>
+  <view class='record01'  wx:for="{{myPractice}}" wx:for-item="myPractice">
+    <view class='record02'>
+      <image class='curri_pic01' src='../images/foot.png'></image>
+      <text class='record_time'>{{myPractice.startTime}}</text>
+    </view>
+    <view class='record03'>
+      <view class='record04'>
+        <view class='record05'>
+          <text class='record_left'>垂吊重量</text>
+          <text class='record_right'>{{myPractice.weight}}g</text>
+        </view>
+        <view class='record05'>
+          <text class='record_left'>练功感悟</text>
+          <text class='record_right'>{{myPractice.content}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<navigator url='../Addrecord/index?practiceId={{practiceId}}'>
+  <image class='Retu_pic01' src='../images/editor.png'></image>
+</navigator>

@@ -1,0 +1,18 @@
+<!--pages/month/index.wxml-->
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th">姓名</view>
+    <view class="th">时间</view>
+    <view class="th ">课程</view>
+    <view class="th ">提成/金额(元)</view>
+  </view>
+  <block wx:for="{{salesman2}}" wx:for-item="s2">
+    <view class="tr">
+      <view class="td">{{s2.username}}</view>
+      <view class="td">{{s2.createTime}}</view>
+      <view class="td">{{s2.curriculum_name}}</view>
+      <view class="td">{{s2.money}}/{{s2.total_money}}</view>
+    </view>
+  </block>
+</view>
+

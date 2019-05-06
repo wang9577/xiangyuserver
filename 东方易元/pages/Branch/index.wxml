@@ -1,0 +1,20 @@
+<!--pages/Branch/index.wxml-->
+<navigator wx:for="{{branch}}" url='../Branchdet/index?id={{item.id}}'>
+  <view class="weui-cell">
+    <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+      <image class='pic04' src="{{url}}/imgfile/{{item.url}}" />
+    </view>
+    <view class="weui-cell__bd">
+      <view class='words04'>{{item.branchName}}</view>
+      <view class='words05'>
+        <image class='pic' src='../images/position.png'></image>
+        <text class='words'>{{item.city}}</text>
+        <!-- <image class='pic01' src='../images/piuc001_10.jpg'></image> -->
+        <!-- <text class='words'>500米</text> -->
+      </view>
+    </view>
+  </view>
+</navigator>
+
+
+

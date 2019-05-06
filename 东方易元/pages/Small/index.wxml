@@ -1,0 +1,63 @@
+<!--pages/Small/index.wxml-->
+<view class='head'>
+  <image class='pic07' mode='widthFix' src='{{url}}'></image>
+  <!-- <image class='pic08' src='../images/pic07.png'></image>
+  <view class='camp'>
+    <view class='camp_left'>
+      <text class='words08'>6天</text>
+      <text class='words09'>密训营</text>
+    </view>
+    <view class='camp_right'>
+      <text class='words08'>3天</text>
+      <text class='words09'>私教习练实修</text>
+    </view>
+  </view>
+</view>
+<view class='target'> -->
+<view><image class='pic071 pic07' mode='widthFix' wx:for="{{picture}}" src='{{urls}}/imgfile/{{item.image_id}}'></image></view>
+  <!-- <view class='target_bt'>
+    <image class='pic09' src='../images/pic04.png'></image>
+    <text class='target01'>目</text>
+    <text class='target01'>标</text>
+  </view>
+  <view class='target_nr'>
+    <view class='target02'>
+      <image class='pic010' src='../images/yuan_03.jpg'></image>
+      <text class='target03'>小关功法交付、小关髓友促成转化中关、大关髓友；</text>
+    </view>
+    <view class='target02'>
+      <image class='pic010' src='../images/yuan_03.jpg'></image>
+      <text class='target03'>将练功髓友通过招商，转化成公司渠道商，或通过招股，将练功髓友转换成分馆的出资、出资源股东。</text>
+    </view>
+  </view>
+  <view class='target_bt'>
+    <image class='pic09' src='../images/pic03.png'></image>
+    <text class='target01'>内</text>
+    <text class='target01'>容</text>
+  </view>
+  <view class='target_nr'>
+    <view class='target02'>
+      <image class='pic010' src='../images/yuan_03.jpg'></image>
+      <text class='target03'>密训营内容、功法的详细教授与习练（吐纳、易筋经6式、拍打、垂吊绑法）；</text>
+    </view>
+    <view class='target02'>
+      <image class='pic010' src='../images/yuan_03.jpg'></image>
+      <text class='target03'>小关开筋点穴的重要性和好处、注意事项、转关的必要性、招商招股。</text>
+    </view>
+  </view>
+  <view class='target_bt'>
+    <image class='pic09' src='../images/pic02.png'></image>
+    <text class='target01'>权</text>
+    <text class='target01'>益</text>
+  </view>
+  <view class='target_nr'>
+    <view class='target02'>
+      <image class='pic010' src='../images/yuan_03.jpg'></image>
+      <text class='target03'>赠送100天会员服务，及30次私教服务。</text>
+    </view>
+    <view class='target02'>
+      <image class='pic010' src='../images/yuan_03.jpg'></image>
+      <text class='target03'>练功装备一套：练功服、小关丝束、小关拍打棒、小关垂吊装备。</text>
+    </view>
+  </view> -->
+</view>

@@ -1,0 +1,28 @@
+/* pages/Small/index.wxss */
+.head,.pic07{ position: relative;}
+.pic08,.camp{ position: absolute;}
+.pic08{ z-index: 99; top: 30%;}
+.camp{ bottom: 9%}
+.head,.pic07,.pic08,.camp,.words08,.words09,.target,.target_bt,.target_nr,.target02{ width: 100%;}
+.camp_right,.camp_left{ width: 50%;}
+.camp_right,.camp_left{ text-align: center}
+.head,.pic07,.pic08,.camp,.camp_left,.words08,.words09,.target,.target_bt,.target_nr,.pic09,.target01,.target02,.target03,.pic010{ float: left}
+.camp_right{ float: right}
+.head,.pic08,.camp,.target_nr,.target_bt,.target_nr,.target02{ box-sizing: border-box}
+.pic08{ padding: 0 15%}
+.pic08{ height: 43rpx;}
+.pic08{ display: block}
+.words08,.words09{ color: #fff}
+.words08{ font-size: 18px;}
+.words09,.target03{ font-size: 14px;}
+.words08,.words09{ line-height: 30px;}
+.target03{ line-height: 26px;}
+.target01{ font-size: 18px;}
+.target01,.target03{ color: #333}
+.pic09{ width: 42rpx; height: 42rpx;}
+.pic09,.target01{ margin: 0 8rpx;}
+.target_bt{ padding: 10% 39% 5% 39%}
+.target_nr{ padding: 0 8%}
+.pic010{ width: 8px; height: 8px; margin-top: 9px;}
+.target03{ width: 94%; margin-left: 10px;}
+.target{ margin-bottom: 13%}

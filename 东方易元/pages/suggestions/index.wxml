@@ -1,0 +1,32 @@
+<!--pages/suggestions/index.wxml-->
+<view class="weui-cell weui-cell_access">
+  <view class="weui-cell__bd" name ="proposalMotion">我的健康运动</view>
+  <view class="weui-cell__ft">
+    <input class="weui-input"   bindinput='getProposalMotion'
+    placeholder="{{suggestions.healthy.proposalMotion == null?'请输入':suggestions.healthy.proposalMotion}}"/>
+  </view>
+</view>
+<view class="weui-cell weui-cell_access">
+  <view class="weui-cell__bd" name = "proposalDiet">我的健康饮食</view>
+  <view class="weui-cell__ft">
+    <input class="weui-input" bindinput='getProposalDiet'
+     placeholder="{{suggestions.healthy.proposalDiet == null?'请输入':suggestions.healthy.proposalDiet}}"/>
+  </view>
+</view>
+<view class="weui-cell weui-cell_access">
+  <view class="weui-cell__bd" name = "proposalFood">我的健康食品</view>
+  <view class="weui-cell__ft">
+    <input class="weui-input"  bindinput='getProposalFood'
+    placeholder="{{suggestions.healthy.proposalFood == null?'请输入':suggestions.healthy.proposalFood}}"/>
+  </view>
+</view>
+<view class="weui-cell weui-cell_access" style='border-bottom: none;'>
+  <view class="weui-cell__bd" name="proposalProductDirection'">希望选择的产品方向</view>
+</view>
+<view class='jieshao'>
+  <input class="weui-input" bindinput='getProposalProductDirection'
+placeholder="{{suggestions.healthy.proposalProductDirection == null?'请输入您希望的产品方向':suggestions.healthy.proposalProductDirection}}"/>
+</view>
+<view class="weui-btn-area">
+  <button class="weui-btn_warn" bindtap="save">保存</button>
+</view>

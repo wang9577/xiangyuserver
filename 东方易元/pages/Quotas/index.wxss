@@ -1,0 +1,6 @@
+/* pages/Quotas/index.wxss */
+.Tutor06{ width: 50%; overflow: hidden; height: 92rpx;}
+.Tutor05{ width: 40%; overflow: hidden;}
+.Quotas_bt{ border-bottom: 2rpx solid #eee;}
+.Quotas_right,.Quotas_left{ width: 49%;}
+.Quotas_pic{ width: 1px; height: 37px; margin-top: 30rpx;}

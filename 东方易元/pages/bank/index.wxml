@@ -1,0 +1,49 @@
+<!--pages/bank/index.wxml-->
+<navigator url='' class="weui-cell weui-cell_input">
+  <view class="weui-cell__bd">
+    <view class="weui-label" name="bank">开户行</view>
+  </view>
+  <view class="weui-cell__ft weui-cell__ft_in-access">
+   <input class="weui-input" placeholder="请输入"  bindinput='getbank'/>
+  </view>
+</navigator>
+<view class="weui-cell weui-cell_input">
+  <view class="weui-cell__bd">
+    <view class="weui-label" name="accout">银行卡号</view>
+  </view>
+  <view class="weui-cell__ft">
+    <input class="weui-input" placeholder="请输入" bindinput='getaccout'/>
+  </view>
+</view>
+<view class="weui-cell weui-cell_input">
+  <view class="weui-cell__bd">
+    <view class="weui-label" name="name">开户人姓名</view>
+  </view>
+  <view class="weui-cell__ft weui-cell__ft_in-access">
+    <input class="weui-input" placeholder="请输入" bindinput='getname'/>
+  </view>
+</view>
+<view class="weui-cell weui-cell_input">
+  <view class="weui-cell__bd">
+    <view class="weui-label" name="phone">手机号</view>
+  </view>
+  <view class="weui-cell__ft">
+    <input class="weui-input" placeholder="银行预留手机号" bindinput='getphone'/>
+  </view>
+</view>
+<view class="weui-cell weui-cell_input weui-cell_vcode">
+  <view class="weui-cell__bd">
+    <view class="weui-label" name="xcode">验证码</view>
+  </view>
+  <view class="weui-cell__bd">
+    <input class="weui-input" placeholder="" bindinput='getXCode'/>
+  </view>
+  <view class="weui-cell__ft">
+    <!-- <view class="weui-vcode-btn" bindtap="getCode">获取验证码</view> -->
+    <view class="weui-vcode-btn" wx:if="{{!isShow}}" bindtap="getCode">获取验证码</view>
+      <view class='weui-vcode-btn' wx:if="{{isShow}}">{{sec}}秒后重新发送</view>
+  </view>
+</view>
+<view class="weui-btn-area">
+  <button class="weui-btn_warn" bindtap="save">确认</button>
+</view>

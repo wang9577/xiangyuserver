@@ -1,0 +1,25 @@
+<!--pages/Release/index.wxml-->
+<view class='dyna'>
+  <view class="weui-cell">
+    <view class="weui-cell__bd">
+      <textarea class="weui-textarea" placeholder="这一刻的想法..." bindinput='count'/>
+    </view>
+  </view>
+  <view class="weui-uploader__bd">
+    <view class="weui-uploader__files" id="uploaderFiles">
+      <block wx:for="{{files}}" wx:key="*this">
+        <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+          <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+        </view>
+      </block>
+      <!-- <view class="weui-uploader__file">
+        <image class="weui-uploader__img" src="../images/pic02_07.jpg" mode="aspectFill" />
+        <image class='guanbi' src="../images/delete.png"></image>
+      </view> -->
+    </view>
+    <view class="weui-uploader__input-box">
+      <view class="weui-uploader__input" bindtap="chooseImage"></view>
+    </view>
+  </view>
+  <button class='btn01' bindtap='uploadimg'>发布</button>
+</view>

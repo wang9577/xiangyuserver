@@ -1,0 +1,37 @@
+<!--pages/Profit/index.wxml-->
+<view class='Tutor'>
+  <text class='Tutor01'>累计收益（元）</text>
+  <text class='Tutor02' wx:if="{{profit.revenue == null }}">0.00</text>
+  <text class='Tutor02' wx:if="{{profit.revenue != null }}">{{profit.revenue}}</text>
+   <!-- <text class='Tutor02'>{{profit.revenue}}</text>  -->
+</view>
+<view class='Tutor03'>收益明细</view>
+<view class='Tutor04' wx:for="{{profit.myProfit}}" wx:for-item="myProfit">
+  <image class='Tutor_pic' src='../images/pic03_09.jpg'></image>
+  <view class='Tutor05'>
+    <view class='Tutor07'>{{myProfit.username}}
+    <text class='indi' wx:if="{{myProfit.recommend_status == 0}}">直接介绍</text>
+    <text class='indi' wx:if="{{myProfit.recommend_status == 1}}">间接介绍</text>
+    </view>
+    <text class='Tutor08'>{{myProfit.create_time}}</text>
+  </view>
+  <view class='Tutor06'>
+    <text class='Tutor07'>{{myProfit.extract_money}}</text>
+    <view class='Tutor08_ts Tutor08' wx:if="{{myProfit.status == 0}}"><text>待结算</text></view>
+    <view class='Tutor08' wx:if="{{myProfit.status == 1}}"><text>已结算</text></view>
+    <view class='Tutor08_ts Tutor08' wx:if="{{myProfit.status == 2}}"><text>已逾期</text></view>
+    <!-- <text class='Tutor08_ts Tutor08'>待结算</text> -->
+  </view>
+</view>
+
+<!-- <view class='Tutor04'>
+  <image class='Tutor_pic' src='../images/pic03_09.jpg'></image>
+  <view class='Tutor05'>
+    <view class='Tutor07'>冰美式<text class='indi'>直接介绍</text></view>
+    <text class='Tutor08'>05-02 06:23</text>
+  </view>
+  <view class='Tutor06'>
+    <text class='Tutor07'>100.00</text>
+    <text class='Tutor08_ts Tutor08'>待结算</text>
+  </view>
+</view> -->

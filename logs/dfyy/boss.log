@@ -1,0 +1,412 @@
+11:01:17.308 [main] INFO  com.dfyy.DfyyiApplication - Starting DfyyiApplication on DESKTOP-FM4HDMH with PID 4020 (D:\myproject\dfyy\target\classes started by wqd in D:\myproject\dfyy)
+11:01:17.315 [main] DEBUG com.dfyy.DfyyiApplication - Running with Spring Boot v1.5.10.RELEASE, Spring v4.3.14.RELEASE
+11:01:17.315 [main] INFO  com.dfyy.DfyyiApplication - The following profiles are active: druid
+11:01:17.565 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.6.Final
+11:01:19.438 [main] INFO  org.apache.shiro.cache.ehcache.EhCacheManager - Cache with name 'com.dfyy.framework.shiro.realm.UserRealm.authorizationCache' does not yet exist.  Creating now.
+11:01:19.439 [main] INFO  org.apache.shiro.cache.ehcache.EhCacheManager - Added EhCache named [com.dfyy.framework.shiro.realm.UserRealm.authorizationCache]
+11:01:20.981 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+11:01:22.299 [main] INFO  org.apache.shiro.cache.ehcache.EhCacheManager - Using existing EHCache named [loginRecordCache]
+11:01:23.176 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+11:01:23.177 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.27
+11:01:23.289 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+11:01:23.762 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+11:01:23.774 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+11:01:23.774 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.0 created.
+11:01:23.783 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'dfyyScheduler' with instanceId 'DESKTOP-FM4HDMH1557111683764'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 20 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+11:01:23.783 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'dfyyScheduler' initialized from an externally provided properties instance.
+11:01:23.783 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.0
+11:01:23.784 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@72976b4
+11:01:23.822 [main] DEBUG com.dfyy.project.monitor.job.dao.IJobDao.selectJobAll - ==>  Preparing: SELECT job_id, job_name, job_group, method_name, params, cron_expression, status, create_by, create_time FROM sys_job 
+11:01:23.896 [main] DEBUG com.dfyy.project.monitor.job.dao.IJobDao.selectJobAll - ==> Parameters: 
+11:01:23.940 [main] DEBUG com.dfyy.project.monitor.job.dao.IJobDao.selectJobAll - <==      Total: 0
+11:01:25.118 [main] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+11:01:25.817 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+11:01:25.827 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+11:01:25.839 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+11:01:25.859 [main] INFO  com.dfyy.DfyyiApplication - Started DfyyiApplication in 9.018 seconds (JVM running for 10.258)
+11:01:26.965 [Quartz Scheduler [dfyyScheduler]] INFO  org.quartz.core.QuartzScheduler - Scheduler dfyyScheduler_$_DESKTOP-FM4HDMH1557111683764 started.
+11:01:40.233 [http-nio-8081-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+11:01:40.298 [http-nio-8081-exec-1] INFO  org.apache.shiro.session.mgt.AbstractValidatingSessionManager - Enabling session validation scheduler...
+11:01:40.299 [http-nio-8081-exec-1] DEBUG com.dfyy.framework.shiro.web.session.SpringSessionValidationScheduler - Scheduling session validation job using Spring Scheduler with session validation interval of [600000]ms...
+11:01:40.299 [http-nio-8081-exec-1] DEBUG com.dfyy.framework.shiro.web.session.SpringSessionValidationScheduler - Session validation job successfully scheduled with Spring Scheduler.
+11:01:40.318 [http-nio-8081-exec-1] INFO  org.apache.shiro.cache.ehcache.EhCacheManager - Using existing EHCache named [shiro-activeSessionCache]
+11:01:41.301 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+11:01:41.309 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+11:01:41.311 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2019-05-06 10:31:41(String)
+11:01:41.316 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 0
+11:01:41.317 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. No sessions were stopped.
+11:08:05.058 [http-nio-8081-exec-6] DEBUG com.dfyy.project.module.userCheck.dao.IUserCheckDao.selectAppinfo - ==>  Preparing: select id,type from t_user_check where p_id=? and stu_id = ? 
+11:08:05.060 [http-nio-8081-exec-6] DEBUG com.dfyy.project.module.userCheck.dao.IUserCheckDao.selectAppinfo - ==> Parameters: 3(String), 2(String)
+11:08:05.068 [http-nio-8081-exec-6] DEBUG com.dfyy.project.module.userCheck.dao.IUserCheckDao.selectAppinfo - <==      Total: 1
+11:08:19.091 [http-nio-8081-exec-5] DEBUG com.dfyy.project.module.user.dao.IUserAppDao.selectisuser - ==>  Preparing: select count(1) from t_user where username = ? 
+11:08:19.092 [http-nio-8081-exec-5] DEBUG com.dfyy.project.module.user.dao.IUserAppDao.selectisuser - ==> Parameters: hebaodan(String)
+11:08:19.100 [http-nio-8081-exec-5] DEBUG com.dfyy.project.module.user.dao.IUserAppDao.selectisuser - <==      Total: 1
+11:08:19.101 [http-nio-8081-exec-5] DEBUG com.dfyy.project.module.user.dao.IUserAppDao.selectUserName - ==>  Preparing: select id , username , password , type,name from t_user where username = ? and password = ? 
+11:08:19.102 [http-nio-8081-exec-5] DEBUG com.dfyy.project.module.user.dao.IUserAppDao.selectUserName - ==> Parameters: hebaodan(String), 123456(String)
+11:08:19.103 [http-nio-8081-exec-5] DEBUG com.dfyy.project.module.user.dao.IUserAppDao.selectUserName - <==      Total: 1
+11:08:19.105 [http-nio-8081-exec-5] DEBUG com.dfyy.project.module.user.dao.IUserAppDao.selectPlan - ==>  Preparing: SELECT t2.id, min(timestampdiff(SECOND,NOW(),t2.end_time)) as time from t_teacher_course t1 LEFT JOIN t_teach_plan t2 on t1.id = t2.tc_id WHERE t1.user_id=? AND timestampdiff(SECOND,NOW(),t2.end_time)>0 
+11:08:19.109 [http-nio-8081-exec-5] DEBUG com.dfyy.project.module.user.dao.IUserAppDao.selectPlan - ==> Parameters: 2(Integer)
+11:08:19.119 [http-nio-8081-exec-5] DEBUG com.dfyy.project.module.user.dao.IUserAppDao.selectPlan - <==      Total: 1
+11:11:41.300 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+11:11:41.301 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+11:11:41.301 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2019-05-06 10:41:41(String)
+11:11:41.302 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 0
+11:11:41.303 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. No sessions were stopped.
+11:21:41.302 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+11:21:41.302 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+11:21:41.303 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2019-05-06 10:51:41(String)
+11:21:41.303 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 0
+11:21:41.304 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. No sessions were stopped.
+11:31:41.301 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+11:31:41.301 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+11:31:41.302 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2019-05-06 11:01:41(String)
+11:31:41.303 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 0
+11:31:41.303 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. No sessions were stopped.
+11:32:34.776 [http-nio-8081-exec-10] DEBUG com.dfyy.project.module.user.dao.IUserAppDao.selectisuser - ==>  Preparing: select count(1) from t_user where username = ? 
+11:32:34.777 [http-nio-8081-exec-10] DEBUG com.dfyy.project.module.user.dao.IUserAppDao.selectisuser - ==> Parameters: hebaodan(String)
+11:32:34.778 [http-nio-8081-exec-10] DEBUG com.dfyy.project.module.user.dao.IUserAppDao.selectisuser - <==      Total: 1
+11:32:34.779 [http-nio-8081-exec-10] DEBUG com.dfyy.project.module.user.dao.IUserAppDao.selectUserName - ==>  Preparing: select id , username , password , type,name from t_user where username = ? and password = ? 
+11:32:34.779 [http-nio-8081-exec-10] DEBUG com.dfyy.project.module.user.dao.IUserAppDao.selectUserName - ==> Parameters: hebaodan(String), 123456(String)
+11:32:34.781 [http-nio-8081-exec-10] DEBUG com.dfyy.project.module.user.dao.IUserAppDao.selectUserName - <==      Total: 1
+11:32:34.782 [http-nio-8081-exec-10] DEBUG com.dfyy.project.module.user.dao.IUserAppDao.selectPlan - ==>  Preparing: SELECT t2.id, min(timestampdiff(SECOND,NOW(),t2.end_time)) as time from t_teacher_course t1 LEFT JOIN t_teach_plan t2 on t1.id = t2.tc_id WHERE t1.user_id=? AND timestampdiff(SECOND,NOW(),t2.end_time)>0 
+11:32:34.785 [http-nio-8081-exec-10] DEBUG com.dfyy.project.module.user.dao.IUserAppDao.selectPlan - ==> Parameters: 2(Integer)
+11:32:34.788 [http-nio-8081-exec-10] DEBUG com.dfyy.project.module.user.dao.IUserAppDao.selectPlan - <==      Total: 1
+11:34:19.180 [http-nio-8081-exec-9] DEBUG com.dfyy.project.module.user.dao.IUserAppDao.selectisuser - ==>  Preparing: select count(1) from t_user where username = ? 
+11:34:19.180 [http-nio-8081-exec-9] DEBUG com.dfyy.project.module.user.dao.IUserAppDao.selectisuser - ==> Parameters: hebaodan(String)
+11:34:19.186 [http-nio-8081-exec-9] DEBUG com.dfyy.project.module.user.dao.IUserAppDao.selectisuser - <==      Total: 1
+11:34:19.187 [http-nio-8081-exec-9] DEBUG com.dfyy.project.module.user.dao.IUserAppDao.selectUserName - ==>  Preparing: select id , username , password , type,name from t_user where username = ? and password = ? 
+11:34:19.188 [http-nio-8081-exec-9] DEBUG com.dfyy.project.module.user.dao.IUserAppDao.selectUserName - ==> Parameters: hebaodan(String), 123456(String)
+11:34:19.189 [http-nio-8081-exec-9] DEBUG com.dfyy.project.module.user.dao.IUserAppDao.selectUserName - <==      Total: 1
+11:34:19.189 [http-nio-8081-exec-9] DEBUG com.dfyy.project.module.user.dao.IUserAppDao.selectPlan - ==>  Preparing: SELECT t2.id, min(timestampdiff(SECOND,NOW(),t2.end_time)) as time from t_teacher_course t1 LEFT JOIN t_teach_plan t2 on t1.id = t2.tc_id WHERE t1.user_id=? AND timestampdiff(SECOND,NOW(),t2.end_time)>0 
+11:34:19.190 [http-nio-8081-exec-9] DEBUG com.dfyy.project.module.user.dao.IUserAppDao.selectPlan - ==> Parameters: 2(Integer)
+11:34:19.191 [http-nio-8081-exec-9] DEBUG com.dfyy.project.module.user.dao.IUserAppDao.selectPlan - <==      Total: 1
+11:41:41.302 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+11:41:41.303 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+11:41:41.304 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2019-05-06 11:11:41(String)
+11:41:41.306 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 0
+11:41:41.307 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. No sessions were stopped.
+11:51:41.300 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+11:51:41.301 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+11:51:41.302 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2019-05-06 11:21:41(String)
+11:51:41.303 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 0
+11:51:41.304 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. No sessions were stopped.
+12:01:41.301 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+12:01:41.302 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+12:01:41.302 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2019-05-06 11:31:41(String)
+12:01:41.303 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 0
+12:01:41.303 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. No sessions were stopped.
+12:11:41.300 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+12:11:41.301 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+12:11:41.301 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2019-05-06 11:41:41(String)
+12:11:41.302 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 0
+12:11:41.303 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. No sessions were stopped.
+12:21:41.301 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+12:21:41.302 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+12:21:41.302 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2019-05-06 11:51:41(String)
+12:21:41.303 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 0
+12:21:41.303 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. No sessions were stopped.
+12:31:41.300 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+12:31:41.301 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+12:31:41.302 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2019-05-06 12:01:41(String)
+12:31:41.303 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 0
+12:31:41.303 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. No sessions were stopped.
+12:36:33.108 [main] INFO  com.dfyy.DfyyiApplication - Starting DfyyiApplication on DESKTOP-FM4HDMH with PID 18096 (D:\myproject\dfyy\target\classes started by wqd in D:\myproject\dfyy)
+12:36:33.111 [main] DEBUG com.dfyy.DfyyiApplication - Running with Spring Boot v1.5.10.RELEASE, Spring v4.3.14.RELEASE
+12:36:33.111 [main] INFO  com.dfyy.DfyyiApplication - The following profiles are active: druid
+12:36:33.298 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.6.Final
+12:36:34.600 [main] INFO  org.apache.shiro.cache.ehcache.EhCacheManager - Cache with name 'com.dfyy.framework.shiro.realm.UserRealm.authorizationCache' does not yet exist.  Creating now.
+12:36:34.600 [main] INFO  org.apache.shiro.cache.ehcache.EhCacheManager - Added EhCache named [com.dfyy.framework.shiro.realm.UserRealm.authorizationCache]
+12:36:35.299 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+12:36:35.695 [main] INFO  org.apache.shiro.cache.ehcache.EhCacheManager - Using existing EHCache named [loginRecordCache]
+12:36:36.545 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+12:36:36.546 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.27
+12:36:36.660 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:36:37.192 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+12:36:37.205 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+12:36:37.205 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.0 created.
+12:36:37.219 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'dfyyScheduler' with instanceId 'DESKTOP-FM4HDMH1557117397194'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 20 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+12:36:37.220 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'dfyyScheduler' initialized from an externally provided properties instance.
+12:36:37.220 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.0
+12:36:37.222 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@4f654cee
+12:36:37.269 [main] DEBUG com.dfyy.project.monitor.job.dao.IJobDao.selectJobAll - ==>  Preparing: SELECT job_id, job_name, job_group, method_name, params, cron_expression, status, create_by, create_time FROM sys_job 
+12:36:37.341 [main] DEBUG com.dfyy.project.monitor.job.dao.IJobDao.selectJobAll - ==> Parameters: 
+12:36:37.393 [main] DEBUG com.dfyy.project.monitor.job.dao.IJobDao.selectJobAll - <==      Total: 0
+12:36:38.404 [main] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+12:36:39.112 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+12:36:39.122 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+12:36:39.133 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+12:36:39.152 [main] INFO  com.dfyy.DfyyiApplication - Started DfyyiApplication in 6.406 seconds (JVM running for 8.015)
+12:36:40.504 [Quartz Scheduler [dfyyScheduler]] INFO  org.quartz.core.QuartzScheduler - Scheduler dfyyScheduler_$_DESKTOP-FM4HDMH1557117397194 started.
+12:39:11.038 [QuartzScheduler_dfyyScheduler-DESKTOP-FM4HDMH1557117397194_ClusterManager] ERROR com.alibaba.druid.pool.DruidDataSource - discard connection
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 6,384 milliseconds ago.  The last packet sent successfully to the server was 7 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3559)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3459)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3900)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2527)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2680)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2480)
+	at com.mysql.jdbc.ConnectionImpl.setAutoCommit(ConnectionImpl.java:4811)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_setAutoCommit(FilterChainImpl.java:553)
+	at com.alibaba.druid.filter.logging.LogFilter.connection_setAutoCommit(LogFilter.java:435)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_setAutoCommit(FilterChainImpl.java:549)
+	at com.alibaba.druid.filter.FilterAdapter.connection_setAutoCommit(FilterAdapter.java:984)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_setAutoCommit(FilterChainImpl.java:549)
+	at com.alibaba.druid.filter.FilterAdapter.connection_setAutoCommit(FilterAdapter.java:984)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_setAutoCommit(FilterChainImpl.java:549)
+	at com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl.setAutoCommit(ConnectionProxyImpl.java:430)
+	at com.alibaba.druid.pool.DruidPooledConnection.setAutoCommit(DruidPooledConnection.java:694)
+	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.setAutoCommit(AttributeRestoringConnectionInvocationHandler.java:98)
+	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.invoke(AttributeRestoringConnectionInvocationHandler.java:66)
+	at com.sun.proxy.$Proxy110.setAutoCommit(Unknown Source)
+	at org.quartz.impl.jdbcjobstore.JobStoreCMT.getNonManagedTXConnection(JobStoreCMT.java:191)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3307)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3920)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3957)
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:3011)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3469)
+	... 22 common frames omitted
+12:39:11.038 [QuartzScheduler_dfyyScheduler-DESKTOP-FM4HDMH1557117397194_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - Failed to override connection auto commit/transaction isolation.
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 6,384 milliseconds ago.  The last packet sent successfully to the server was 7 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3559)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3459)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3900)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2527)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2680)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2480)
+	at com.mysql.jdbc.ConnectionImpl.setAutoCommit(ConnectionImpl.java:4811)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_setAutoCommit(FilterChainImpl.java:553)
+	at com.alibaba.druid.filter.logging.LogFilter.connection_setAutoCommit(LogFilter.java:435)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_setAutoCommit(FilterChainImpl.java:549)
+	at com.alibaba.druid.filter.FilterAdapter.connection_setAutoCommit(FilterAdapter.java:984)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_setAutoCommit(FilterChainImpl.java:549)
+	at com.alibaba.druid.filter.FilterAdapter.connection_setAutoCommit(FilterAdapter.java:984)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_setAutoCommit(FilterChainImpl.java:549)
+	at com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl.setAutoCommit(ConnectionProxyImpl.java:430)
+	at com.alibaba.druid.pool.DruidPooledConnection.setAutoCommit(DruidPooledConnection.java:694)
+	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.setAutoCommit(AttributeRestoringConnectionInvocationHandler.java:98)
+	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.invoke(AttributeRestoringConnectionInvocationHandler.java:66)
+	at com.sun.proxy.$Proxy110.setAutoCommit(Unknown Source)
+	at org.quartz.impl.jdbcjobstore.JobStoreCMT.getNonManagedTXConnection(JobStoreCMT.java:191)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3307)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3920)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3957)
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:3011)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3469)
+	... 22 common frames omitted
+12:39:11.040 [QuartzScheduler_dfyyScheduler-DESKTOP-FM4HDMH1557117397194_ClusterManager] WARN  org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler - Failed restore connection's original auto commit setting.
+java.sql.SQLException: connection holder is null
+	at com.alibaba.druid.pool.DruidPooledConnection.checkStateInternal(DruidPooledConnection.java:1120)
+	at com.alibaba.druid.pool.DruidPooledConnection.checkState(DruidPooledConnection.java:1113)
+	at com.alibaba.druid.pool.DruidPooledConnection.setAutoCommit(DruidPooledConnection.java:683)
+	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.restoreOriginalAtributes(AttributeRestoringConnectionInvocationHandler.java:141)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.cleanupConnection(JobStoreSupport.java:3662)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3348)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3920)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3957)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 6,384 milliseconds ago.  The last packet sent successfully to the server was 7 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3559)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3459)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3900)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2527)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2680)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2480)
+	at com.mysql.jdbc.ConnectionImpl.setAutoCommit(ConnectionImpl.java:4811)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_setAutoCommit(FilterChainImpl.java:553)
+	at com.alibaba.druid.filter.logging.LogFilter.connection_setAutoCommit(LogFilter.java:435)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_setAutoCommit(FilterChainImpl.java:549)
+	at com.alibaba.druid.filter.FilterAdapter.connection_setAutoCommit(FilterAdapter.java:984)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_setAutoCommit(FilterChainImpl.java:549)
+	at com.alibaba.druid.filter.FilterAdapter.connection_setAutoCommit(FilterAdapter.java:984)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_setAutoCommit(FilterChainImpl.java:549)
+	at com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl.setAutoCommit(ConnectionProxyImpl.java:430)
+	at com.alibaba.druid.pool.DruidPooledConnection.setAutoCommit(DruidPooledConnection.java:694)
+	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.setAutoCommit(AttributeRestoringConnectionInvocationHandler.java:98)
+	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.invoke(AttributeRestoringConnectionInvocationHandler.java:66)
+	at com.sun.proxy.$Proxy110.setAutoCommit(Unknown Source)
+	at org.quartz.impl.jdbcjobstore.JobStoreCMT.getNonManagedTXConnection(JobStoreCMT.java:191)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3307)
+	... 2 common frames omitted
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:3011)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3469)
+	... 22 common frames omitted
+12:39:11.040 [QuartzScheduler_dfyyScheduler-DESKTOP-FM4HDMH1557117397194_ClusterManager] ERROR org.springframework.scheduling.quartz.LocalDataSourceJobStore - ClusterManager: Error managing cluster: Failure identifying failed instances when checking-in: connection holder is null
+org.quartz.JobPersistenceException: Failure identifying failed instances when checking-in: connection holder is null
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.findFailedInstances(JobStoreSupport.java:3405)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.clusterCheckIn(JobStoreSupport.java:3455)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3315)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3920)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3957)
+Caused by: java.sql.SQLException: connection holder is null
+	at com.alibaba.druid.pool.DruidPooledConnection.checkStateInternal(DruidPooledConnection.java:1120)
+	at com.alibaba.druid.pool.DruidPooledConnection.checkState(DruidPooledConnection.java:1113)
+	at com.alibaba.druid.pool.DruidPooledConnection.prepareStatement(DruidPooledConnection.java:318)
+	at sun.reflect.GeneratedMethodAccessor96.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.invoke(AttributeRestoringConnectionInvocationHandler.java:73)
+	at com.sun.proxy.$Proxy110.prepareStatement(Unknown Source)
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.selectSchedulerStateRecords(StdJDBCDelegate.java:2992)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.findFailedInstances(JobStoreSupport.java:3369)
+	... 4 common frames omitted
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 6,384 milliseconds ago.  The last packet sent successfully to the server was 7 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3559)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3459)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3900)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2527)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2680)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2480)
+	at com.mysql.jdbc.ConnectionImpl.setAutoCommit(ConnectionImpl.java:4811)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_setAutoCommit(FilterChainImpl.java:553)
+	at com.alibaba.druid.filter.logging.LogFilter.connection_setAutoCommit(LogFilter.java:435)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_setAutoCommit(FilterChainImpl.java:549)
+	at com.alibaba.druid.filter.FilterAdapter.connection_setAutoCommit(FilterAdapter.java:984)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_setAutoCommit(FilterChainImpl.java:549)
+	at com.alibaba.druid.filter.FilterAdapter.connection_setAutoCommit(FilterAdapter.java:984)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_setAutoCommit(FilterChainImpl.java:549)
+	at com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl.setAutoCommit(ConnectionProxyImpl.java:430)
+	at com.alibaba.druid.pool.DruidPooledConnection.setAutoCommit(DruidPooledConnection.java:694)
+	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.setAutoCommit(AttributeRestoringConnectionInvocationHandler.java:98)
+	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.invoke(AttributeRestoringConnectionInvocationHandler.java:66)
+	at com.sun.proxy.$Proxy110.setAutoCommit(Unknown Source)
+	at org.quartz.impl.jdbcjobstore.JobStoreCMT.getNonManagedTXConnection(JobStoreCMT.java:191)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3307)
+	... 2 common frames omitted
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:3011)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3469)
+	... 22 common frames omitted
+12:39:18.941 [main] INFO  com.dfyy.DfyyiApplication - Starting DfyyiApplication on DESKTOP-FM4HDMH with PID 10628 (D:\myproject\dfyy\target\classes started by wqd in D:\myproject\dfyy)
+12:39:18.944 [main] DEBUG com.dfyy.DfyyiApplication - Running with Spring Boot v1.5.10.RELEASE, Spring v4.3.14.RELEASE
+12:39:18.944 [main] INFO  com.dfyy.DfyyiApplication - The following profiles are active: druid
+12:39:19.073 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.6.Final
+12:39:20.312 [main] INFO  org.apache.shiro.cache.ehcache.EhCacheManager - Cache with name 'com.dfyy.framework.shiro.realm.UserRealm.authorizationCache' does not yet exist.  Creating now.
+12:39:20.313 [main] INFO  org.apache.shiro.cache.ehcache.EhCacheManager - Added EhCache named [com.dfyy.framework.shiro.realm.UserRealm.authorizationCache]
+12:39:21.016 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+12:39:21.551 [main] INFO  org.apache.shiro.cache.ehcache.EhCacheManager - Using existing EHCache named [loginRecordCache]
+12:39:22.382 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+12:39:22.383 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.27
+12:39:22.503 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:39:22.966 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+12:39:22.978 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+12:39:22.978 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.0 created.
+12:39:22.986 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'dfyyScheduler' with instanceId 'DESKTOP-FM4HDMH1557117562966'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 20 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+12:39:22.986 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'dfyyScheduler' initialized from an externally provided properties instance.
+12:39:22.987 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.0
+12:39:22.988 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@51b77cdf
+12:39:23.024 [main] DEBUG com.dfyy.project.monitor.job.dao.IJobDao.selectJobAll - ==>  Preparing: SELECT job_id, job_name, job_group, method_name, params, cron_expression, status, create_by, create_time FROM sys_job 
+12:39:23.091 [main] DEBUG com.dfyy.project.monitor.job.dao.IJobDao.selectJobAll - ==> Parameters: 
+12:39:23.134 [main] DEBUG com.dfyy.project.monitor.job.dao.IJobDao.selectJobAll - <==      Total: 0
+12:39:24.116 [main] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+12:39:24.776 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+12:39:24.784 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+12:39:24.796 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+12:39:24.815 [main] INFO  com.dfyy.DfyyiApplication - Started DfyyiApplication in 6.206 seconds (JVM running for 7.578)
+12:39:26.194 [Quartz Scheduler [dfyyScheduler]] INFO  org.quartz.core.QuartzScheduler - Scheduler dfyyScheduler_$_DESKTOP-FM4HDMH1557117562966 started.
+12:39:32.083 [http-nio-8081-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+12:39:32.129 [http-nio-8081-exec-1] INFO  org.apache.shiro.session.mgt.AbstractValidatingSessionManager - Enabling session validation scheduler...
+12:39:32.129 [http-nio-8081-exec-1] DEBUG com.dfyy.framework.shiro.web.session.SpringSessionValidationScheduler - Scheduling session validation job using Spring Scheduler with session validation interval of [600000]ms...
+12:39:32.130 [http-nio-8081-exec-1] DEBUG com.dfyy.framework.shiro.web.session.SpringSessionValidationScheduler - Session validation job successfully scheduled with Spring Scheduler.
+12:39:32.131 [http-nio-8081-exec-1] INFO  org.apache.shiro.cache.ehcache.EhCacheManager - Using existing EHCache named [shiro-activeSessionCache]
+12:39:32.135 [http-nio-8081-exec-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineById - ==>  Preparing: select * from sys_user_online where sessionid = ? 
+12:39:32.138 [http-nio-8081-exec-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineById - ==> Parameters: gfg173meg5o816054m2j4r3k(String)
+12:39:32.199 [http-nio-8081-exec-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineById - <==      Total: 0
+12:39:33.132 [pool-1-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+12:39:33.136 [pool-1-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+12:39:33.138 [pool-1-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2019-05-06 12:09:33(String)
+12:39:33.168 [pool-1-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 0
+12:39:33.169 [pool-1-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. No sessions were stopped.
+12:39:39.674 [http-nio-8081-exec-3] INFO  sys-user - [127.0.0.1][][Error][* 必须填写]
+12:39:39.679 [http-nio-8081-exec-3] DEBUG com.dfyy.project.monitor.logininfor.dao.ILogininforDao.insertLogininfor - ==>  Preparing: insert into sys_logininfor (login_name, status, ipaddr, browser, os, msg) values (?, ?, ?, ?, ?, ?) 
+12:39:39.681 [http-nio-8081-exec-3] DEBUG com.dfyy.project.monitor.logininfor.dao.ILogininforDao.insertLogininfor - ==> Parameters: null, 1(String), 127.0.0.1(String), Chrome(String), Windows 10(String), * 必须填写(String)
+12:39:39.726 [http-nio-8081-exec-3] DEBUG com.dfyy.project.monitor.logininfor.dao.ILogininforDao.insertLogininfor - <==    Updates: 1
+12:39:46.633 [http-nio-8081-exec-10] INFO  sys-user - [127.0.0.1][][Error][* 必须填写]
+12:39:46.634 [http-nio-8081-exec-10] DEBUG com.dfyy.project.monitor.logininfor.dao.ILogininforDao.insertLogininfor - ==>  Preparing: insert into sys_logininfor (login_name, status, ipaddr, browser, os, msg) values (?, ?, ?, ?, ?, ?) 
+12:39:46.635 [http-nio-8081-exec-5] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserByName - ==>  Preparing: select u.user_id, u.dept_id,u.user_number,u.branch_id, u.login_name, u.user_name, u.email, u.phonenumber, u.sex, u.avatar, u.password, u.salt, u.status, u.refuse_des, u.create_time, d.dept_id, d.parent_id, d.dept_name, d.order_num, d.status as dept_status from sys_user u left join sys_dept d on u.dept_id = d.dept_id left join sys_user_role ur on u.user_id = ur.user_id where u.login_name = ? 
+12:39:46.636 [http-nio-8081-exec-10] DEBUG com.dfyy.project.monitor.logininfor.dao.ILogininforDao.insertLogininfor - ==> Parameters: null, 1(String), 127.0.0.1(String), Chrome(String), Windows 10(String), * 必须填写(String)
+12:39:46.638 [http-nio-8081-exec-5] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserByName - ==> Parameters: admin(String)
+12:39:46.673 [http-nio-8081-exec-10] DEBUG com.dfyy.project.monitor.logininfor.dao.ILogininforDao.insertLogininfor - <==    Updates: 1
+12:39:46.676 [http-nio-8081-exec-5] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserByName - <==      Total: 1
+12:39:46.687 [http-nio-8081-exec-5] INFO  sys-user - [127.0.0.1][admin][Success][登录成功]
+12:39:46.688 [http-nio-8081-exec-5] DEBUG com.dfyy.project.monitor.logininfor.dao.ILogininforDao.insertLogininfor - ==>  Preparing: insert into sys_logininfor (login_name, status, ipaddr, browser, os, msg) values (?, ?, ?, ?, ?, ?) 
+12:39:46.690 [http-nio-8081-exec-5] DEBUG com.dfyy.project.monitor.logininfor.dao.ILogininforDao.insertLogininfor - ==> Parameters: admin(String), 0(String), 127.0.0.1(String), Chrome(String), Windows 10(String), 登录成功(String)
+12:39:46.725 [http-nio-8081-exec-5] DEBUG com.dfyy.project.monitor.logininfor.dao.ILogininforDao.insertLogininfor - <==    Updates: 1
+12:39:47.741 [http-nio-8081-exec-8] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenusByUserId - ==>  Preparing: select distinct m.menu_id, m.parent_id, m.menu_name, m.url, m.perms , m.menu_type, m.icon, m.order_num, m.create_time from sys_menu m left join sys_role_menu rm on m.menu_id = rm.menu_id left join sys_user_role ur on rm.role_id = ur.role_id where ur.user_id = ? and m.menu_type in ('M', 'C') and m.visible = 0 order by m.order_num 
+12:39:47.745 [http-nio-8081-exec-8] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenusByUserId - ==> Parameters: 1(Long)
+12:39:47.791 [http-nio-8081-exec-8] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenusByUserId - <==      Total: 16
+12:39:47.925 [http-nio-8081-exec-6] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - ==>  Preparing: replace into sys_user_online(sessionId, login_name, dept_name, ipaddr, browser, os, status, start_timestsamp, last_access_time, expire_time) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+12:39:47.956 [http-nio-8081-exec-6] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - ==> Parameters: f31e41c1-7d34-4c2a-828f-b6dfd7a62077(String), admin(String), 黄河科技学院(String), 127.0.0.1(String), Chrome(String), Windows 10(String), on_line(String), 2019-05-06 12:39:32.206(Timestamp), 2019-05-06 12:39:47.924(Timestamp), 1800000(Long)
+12:39:47.990 [http-nio-8081-exec-6] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - <==    Updates: 1
+12:39:51.462 [http-nio-8081-exec-8] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesByUserId - ==>  Preparing: SELECT r.role_id, r.role_name, r.role_key FROM sys_user u LEFT JOIN sys_user_role ur ON u.user_id = ur.user_id LEFT JOIN sys_role r ON ur.role_id = r.role_id WHERE ur.user_id = ? 
+12:39:51.463 [http-nio-8081-exec-8] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesByUserId - ==> Parameters: 1(Long)
+12:39:51.494 [http-nio-8081-exec-8] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesByUserId - <==      Total: 1
+12:39:51.496 [http-nio-8081-exec-8] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectPermsByUserId - ==>  Preparing: select distinct m.perms from sys_menu m left join sys_role_menu rm on m.menu_id = rm.menu_id left join sys_user_role ur on rm.role_id = ur.role_id where ur.user_id = ? 
+12:39:51.498 [http-nio-8081-exec-8] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectPermsByUserId - ==> Parameters: 1(Long)
+12:39:51.529 [http-nio-8081-exec-8] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectPermsByUserId - <==      Total: 79
+12:39:51.990 [http-nio-8081-exec-5] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - ==>  Preparing: SELECT count(0) FROM information_schema.tables WHERE table_comment <> '' AND table_schema = (SELECT database()) 
+12:39:51.992 [http-nio-8081-exec-5] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - ==> Parameters: 
+12:39:52.024 [http-nio-8081-exec-5] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - <==      Total: 1
+12:39:52.028 [http-nio-8081-exec-5] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - ==>  Preparing: SELECT table_name, table_comment, create_time, update_time FROM information_schema.tables WHERE table_comment <> '' AND table_schema = (SELECT database()) order by create_time desc LIMIT ? 
+12:39:52.030 [http-nio-8081-exec-5] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - ==> Parameters: 10(Integer)
+12:39:52.123 [http-nio-8081-exec-5] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - <==      Total: 10
+12:39:53.161 [http-nio-8081-exec-7] DEBUG c.d.project.module.institution.dao.IInstitutionDao.selectInstitutionList_COUNT - ==>  Preparing: SELECT count(0) FROM institution WHERE 1 = 1 
+12:39:53.162 [http-nio-8081-exec-7] DEBUG c.d.project.module.institution.dao.IInstitutionDao.selectInstitutionList_COUNT - ==> Parameters: 
+12:39:53.192 [http-nio-8081-exec-7] DEBUG c.d.project.module.institution.dao.IInstitutionDao.selectInstitutionList_COUNT - <==      Total: 1
+12:39:53.193 [http-nio-8081-exec-7] DEBUG com.dfyy.project.module.institution.dao.IInstitutionDao.selectInstitutionList - ==>  Preparing: select id , name , create_time , isDel from institution where 1=1 LIMIT ? 
+12:39:53.193 [http-nio-8081-exec-7] DEBUG com.dfyy.project.module.institution.dao.IInstitutionDao.selectInstitutionList - ==> Parameters: 10(Integer)
+12:39:53.224 [http-nio-8081-exec-7] DEBUG com.dfyy.project.module.institution.dao.IInstitutionDao.selectInstitutionList - <==      Total: 4

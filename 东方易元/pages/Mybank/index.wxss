@@ -1,0 +1,84 @@
+/* pages/Mybank/index.wxss */
+.touch-item {
+ font-size: 14px;
+ display: flex;
+ justify-content: space-between;
+ border-bottom:0px solid #ccc;
+ width: 100%;
+ overflow: hidden;
+ margin-bottom: 30rpx;
+ border-radius: 10rpx;
+}
+.content {
+ width: 100%;
+ padding: 40rpx;
+ line-height: 22px;
+ margin-right:0;
+ -webkit-transition: all 0.4s;
+ transition: all 0.4s;
+ -webkit-transform: translateX(85px);
+ transform: translateX(85px);
+ margin-left: -85px;
+ height: 240rpx;
+ box-sizing: border-box;
+}
+.touch-item:first-child,.touch-item:nth-child(6),.touch-item:nth-child(11),.touch-item:nth-child(16){ background:-webkit-linear-gradient(left, #f77069, #d13228);}
+.touch-item:nth-child(2),.touch-item:nth-child(7),.touch-item:nth-child(12),.touch-item:nth-child(17){ background:-webkit-linear-gradient(left, #fba66d, #ef8234);}
+.touch-item:nth-child(3),.touch-item:nth-child(8),.touch-item:nth-child(13),.touch-item:nth-child(18){ background:-webkit-linear-gradient(left, #45d3b4, #12a283);}
+.touch-item:nth-child(4),.touch-item:nth-child(9),.touch-item:nth-child(14),.touch-item:nth-child(19){ background:-webkit-linear-gradient(left, #54b5ef, #007fe1);}
+.touch-item:nth-child(5),.touch-item:nth-child(10),.touch-item:nth-child(15),.touch-item:nth-child(20){ background:-webkit-linear-gradient(left, #938cf0, #5249c6);}
+.touch-item .del {
+ background-color: #df4239;
+ width: 150rpx;
+ height: 240rpx;
+ display: flex;
+ color: #fff;
+ -webkit-transform: translateX(90px);
+ transform: translateX(90px);
+ -webkit-transition: all 0.4s;
+ transition: all 0.4s;
+ border-radius: 0px;
+ line-height: 240rpx;
+}
+.jian01{ width: 30rpx; height: 240rpx; background: #fff; float: left;}
+.touch-move-active .content,
+.touch-move-active .del {
+ -webkit-transform: translateX(0);
+ transform: translateX(0);
+}
+.bank02,.bank01{ float: left; width: 100%; color: #fff;}
+.bank03,.bank04{ float: left;}
+.bank02{ font-size: 23px; letter-spacing: 6rpx;}
+.bank03{ font-size: 16px;} 
+.bank04{ transform:skew(-15deg); /*设置倾斜度为-30*/  -webkit-transform: skew(-15deg); -moz-transform: skew(-15deg); -o-transform:skew(-15deg); -ms-transform:skew(-15deg); padding: 0rpx 8rpx; background: rgba(255, 255, 255, 0.3); border-radius: 10rpx; font-size: 12px; margin-left: 20rpx;}
+.bank01{ margin-top: 10rpx;}
+.bank02{ margin-top: 56rpx;}
+.jian01,.bank05{ float: left;}
+.bank05{ width: 130rpx; text-align: center;}
+.mask{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  z-index: 9000;
+  opacity: 0.8;
+}
+ 
+.modalDlg{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding:25px 25px 15px 25px;
+}
+.act_pic04{ width: 12px; height: 12px; position: absolute; right: 25px}
+.btn04{ border: 1px solid #333; background: transparent; height: 70rpx; line-height: 70rpx; padding: 0 40px; margin-top: 30rpx; margin-bottom: 30rpx; font-size: 16px;}
+.wenzi{ padding: 20px 0; font-size: 16px; color: #333; text-align: center;}
+.addedd{ float: left; width: 100%; border-radius: 10rpx; font-size: 28rpx; color: #666; text-align: center; box-sizing: border-box; line-height: 120rpx; box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05); background: #fff;}

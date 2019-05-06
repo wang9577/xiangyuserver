@@ -1,0 +1,28 @@
+<!--pages/activity/index.wxml-->
+<view class='warp'>
+<view class="weui-grids04 weui-grids">
+  <navigator url="../activities/index?id={{act.id}}" class="weui-grid" hover-class="weui-grid_active" wx:for="{{activity}}" wx:for-item="act">
+    <image class="weui-grid__icon" src="{{url}}/imgfile/{{act.picture}}" />
+    <image class='pic02' src="../images/course-enter.png"></image>
+    <block wx:if="{{act.activity_status === 3}}">
+      <image class='pic02' src="../images/course-enter.png"></image>
+      </block>
+      <block wx:if="{{act.activity_status === 5}}">
+      <image class='pic02' src="../images/course-progress.png"></image>
+      </block>
+    <text class='words01' wx:if="{{act.activity_status === 3}}">报名中</text>
+    <text class='words01' wx:if="{{act.activity_status === 4}}">已截止</text>
+    <text class='words01' wx:if="{{act.activity_status === 5}}">进行中</text>
+    <view class="weui-grid__label">{{act.activity_name}}</view>
+    <view class='adders'>
+      <view class='adders_left'>
+        <image class='pic' src='../images/position.png'></image>
+        <text class='words'>{{act.city}}</text>
+        <image class='pic01' src='../images/piuc001_10.jpg'></image>
+        <text class='words'>{{act.activity_time}}</text>
+      </view>
+      <text class='adders_right'>{{act.enroll}}人报名</text>
+    </view>
+  </navigator>
+</view>
+</view>

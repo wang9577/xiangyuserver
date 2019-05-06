@@ -1,0 +1,18 @@
+/* pages/QRcode/index.wxss */
+.QRcode_pic{ width: 100%; height: 100%; overflow-y: none}
+page{height:100%}
+page.QRcode_pic{ position: relative;}
+.QRcode,.QRcode01{ position: absolute;}
+.QRcode{ top: 11%}
+.QRcode01{ top: 4%;}
+.QRcode{ width: 70%; margin: 15%; float: left;}
+.QRcode_pic01{ width: 100%; height: 750rpx;}
+.QRcode01,.QRcode04{ text-align:center;}
+.QRcode01,.QRcode02,.QRcode04{ float: left; width: 100%; }
+.QRcode01{ color: #333; box-sizing: border-box; padding: 30rpx;}
+.QRcode_pic02{ border-radius: 50%; width: 90rpx; height: 90rpx;}
+.QRcode02{ font-size: 16px; line-height: 60rpx;}
+.QRcode_pic03{ width: 300rpx; height: 300rpx;}
+.QRcode05{ font-size: 13px;}
+.QRcode06{ margin-top: 16rpx;}
+.QRcode_btn{ float: left; width: 30%; margin: 3% 35% 0 35%; color: #fff; border: 0; background: #e5322e; border-radius: 0; font-size: 15px; height: 27px; line-height: 27px;}

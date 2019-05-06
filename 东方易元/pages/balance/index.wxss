@@ -1,0 +1,12 @@
+/* pages/balance/index.wxss */
+.Tutor07add{ color: #df4239;}
+.Tutor06 .Tutor07{ line-height: 92rpx;}
+.Tutor05{ padding-left: 0;}
+.bala,.bala01,.bala02{ float: left;}
+.bala03{ float: right}
+.bala,.bala01{ width: 100%}
+.bala,.bala01{ color: #fff}
+.bala02{ font-size: 26px;}
+.bala{ font-size: 14px;}
+.bala03{ font-size: 15px; border: 2rpx solid #fff; border-radius: 10rpx; padding: 10rpx 40rpx;}
+.bala01{ margin-top: 30rpx;}

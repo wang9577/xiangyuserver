@@ -1,0 +1,29 @@
+/* CSS Document */
+body, div, form, p, span, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6 {margin: 0; padding: 0; font-family: "Open Sans", "Helvetica neue", Helvetica, Tahoma, "lantinghei sc", "Microsoft Yahei", sans-seri,"heiti sc";}
+ul, ol, li {list-style: none;}
+img, a img {border: 0 none;}
+a {text-decoration: none; tap-highlight-color:rgba(0,0,0,0); focus-ring-color:rgba(0,0,0,0); -webkit-tap-highlight-color:rgba(0,0,0,0); -webkit-focus-ring-color:rgba(0,0,0,0); -moz-tap-highlight-color:rgba(0,0,0,0); -moz-focus-ring-color:rgba(0,0,0,0);}
+input, select, button, textarea{vertical-align: middle; font-family: "Open Sans", "Helvetica neue", Helvetica, Tahoma, "lantinghei sc", "Microsoft Yahei", sans-seri,"heiti sc";}
+.fl {float: left;}
+.fr {float: right;}
+.tal {text-align: left;}
+.tac {text-align: center;}
+.tar {text-align: right;}
+.isdis {display: block;}
+.undis {display: none;}
+.clear{clear:both;}
+*:focus { outline: none; border:0; }
+
+body{ background:#efeff4; min-width:320px; max-width:640px; margin:0 auto; width:100%; clear:both;}
+.details,.details_bt,.details p,.details_bt ul,.details_bt h2{ float:left; width:100%; box-sizing:border-box;}
+.details{ background:#fff; padding:2% 3%;}
+.details_bt{ border-bottom:1px solid #e5e5ea; padding-bottom:8px; margin-bottom:6px;}
+.details p{ font-size:13px; line-height:24px; color:#666; letter-spacing:2px;}
+.details p img{ display:block; text-indent:0px;}
+.details img{ width:100%; overflow:hidden;}
+.details p{ margin:6px auto}
+.details_bt ul li{ float:left; color:#666; font-size:12px; line-height:25px; margin-right:3px; letter-spacing:1px;}
+.details_bt h2{ font-weight:500; color:#333; letter-spacing:2px; font-size:16px; line-height:30px;}
+.details_bt ul li.special{ color:#dc3f3f; margin-left:18px;}
+.details{ margin-bottom:15px;}
+

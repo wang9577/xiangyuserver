@@ -1,0 +1,20 @@
+/* pages/journey/index.wxss */
+.jour_left,.jour_pic01,.jour_nr,.jour_02,.jour_03,.jour_pic02,.jour_04{ float: left}
+.jour_left,.jour_right,.jour_02,.jour_03,.jour_right,.jour_01{ width: 100%;}
+.jour_right,.jour_01{ float: right;}
+.jour_01{ box-sizing: border-box;}
+.jour_pic01{ width: 15px; height: 17px;}
+.jour_nr,.jour_02{ color: #333}
+.jour_04{ color: #999;}
+.jour_02{ font-size: 17px;}
+.jour_nr{ font-size: 16px;}
+.jour_04{ font-size: 14px;}
+.jour_pic01{ margin-right: 12rpx;}
+.jour_right{ border-left: 0rpx solid #eee;}
+.jour_01{ background: #fff; box-shadow: 0 0 5px 2px rgba(0,0,0,0.05); border: 2rpx solid #eee;}
+.jour_01{ padding: 30rpx;}
+.jour_01{ border-radius: 10rpx;}
+.jour_pic02{ width: 11px; height: 13px; margin-top: 6rpx; margin-right: 12rpx;}
+.jour_03{ margin-top: 30rpx;}
+.jour_01{ margin-bottom:30rpx;}
+.jour_01:first-child{ margin-top: 0rpx;}

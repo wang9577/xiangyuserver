@@ -1,0 +1,23 @@
+<!--pages/Quotas/index.wxml-->
+<view class='Tutor'>
+  <view class='Quotas_left'>
+    <text class='Tutor01'>已用额度（元）</text>
+    <text class='Tutor02'>{{zMoney-kyMoney}}</text>
+  </view>
+  <image class='Quotas_pic' src='../images/xianxx_03.jpg'></image>
+  <view class='Quotas_right'>
+    <text class='Tutor01'>总额度（元）</text>
+    <text class='Tutor02'>{{zMoney}}</text>
+  </view>
+</view>
+<view class='Tutor04'  wx:for="{{quotas}}" wx:for-item="quotas">
+  <image class='Tutor_pic' src='{{quotas.avatarUrl}}'></image>
+  <view class='Tutor05'>
+    <text class='Tutor07'>{{quotas.username}}</text>
+    <text class='Tutor08'>{{quotas.create_time1}}</text>
+  </view>
+  <view class='Tutor06'>
+    <text class='Tutor07'>{{quotas.expenditure}}</text>
+    <text class='Tutor08'>{{quotas.curriculum_name}}</text>
+  </view>
+</view>

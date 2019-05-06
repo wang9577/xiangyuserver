@@ -1,0 +1,311 @@
+14:49:20.139 [main] INFO  com.dfyy.DfyyiApplication - Starting DfyyiApplication on MS-20160329BWCW with PID 7244 (D:\ecl\eclipse\home\dfyy\target\classes started by Administrator in D:\ecl\eclipse\home\dfyy)
+14:49:20.167 [main] DEBUG com.dfyy.DfyyiApplication - Running with Spring Boot v1.5.10.RELEASE, Spring v4.3.14.RELEASE
+14:49:20.167 [main] INFO  com.dfyy.DfyyiApplication - The following profiles are active: druid
+14:49:20.566 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.6.Final
+14:49:22.343 [main] INFO  org.apache.shiro.cache.ehcache.EhCacheManager - Cache with name 'com.dfyy.framework.shiro.realm.UserRealm.authorizationCache' does not yet exist.  Creating now.
+14:49:22.344 [main] INFO  org.apache.shiro.cache.ehcache.EhCacheManager - Added EhCache named [com.dfyy.framework.shiro.realm.UserRealm.authorizationCache]
+14:49:23.155 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+14:49:23.637 [main] INFO  org.apache.shiro.cache.ehcache.EhCacheManager - Using existing EHCache named [loginRecordCache]
+14:49:24.907 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+14:49:24.908 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.27
+14:49:25.058 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:49:25.879 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+14:49:25.904 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+14:49:25.905 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.0 created.
+14:49:25.924 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'dfyyScheduler' with instanceId 'MS-20160329BWCW1535352565883'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 20 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+14:49:25.925 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'dfyyScheduler' initialized from an externally provided properties instance.
+14:49:25.925 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.0
+14:49:25.927 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@14dbfdb1
+14:49:26.019 [main] DEBUG com.dfyy.project.monitor.job.dao.IJobDao.selectJobAll - ==>  Preparing: SELECT job_id, job_name, job_group, method_name, params, cron_expression, status, create_by, create_time FROM sys_job 
+14:49:26.173 [main] DEBUG com.dfyy.project.monitor.job.dao.IJobDao.selectJobAll - ==> Parameters: 
+14:49:26.195 [main] DEBUG com.dfyy.project.monitor.job.dao.IJobDao.selectJobAll - <==      Total: 2
+14:49:29.703 [main] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+14:49:31.307 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8085"]
+14:49:31.328 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8085"]
+14:49:31.341 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+14:49:31.377 [main] INFO  com.dfyy.DfyyiApplication - Started DfyyiApplication in 11.759 seconds (JVM running for 12.805)
+14:49:32.346 [Quartz Scheduler [dfyyScheduler]] INFO  org.quartz.core.QuartzScheduler - Scheduler dfyyScheduler_$_MS-20160329BWCW1535352565883 started.
+14:49:36.900 [http-nio-8085-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+14:49:36.967 [http-nio-8085-exec-1] INFO  org.apache.shiro.session.mgt.AbstractValidatingSessionManager - Enabling session validation scheduler...
+14:49:36.967 [http-nio-8085-exec-1] DEBUG com.dfyy.framework.shiro.web.session.SpringSessionValidationScheduler - Scheduling session validation job using Spring Scheduler with session validation interval of [600000]ms...
+14:49:36.968 [http-nio-8085-exec-1] DEBUG com.dfyy.framework.shiro.web.session.SpringSessionValidationScheduler - Session validation job successfully scheduled with Spring Scheduler.
+14:49:36.971 [http-nio-8085-exec-1] INFO  org.apache.shiro.cache.ehcache.EhCacheManager - Using existing EHCache named [shiro-activeSessionCache]
+14:49:36.976 [http-nio-8085-exec-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineById - ==>  Preparing: select * from sys_user_online where sessionid = ? 
+14:49:36.977 [http-nio-8085-exec-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineById - ==> Parameters: 00d14b05-eada-4493-baf8-a0e77992aa21(String)
+14:49:36.988 [http-nio-8085-exec-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineById - <==      Total: 0
+14:49:37.969 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+14:49:37.975 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+14:49:37.976 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2018-08-27 14:19:37(String)
+14:49:37.978 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 0
+14:49:37.978 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. No sessions were stopped.
+14:49:44.842 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserByName - ==>  Preparing: select u.user_id, u.dept_id, u.login_name, u.user_name, u.email, u.phonenumber, u.sex, u.avatar, u.password, u.salt, u.status, u.refuse_des, u.create_time, d.dept_id, d.parent_id, d.dept_name, d.order_num, d.status as dept_status from sys_user u left join sys_dept d on u.dept_id = d.dept_id left join sys_user_role ur on u.user_id = ur.user_id where u.login_name = ? 
+14:49:44.849 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserByName - ==> Parameters: admin(String)
+14:49:44.860 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserByName - <==      Total: 1
+14:49:44.855 [http-nio-8085-exec-2] INFO  sys-user - [0:0:0:0:0:0:0:1][][Error][* 必须填写]
+14:49:44.875 [http-nio-8085-exec-1] INFO  sys-user - [0:0:0:0:0:0:0:1][admin][Success][登录成功]
+14:49:44.879 [http-nio-8085-exec-1] DEBUG com.dfyy.project.monitor.logininfor.dao.ILogininforDao.insertLogininfor - ==>  Preparing: insert into sys_logininfor (login_name, status, ipaddr, browser, os, msg) values (?, ?, ?, ?, ?, ?) 
+14:49:44.879 [http-nio-8085-exec-2] DEBUG com.dfyy.project.monitor.logininfor.dao.ILogininforDao.insertLogininfor - ==>  Preparing: insert into sys_logininfor (login_name, status, ipaddr, browser, os, msg) values (?, ?, ?, ?, ?, ?) 
+14:49:44.880 [http-nio-8085-exec-1] DEBUG com.dfyy.project.monitor.logininfor.dao.ILogininforDao.insertLogininfor - ==> Parameters: admin(String), 0(String), 0:0:0:0:0:0:0:1(String), Chrome(String), Windows 7(String), 登录成功(String)
+14:49:44.881 [http-nio-8085-exec-2] DEBUG com.dfyy.project.monitor.logininfor.dao.ILogininforDao.insertLogininfor - ==> Parameters: null, 1(String), 0:0:0:0:0:0:0:1(String), Chrome(String), Windows 7(String), * 必须填写(String)
+14:49:44.954 [http-nio-8085-exec-1] DEBUG com.dfyy.project.monitor.logininfor.dao.ILogininforDao.insertLogininfor - <==    Updates: 1
+14:49:45.005 [http-nio-8085-exec-2] DEBUG com.dfyy.project.monitor.logininfor.dao.ILogininforDao.insertLogininfor - <==    Updates: 1
+14:49:46.062 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenusByUserId - ==>  Preparing: select distinct m.menu_id, m.parent_id, m.menu_name, m.url, m.perms , m.menu_type, m.icon, m.order_num, m.create_time from sys_menu m left join sys_role_menu rm on m.menu_id = rm.menu_id left join sys_user_role ur on rm.role_id = ur.role_id where ur.user_id = ? and m.menu_type in ('M', 'C') and m.visible = 0 order by m.order_num 
+14:49:46.069 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenusByUserId - ==> Parameters: 1(Long)
+14:49:46.086 [http-nio-8085-exec-9] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenusByUserId - <==      Total: 13
+14:49:46.329 [http-nio-8085-exec-2] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - ==>  Preparing: replace into sys_user_online(sessionId, login_name, dept_name, ipaddr, browser, os, status, start_timestsamp, last_access_time, expire_time) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+14:49:46.351 [http-nio-8085-exec-2] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - ==> Parameters: 5dbff3ca-99fa-44da-b1e4-20032d151d08(String), admin(String), 研发一部(String), 0:0:0:0:0:0:0:1(String), Chrome(String), Windows 7(String), on_line(String), 2018-08-27 14:49:37.001(Timestamp), 2018-08-27 14:49:46.329(Timestamp), 1800000(Long)
+14:49:46.445 [http-nio-8085-exec-2] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - <==    Updates: 1
+14:49:48.059 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesByUserId - ==>  Preparing: SELECT r.role_id, r.role_name, r.role_key FROM sys_user u LEFT JOIN sys_user_role ur ON u.user_id = ur.user_id LEFT JOIN sys_role r ON ur.role_id = r.role_id WHERE ur.user_id = ? 
+14:49:48.062 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesByUserId - ==> Parameters: 1(Long)
+14:49:48.070 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesByUserId - <==      Total: 1
+14:49:48.072 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectPermsByUserId - ==>  Preparing: select distinct m.perms from sys_menu m left join sys_role_menu rm on m.menu_id = rm.menu_id left join sys_user_role ur on rm.role_id = ur.role_id where ur.user_id = ? 
+14:49:48.074 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectPermsByUserId - ==> Parameters: 1(Long)
+14:49:48.078 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectPermsByUserId - <==      Total: 67
+14:49:48.910 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.dept.dao.IDeptDao.selectDeptAll - ==>  Preparing: select dept_id, parent_id, dept_name, order_num, leader, phone, email, status, create_by, create_time from sys_dept 
+14:49:48.911 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.dept.dao.IDeptDao.selectDeptAll - ==> Parameters: 
+14:49:48.915 [http-nio-8085-exec-1] DEBUG com.dfyy.project.system.dept.dao.IDeptDao.selectDeptAll - <==      Total: 7
+14:49:48.972 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList_COUNT - ==>  Preparing: SELECT count(0) FROM sys_user 
+14:49:48.973 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList_COUNT - ==> Parameters: 
+14:49:48.975 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList_COUNT - <==      Total: 1
+14:49:48.978 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList - ==>  Preparing: SELECT user_id, dept_id, login_name, user_name, email, phonenumber, password, sex, avatar, salt, user_type, status, refuse_des, create_by, create_time FROM sys_user order by create_time desc LIMIT ? 
+14:49:48.980 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList - ==> Parameters: 10(Integer)
+14:49:48.985 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList - <==      Total: 10
+14:49:50.902 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - ==>  Preparing: SELECT count(0) FROM sys_role 
+14:49:50.904 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - ==> Parameters: 
+14:49:50.906 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - <==      Total: 1
+14:49:50.908 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - ==>  Preparing: SELECT role_id, role_name, role_key, role_sort, status, create_time, remark FROM sys_role order by role_sort asc LIMIT ? 
+14:49:50.909 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - ==> Parameters: 10(Integer)
+14:49:50.910 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - <==      Total: 2
+14:49:52.100 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==>  Preparing: select menu_id, menu_name, parent_id, order_num, url, menu_type, visible, perms, icon, create_by, create_time from sys_menu 
+14:49:52.104 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==> Parameters: 
+14:49:52.119 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - <==      Total: 69
+14:49:54.235 [http-nio-8085-exec-9] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.selectOperLogList_COUNT - ==>  Preparing: SELECT count(0) FROM sys_oper_log 
+14:49:54.236 [http-nio-8085-exec-9] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.selectOperLogList_COUNT - ==> Parameters: 
+14:49:54.349 [http-nio-8085-exec-9] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.selectOperLogList_COUNT - <==      Total: 1
+14:49:54.353 [http-nio-8085-exec-9] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.selectOperLogList - ==>  Preparing: SELECT * FROM sys_oper_log order by oper_time desc LIMIT ? 
+14:49:54.355 [http-nio-8085-exec-9] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.selectOperLogList - ==> Parameters: 10(Integer)
+14:49:54.358 [http-nio-8085-exec-9] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.selectOperLogList - <==      Total: 2
+14:49:55.375 [http-nio-8085-exec-2] DEBUG c.dfyy.project.monitor.logininfor.dao.ILogininforDao.selectLogininforList_COUNT - ==>  Preparing: SELECT count(0) FROM sys_logininfor 
+14:49:55.379 [http-nio-8085-exec-2] DEBUG c.dfyy.project.monitor.logininfor.dao.ILogininforDao.selectLogininforList_COUNT - ==> Parameters: 
+14:49:55.381 [http-nio-8085-exec-2] DEBUG c.dfyy.project.monitor.logininfor.dao.ILogininforDao.selectLogininforList_COUNT - <==      Total: 1
+14:49:55.383 [http-nio-8085-exec-2] DEBUG com.dfyy.project.monitor.logininfor.dao.ILogininforDao.selectLogininforList - ==>  Preparing: SELECT * FROM sys_logininfor order by login_time desc LIMIT ? 
+14:49:55.384 [http-nio-8085-exec-2] DEBUG com.dfyy.project.monitor.logininfor.dao.ILogininforDao.selectLogininforList - ==> Parameters: 10(Integer)
+14:49:55.388 [http-nio-8085-exec-2] DEBUG com.dfyy.project.monitor.logininfor.dao.ILogininforDao.selectLogininforList - <==      Total: 10
+14:49:56.482 [http-nio-8085-exec-5] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectUserOnlineList_COUNT - ==>  Preparing: SELECT count(0) FROM sys_user_online 
+14:49:56.483 [http-nio-8085-exec-5] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectUserOnlineList_COUNT - ==> Parameters: 
+14:49:56.498 [http-nio-8085-exec-5] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectUserOnlineList_COUNT - <==      Total: 1
+14:49:56.500 [http-nio-8085-exec-5] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectUserOnlineList - ==>  Preparing: SELECT * FROM sys_user_online order by last_access_time desc LIMIT ? 
+14:49:56.502 [http-nio-8085-exec-5] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectUserOnlineList - ==> Parameters: 10(Integer)
+14:49:56.506 [http-nio-8085-exec-5] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectUserOnlineList - <==      Total: 1
+14:49:57.159 [http-nio-8085-exec-6] DEBUG com.dfyy.project.monitor.job.dao.IJobDao.selectJobList_COUNT - ==>  Preparing: SELECT count(0) FROM sys_job 
+14:49:57.159 [http-nio-8085-exec-6] DEBUG com.dfyy.project.monitor.job.dao.IJobDao.selectJobList_COUNT - ==> Parameters: 
+14:49:57.161 [http-nio-8085-exec-6] DEBUG com.dfyy.project.monitor.job.dao.IJobDao.selectJobList_COUNT - <==      Total: 1
+14:49:57.162 [http-nio-8085-exec-6] DEBUG com.dfyy.project.monitor.job.dao.IJobDao.selectJobList - ==>  Preparing: SELECT job_id, job_name, job_group, method_name, params, cron_expression, status, create_by, create_time remark FROM sys_job order by create_time asc LIMIT ? 
+14:49:57.163 [http-nio-8085-exec-6] DEBUG com.dfyy.project.monitor.job.dao.IJobDao.selectJobList - ==> Parameters: 10(Integer)
+14:49:57.164 [http-nio-8085-exec-6] DEBUG com.dfyy.project.monitor.job.dao.IJobDao.selectJobList - <==      Total: 2
+14:50:01.464 [http-nio-8085-exec-3] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - ==>  Preparing: SELECT count(0) FROM information_schema.tables WHERE table_comment <> '' AND table_schema = (SELECT database()) 
+14:50:01.467 [http-nio-8085-exec-3] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - ==> Parameters: 
+14:50:01.474 [http-nio-8085-exec-3] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - <==      Total: 1
+14:50:01.478 [http-nio-8085-exec-3] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - ==>  Preparing: SELECT table_name, table_comment, create_time, update_time FROM information_schema.tables WHERE table_comment <> '' AND table_schema = (SELECT database()) order by create_time desc LIMIT ? 
+14:50:01.479 [http-nio-8085-exec-3] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - ==> Parameters: 10(Integer)
+14:50:01.488 [http-nio-8085-exec-3] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - <==      Total: 10
+14:50:04.981 [http-nio-8085-exec-7] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - ==>  Preparing: SELECT count(0) FROM information_schema.tables WHERE table_comment <> '' AND table_schema = (SELECT database()) 
+14:50:04.982 [http-nio-8085-exec-7] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - ==> Parameters: 
+14:50:04.988 [http-nio-8085-exec-7] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - <==      Total: 1
+14:50:04.996 [http-nio-8085-exec-7] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - ==>  Preparing: SELECT table_name, table_comment, create_time, update_time FROM information_schema.tables WHERE table_comment <> '' AND table_schema = (SELECT database()) order by create_time desc LIMIT ?, ? 
+14:50:04.998 [http-nio-8085-exec-7] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - ==> Parameters: 10(Integer), 10(Integer)
+14:50:05.004 [http-nio-8085-exec-7] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - <==      Total: 7
+14:50:12.642 [http-nio-8085-exec-3] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - ==>  Preparing: SELECT count(0) FROM information_schema.tables WHERE table_comment <> '' AND table_schema = (SELECT database()) 
+14:50:12.643 [http-nio-8085-exec-3] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - ==> Parameters: 
+14:50:12.650 [http-nio-8085-exec-3] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - <==      Total: 1
+14:50:12.659 [http-nio-8085-exec-3] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - ==>  Preparing: SELECT table_name, table_comment, create_time, update_time FROM information_schema.tables WHERE table_comment <> '' AND table_schema = (SELECT database()) order by create_time desc LIMIT ? 
+14:50:12.659 [http-nio-8085-exec-3] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - ==> Parameters: 10(Integer)
+14:50:12.663 [http-nio-8085-exec-3] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - <==      Total: 10
+14:50:17.452 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenusByUserId - ==>  Preparing: select distinct m.menu_id, m.parent_id, m.menu_name, m.url, m.perms , m.menu_type, m.icon, m.order_num, m.create_time from sys_menu m left join sys_role_menu rm on m.menu_id = rm.menu_id left join sys_user_role ur on rm.role_id = ur.role_id where ur.user_id = ? and m.menu_type in ('M', 'C') and m.visible = 0 order by m.order_num 
+14:50:17.456 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenusByUserId - ==> Parameters: 1(Long)
+14:50:17.467 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenusByUserId - <==      Total: 13
+14:50:19.493 [http-nio-8085-exec-1] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - ==>  Preparing: SELECT count(0) FROM information_schema.tables WHERE table_comment <> '' AND table_schema = (SELECT database()) 
+14:50:19.494 [http-nio-8085-exec-1] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - ==> Parameters: 
+14:50:19.499 [http-nio-8085-exec-1] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - <==      Total: 1
+14:50:19.505 [http-nio-8085-exec-1] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - ==>  Preparing: SELECT table_name, table_comment, create_time, update_time FROM information_schema.tables WHERE table_comment <> '' AND table_schema = (SELECT database()) order by create_time desc LIMIT ? 
+14:50:19.506 [http-nio-8085-exec-1] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - ==> Parameters: 10(Integer)
+14:50:19.508 [http-nio-8085-exec-1] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - <==      Total: 10
+14:50:28.642 [http-nio-8085-exec-9] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - ==>  Preparing: SELECT count(0) FROM information_schema.tables WHERE table_comment <> '' AND table_schema = (SELECT database()) 
+14:50:28.645 [http-nio-8085-exec-9] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - ==> Parameters: 
+14:50:28.649 [http-nio-8085-exec-9] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - <==      Total: 1
+14:50:28.655 [http-nio-8085-exec-9] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - ==>  Preparing: SELECT table_name, table_comment, create_time, update_time FROM information_schema.tables WHERE table_comment <> '' AND table_schema = (SELECT database()) order by create_time desc LIMIT ?, ? 
+14:50:28.655 [http-nio-8085-exec-9] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - ==> Parameters: 10(Integer), 10(Integer)
+14:50:28.658 [http-nio-8085-exec-9] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - <==      Total: 7
+14:50:32.736 [http-nio-8085-exec-8] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - ==>  Preparing: SELECT count(0) FROM information_schema.tables WHERE table_comment <> '' AND table_schema = (SELECT database()) 
+14:50:32.737 [http-nio-8085-exec-8] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - ==> Parameters: 
+14:50:32.743 [http-nio-8085-exec-8] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - <==      Total: 1
+14:50:32.752 [http-nio-8085-exec-8] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - ==>  Preparing: SELECT table_name, table_comment, create_time, update_time FROM information_schema.tables WHERE table_comment <> '' AND table_schema = (SELECT database()) order by create_time desc LIMIT ? 
+14:50:32.753 [http-nio-8085-exec-8] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - ==> Parameters: 10(Integer)
+14:50:32.756 [http-nio-8085-exec-8] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - <==      Total: 10
+15:14:08.708 [main] INFO  com.dfyy.DfyyiApplication - Starting DfyyiApplication on MS-20160329BWCW with PID 6348 (D:\ecl\eclipse\home\dfyy\target\classes started by Administrator in D:\ecl\eclipse\home\dfyy)
+15:14:08.717 [main] DEBUG com.dfyy.DfyyiApplication - Running with Spring Boot v1.5.10.RELEASE, Spring v4.3.14.RELEASE
+15:14:08.718 [main] INFO  com.dfyy.DfyyiApplication - The following profiles are active: druid
+15:14:09.054 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.6.Final
+15:14:10.977 [main] INFO  org.apache.shiro.cache.ehcache.EhCacheManager - Cache with name 'com.dfyy.framework.shiro.realm.UserRealm.authorizationCache' does not yet exist.  Creating now.
+15:14:10.978 [main] INFO  org.apache.shiro.cache.ehcache.EhCacheManager - Added EhCache named [com.dfyy.framework.shiro.realm.UserRealm.authorizationCache]
+15:14:12.203 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+15:14:12.682 [main] INFO  org.apache.shiro.cache.ehcache.EhCacheManager - Using existing EHCache named [loginRecordCache]
+15:14:13.897 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+15:14:13.898 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.27
+15:14:14.042 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:14:14.750 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+15:14:14.783 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+15:14:14.784 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.0 created.
+15:14:14.811 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'dfyyScheduler' with instanceId 'MS-20160329BWCW1535354054754'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 20 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+15:14:14.811 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'dfyyScheduler' initialized from an externally provided properties instance.
+15:14:14.812 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.0
+15:14:14.814 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@21abda60
+15:14:14.921 [main] DEBUG com.dfyy.project.monitor.job.dao.IJobDao.selectJobAll - ==>  Preparing: SELECT job_id, job_name, job_group, method_name, params, cron_expression, status, create_by, create_time FROM sys_job 
+15:14:15.074 [main] DEBUG com.dfyy.project.monitor.job.dao.IJobDao.selectJobAll - ==> Parameters: 
+15:14:15.136 [main] DEBUG com.dfyy.project.monitor.job.dao.IJobDao.selectJobAll - <==      Total: 2
+15:14:19.579 [main] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+15:14:21.131 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8085"]
+15:14:21.149 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8085"]
+15:14:21.162 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+15:14:21.199 [main] INFO  com.dfyy.DfyyiApplication - Started DfyyiApplication in 13.034 seconds (JVM running for 14.037)
+15:14:22.418 [Quartz Scheduler [dfyyScheduler]] INFO  org.quartz.core.QuartzScheduler - Scheduler dfyyScheduler_$_MS-20160329BWCW1535354054754 started.
+15:14:31.296 [http-nio-8085-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+15:14:31.356 [http-nio-8085-exec-1] INFO  org.apache.shiro.session.mgt.AbstractValidatingSessionManager - Enabling session validation scheduler...
+15:14:31.357 [http-nio-8085-exec-1] DEBUG com.dfyy.framework.shiro.web.session.SpringSessionValidationScheduler - Scheduling session validation job using Spring Scheduler with session validation interval of [600000]ms...
+15:14:31.360 [http-nio-8085-exec-1] DEBUG com.dfyy.framework.shiro.web.session.SpringSessionValidationScheduler - Session validation job successfully scheduled with Spring Scheduler.
+15:14:31.365 [http-nio-8085-exec-1] INFO  org.apache.shiro.cache.ehcache.EhCacheManager - Using existing EHCache named [shiro-activeSessionCache]
+15:14:31.371 [http-nio-8085-exec-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineById - ==>  Preparing: select * from sys_user_online where sessionid = ? 
+15:14:31.374 [http-nio-8085-exec-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineById - ==> Parameters: 5dbff3ca-99fa-44da-b1e4-20032d151d08(String)
+15:14:31.449 [http-nio-8085-exec-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineById - <==      Total: 0
+15:14:32.361 [pool-1-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+15:14:32.380 [pool-1-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+15:14:32.382 [pool-1-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2018-08-27 14:44:32(String)
+15:14:32.420 [pool-1-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 0
+15:14:32.421 [pool-1-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. No sessions were stopped.
+15:14:40.110 [http-nio-8085-exec-5] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserByName - ==>  Preparing: select u.user_id, u.dept_id, u.login_name, u.user_name, u.email, u.phonenumber, u.sex, u.avatar, u.password, u.salt, u.status, u.refuse_des, u.create_time, d.dept_id, d.parent_id, d.dept_name, d.order_num, d.status as dept_status from sys_user u left join sys_dept d on u.dept_id = d.dept_id left join sys_user_role ur on u.user_id = ur.user_id where u.login_name = ? 
+15:14:40.112 [http-nio-8085-exec-5] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserByName - ==> Parameters: admin(String)
+15:14:40.122 [http-nio-8085-exec-9] INFO  sys-user - [0:0:0:0:0:0:0:1][][Error][* 必须填写]
+15:14:40.126 [http-nio-8085-exec-9] DEBUG com.dfyy.project.monitor.logininfor.dao.ILogininforDao.insertLogininfor - ==>  Preparing: insert into sys_logininfor (login_name, status, ipaddr, browser, os, msg) values (?, ?, ?, ?, ?, ?) 
+15:14:40.129 [http-nio-8085-exec-9] DEBUG com.dfyy.project.monitor.logininfor.dao.ILogininforDao.insertLogininfor - ==> Parameters: null, 1(String), 0:0:0:0:0:0:0:1(String), Chrome(String), Windows 7(String), * 必须填写(String)
+15:14:40.159 [http-nio-8085-exec-5] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserByName - <==      Total: 1
+15:14:40.164 [http-nio-8085-exec-9] DEBUG com.dfyy.project.monitor.logininfor.dao.ILogininforDao.insertLogininfor - <==    Updates: 1
+15:14:40.165 [http-nio-8085-exec-5] INFO  sys-user - [0:0:0:0:0:0:0:1][admin][Success][登录成功]
+15:14:40.166 [http-nio-8085-exec-5] DEBUG com.dfyy.project.monitor.logininfor.dao.ILogininforDao.insertLogininfor - ==>  Preparing: insert into sys_logininfor (login_name, status, ipaddr, browser, os, msg) values (?, ?, ?, ?, ?, ?) 
+15:14:40.169 [http-nio-8085-exec-5] DEBUG com.dfyy.project.monitor.logininfor.dao.ILogininforDao.insertLogininfor - ==> Parameters: admin(String), 0(String), 0:0:0:0:0:0:0:1(String), Chrome(String), Windows 7(String), 登录成功(String)
+15:14:40.203 [http-nio-8085-exec-5] DEBUG com.dfyy.project.monitor.logininfor.dao.ILogininforDao.insertLogininfor - <==    Updates: 1
+15:14:41.242 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenusByUserId - ==>  Preparing: select distinct m.menu_id, m.parent_id, m.menu_name, m.url, m.perms , m.menu_type, m.icon, m.order_num, m.create_time from sys_menu m left join sys_role_menu rm on m.menu_id = rm.menu_id left join sys_user_role ur on rm.role_id = ur.role_id where ur.user_id = ? and m.menu_type in ('M', 'C') and m.visible = 0 order by m.order_num 
+15:14:41.248 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenusByUserId - ==> Parameters: 1(Long)
+15:14:41.289 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenusByUserId - <==      Total: 13
+15:14:41.584 [http-nio-8085-exec-5] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - ==>  Preparing: replace into sys_user_online(sessionId, login_name, dept_name, ipaddr, browser, os, status, start_timestsamp, last_access_time, expire_time) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+15:14:41.626 [http-nio-8085-exec-5] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - ==> Parameters: e3e1330b-dea1-44c6-bade-dab0ba827075(String), admin(String), 研发一部(String), 0:0:0:0:0:0:0:1(String), Chrome(String), Windows 7(String), on_line(String), 2018-08-27 15:14:31.462(Timestamp), 2018-08-27 15:14:41.582(Timestamp), 1800000(Long)
+15:14:41.676 [http-nio-8085-exec-5] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.saveOnline - <==    Updates: 1
+15:14:46.069 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesByUserId - ==>  Preparing: SELECT r.role_id, r.role_name, r.role_key FROM sys_user u LEFT JOIN sys_user_role ur ON u.user_id = ur.user_id LEFT JOIN sys_role r ON ur.role_id = r.role_id WHERE ur.user_id = ? 
+15:14:46.073 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesByUserId - ==> Parameters: 1(Long)
+15:14:46.107 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRolesByUserId - <==      Total: 1
+15:14:46.110 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectPermsByUserId - ==>  Preparing: select distinct m.perms from sys_menu m left join sys_role_menu rm on m.menu_id = rm.menu_id left join sys_user_role ur on rm.role_id = ur.role_id where ur.user_id = ? 
+15:14:46.112 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectPermsByUserId - ==> Parameters: 1(Long)
+15:14:46.149 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectPermsByUserId - <==      Total: 67
+15:14:46.581 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.dept.dao.IDeptDao.selectDeptAll - ==>  Preparing: select dept_id, parent_id, dept_name, order_num, leader, phone, email, status, create_by, create_time from sys_dept 
+15:14:46.582 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.dept.dao.IDeptDao.selectDeptAll - ==> Parameters: 
+15:14:46.618 [http-nio-8085-exec-8] DEBUG com.dfyy.project.system.dept.dao.IDeptDao.selectDeptAll - <==      Total: 7
+15:14:46.635 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList_COUNT - ==>  Preparing: SELECT count(0) FROM sys_user 
+15:14:46.636 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList_COUNT - ==> Parameters: 
+15:14:46.670 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList_COUNT - <==      Total: 1
+15:14:46.674 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList - ==>  Preparing: SELECT user_id, dept_id, login_name, user_name, email, phonenumber, password, sex, avatar, salt, user_type, status, refuse_des, create_by, create_time FROM sys_user order by create_time desc LIMIT ? 
+15:14:46.676 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList - ==> Parameters: 10(Integer)
+15:14:46.714 [http-nio-8085-exec-7] DEBUG com.dfyy.project.system.user.dao.IUserDao.selectUserList - <==      Total: 10
+15:14:47.556 [http-nio-8085-exec-2] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - ==>  Preparing: SELECT count(0) FROM sys_role 
+15:14:47.559 [http-nio-8085-exec-2] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - ==> Parameters: 
+15:14:47.633 [http-nio-8085-exec-2] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList_COUNT - <==      Total: 1
+15:14:47.635 [http-nio-8085-exec-2] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - ==>  Preparing: SELECT role_id, role_name, role_key, role_sort, status, create_time, remark FROM sys_role order by role_sort asc LIMIT ? 
+15:14:47.637 [http-nio-8085-exec-2] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - ==> Parameters: 10(Integer)
+15:14:47.675 [http-nio-8085-exec-2] DEBUG com.dfyy.project.system.role.dao.IRoleDao.selectRoleList - <==      Total: 2
+15:14:49.066 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==>  Preparing: select menu_id, menu_name, parent_id, order_num, url, menu_type, visible, perms, icon, create_by, create_time from sys_menu 
+15:14:49.068 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - ==> Parameters: 
+15:14:49.120 [http-nio-8085-exec-6] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenuAll - <==      Total: 69
+15:14:51.685 [http-nio-8085-exec-3] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.selectOperLogList_COUNT - ==>  Preparing: SELECT count(0) FROM sys_oper_log 
+15:14:51.687 [http-nio-8085-exec-3] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.selectOperLogList_COUNT - ==> Parameters: 
+15:14:51.726 [http-nio-8085-exec-3] DEBUG com.dfyy.project.monitor.operlog.dao.IOperLogDao.selectOperLogList_COUNT - <==      Total: 1
+15:14:53.584 [http-nio-8085-exec-10] DEBUG c.dfyy.project.monitor.logininfor.dao.ILogininforDao.selectLogininforList_COUNT - ==>  Preparing: SELECT count(0) FROM sys_logininfor 
+15:14:53.586 [http-nio-8085-exec-10] DEBUG c.dfyy.project.monitor.logininfor.dao.ILogininforDao.selectLogininforList_COUNT - ==> Parameters: 
+15:14:53.624 [http-nio-8085-exec-10] DEBUG c.dfyy.project.monitor.logininfor.dao.ILogininforDao.selectLogininforList_COUNT - <==      Total: 1
+15:14:53.626 [http-nio-8085-exec-10] DEBUG com.dfyy.project.monitor.logininfor.dao.ILogininforDao.selectLogininforList - ==>  Preparing: SELECT * FROM sys_logininfor order by login_time desc LIMIT ? 
+15:14:53.627 [http-nio-8085-exec-10] DEBUG com.dfyy.project.monitor.logininfor.dao.ILogininforDao.selectLogininforList - ==> Parameters: 10(Integer)
+15:14:53.669 [http-nio-8085-exec-10] DEBUG com.dfyy.project.monitor.logininfor.dao.ILogininforDao.selectLogininforList - <==      Total: 10
+15:14:56.767 [http-nio-8085-exec-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectUserOnlineList_COUNT - ==>  Preparing: SELECT count(0) FROM sys_user_online 
+15:14:56.769 [http-nio-8085-exec-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectUserOnlineList_COUNT - ==> Parameters: 
+15:14:56.806 [http-nio-8085-exec-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectUserOnlineList_COUNT - <==      Total: 1
+15:14:56.808 [http-nio-8085-exec-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectUserOnlineList - ==>  Preparing: SELECT * FROM sys_user_online order by last_access_time desc LIMIT ? 
+15:14:56.809 [http-nio-8085-exec-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectUserOnlineList - ==> Parameters: 10(Integer)
+15:14:56.848 [http-nio-8085-exec-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectUserOnlineList - <==      Total: 2
+15:14:58.390 [http-nio-8085-exec-9] DEBUG com.dfyy.project.monitor.job.dao.IJobDao.selectJobList_COUNT - ==>  Preparing: SELECT count(0) FROM sys_job 
+15:14:58.391 [http-nio-8085-exec-9] DEBUG com.dfyy.project.monitor.job.dao.IJobDao.selectJobList_COUNT - ==> Parameters: 
+15:14:58.430 [http-nio-8085-exec-9] DEBUG com.dfyy.project.monitor.job.dao.IJobDao.selectJobList_COUNT - <==      Total: 1
+15:14:58.432 [http-nio-8085-exec-9] DEBUG com.dfyy.project.monitor.job.dao.IJobDao.selectJobList - ==>  Preparing: SELECT job_id, job_name, job_group, method_name, params, cron_expression, status, create_by, create_time remark FROM sys_job order by create_time asc LIMIT ? 
+15:14:58.433 [http-nio-8085-exec-9] DEBUG com.dfyy.project.monitor.job.dao.IJobDao.selectJobList - ==> Parameters: 10(Integer)
+15:14:58.471 [http-nio-8085-exec-9] DEBUG com.dfyy.project.monitor.job.dao.IJobDao.selectJobList - <==      Total: 2
+15:15:02.614 [http-nio-8085-exec-3] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - ==>  Preparing: SELECT count(0) FROM information_schema.tables WHERE table_comment <> '' AND table_schema = (SELECT database()) 
+15:15:02.617 [http-nio-8085-exec-3] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - ==> Parameters: 
+15:15:02.651 [http-nio-8085-exec-3] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - <==      Total: 1
+15:15:02.655 [http-nio-8085-exec-3] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - ==>  Preparing: SELECT table_name, table_comment, create_time, update_time FROM information_schema.tables WHERE table_comment <> '' AND table_schema = (SELECT database()) order by create_time desc LIMIT ? 
+15:15:02.656 [http-nio-8085-exec-3] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - ==> Parameters: 10(Integer)
+15:15:02.693 [http-nio-8085-exec-3] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - <==      Total: 10
+15:15:05.707 [http-nio-8085-exec-7] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - ==>  Preparing: SELECT count(0) FROM information_schema.tables WHERE table_comment <> '' AND table_schema = (SELECT database()) 
+15:15:05.709 [http-nio-8085-exec-7] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - ==> Parameters: 
+15:15:05.743 [http-nio-8085-exec-7] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - <==      Total: 1
+15:15:05.749 [http-nio-8085-exec-7] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - ==>  Preparing: SELECT table_name, table_comment, create_time, update_time FROM information_schema.tables WHERE table_comment <> '' AND table_schema = (SELECT database()) order by create_time desc LIMIT ?, ? 
+15:15:05.751 [http-nio-8085-exec-7] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - ==> Parameters: 10(Integer), 10(Integer)
+15:15:05.791 [http-nio-8085-exec-7] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - <==      Total: 10
+15:15:08.267 [http-nio-8085-exec-5] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - ==>  Preparing: SELECT count(0) FROM information_schema.tables WHERE table_comment <> '' AND table_schema = (SELECT database()) 
+15:15:08.269 [http-nio-8085-exec-5] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - ==> Parameters: 
+15:15:08.304 [http-nio-8085-exec-5] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - <==      Total: 1
+15:15:08.312 [http-nio-8085-exec-5] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - ==>  Preparing: SELECT table_name, table_comment, create_time, update_time FROM information_schema.tables WHERE table_comment <> '' AND table_schema = (SELECT database()) order by create_time desc LIMIT ?, ? 
+15:15:08.314 [http-nio-8085-exec-5] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - ==> Parameters: 20(Integer), 10(Integer)
+15:15:08.351 [http-nio-8085-exec-5] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - <==      Total: 10
+15:15:10.107 [http-nio-8085-exec-10] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - ==>  Preparing: SELECT count(0) FROM information_schema.tables WHERE table_comment <> '' AND table_schema = (SELECT database()) 
+15:15:10.108 [http-nio-8085-exec-10] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - ==> Parameters: 
+15:15:10.142 [http-nio-8085-exec-10] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - <==      Total: 1
+15:15:10.147 [http-nio-8085-exec-10] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - ==>  Preparing: SELECT table_name, table_comment, create_time, update_time FROM information_schema.tables WHERE table_comment <> '' AND table_schema = (SELECT database()) order by create_time desc LIMIT ?, ? 
+15:15:10.148 [http-nio-8085-exec-10] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - ==> Parameters: 30(Integer), 10(Integer)
+15:15:10.184 [http-nio-8085-exec-10] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - <==      Total: 10
+15:15:11.042 [http-nio-8085-exec-1] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - ==>  Preparing: SELECT count(0) FROM information_schema.tables WHERE table_comment <> '' AND table_schema = (SELECT database()) 
+15:15:11.043 [http-nio-8085-exec-1] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - ==> Parameters: 
+15:15:11.077 [http-nio-8085-exec-1] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - <==      Total: 1
+15:15:11.081 [http-nio-8085-exec-1] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - ==>  Preparing: SELECT table_name, table_comment, create_time, update_time FROM information_schema.tables WHERE table_comment <> '' AND table_schema = (SELECT database()) order by create_time desc LIMIT ?, ? 
+15:15:11.082 [http-nio-8085-exec-1] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - ==> Parameters: 40(Integer), 10(Integer)
+15:15:11.119 [http-nio-8085-exec-1] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - <==      Total: 10
+15:15:12.948 [http-nio-8085-exec-2] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - ==>  Preparing: SELECT count(0) FROM information_schema.tables WHERE table_comment <> '' AND table_schema = (SELECT database()) 
+15:15:12.949 [http-nio-8085-exec-2] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - ==> Parameters: 
+15:15:12.984 [http-nio-8085-exec-2] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList_COUNT - <==      Total: 1
+15:15:12.995 [http-nio-8085-exec-2] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - ==>  Preparing: SELECT table_name, table_comment, create_time, update_time FROM information_schema.tables WHERE table_comment <> '' AND table_schema = (SELECT database()) order by create_time desc LIMIT ?, ? 
+15:15:12.998 [http-nio-8085-exec-2] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - ==> Parameters: 50(Integer), 10(Integer)
+15:15:13.035 [http-nio-8085-exec-2] DEBUG com.dfyy.project.tool.gen.dao.IGenDao.selectTableList - <==      Total: 2
+15:15:17.431 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenusByUserId - ==>  Preparing: select distinct m.menu_id, m.parent_id, m.menu_name, m.url, m.perms , m.menu_type, m.icon, m.order_num, m.create_time from sys_menu m left join sys_role_menu rm on m.menu_id = rm.menu_id left join sys_user_role ur on rm.role_id = ur.role_id where ur.user_id = ? and m.menu_type in ('M', 'C') and m.visible = 0 order by m.order_num 
+15:15:17.432 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenusByUserId - ==> Parameters: 1(Long)
+15:15:17.502 [http-nio-8085-exec-4] DEBUG com.dfyy.project.system.menu.dao.IMenuDao.selectMenusByUserId - <==      Total: 13
+15:17:08.171 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535354054754_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535354054754) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+15:17:23.248 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535354054754_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535354054754) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+15:17:38.323 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535354054754_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535354054754) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+15:17:53.397 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535354054754_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535354054754) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+15:18:08.472 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535354054754_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535354054754) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+15:18:23.548 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535354054754_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535354054754) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+15:18:38.623 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535354054754_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535354054754) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+15:18:53.735 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535354054754_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535354054754) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+15:19:08.811 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535354054754_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535354054754) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+15:19:23.887 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535354054754_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535354054754) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+15:19:38.970 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535354054754_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535354054754) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+15:19:54.068 [QuartzScheduler_dfyyScheduler-MS-20160329BWCW1535354054754_ClusterManager] WARN  org.springframework.scheduling.quartz.LocalDataSourceJobStore - This scheduler instance (MS-20160329BWCW1535354054754) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.

@@ -1,0 +1,24 @@
+<!--pages/performance/index.wxml-->
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th">时间</view>
+    <view class="th">金额（元）</view>
+    <view class="th ">提成（元）</view>
+  </view>
+  <block wx:for="{{salesman1}}" wx:for-item="s1">
+    <navigator url="../months/index?salesmanId={{s1.salesmanId}}&createTime={{s1.createTime}}" class="tr">
+      <view class="td">{{s1.monthTime}}月</view>
+      <view class="td">{{s1.total_money}}</view>
+      <view class="td">{{s1.money}}</view>
+    </navigator>
+  </block>
+  <!-- <view class="hehe">2017</view>
+  <block wx:for="{{listData}}" wx:key="{{code}}">
+    <view class="tr">
+      <view class="td">{{item.code}}</view>
+      <view class="td">{{item.text}}</view>
+      <view class="td">{{item.type}}</view>
+    </view>
+  </block> -->
+</view>
+

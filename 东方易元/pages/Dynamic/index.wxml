@@ -1,0 +1,49 @@
+<!--pages/Dynamic/index.wxml-->
+<import src="../wxParse/wxParse.wxml"/>
+<view class='dyna'>
+  <text class='dyna_bt'>{{companynews[0].title}}</text>
+  <view class='Read'>
+    <text class='Read_01'>{{companynews[0].createTime}}</text>
+    <view class='Read_02'><text class='Read_ts'>{{companynews[0].playrecord}}</text>阅读</view>
+    <view class='Read_02'><text class='Read_ts'>{{size}}</text>评论</view>
+  </view>
+  <view class="weui-article__p">
+    <image class="weui-article__img" src="{{url}}/imgfile/{{companynews[0].pictureNum}}" mode='widthFix' />
+  </view>
+  <view class='jianggeg'>
+    <view class="wxParse">
+      <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+    </view>
+  </view>
+  <view class='comment'>
+    <text class='comment_bt'>评论</text>
+    <block wx:for="{{commentDetail}}" wx:key="{{index}}">
+      <view class='comment01' data-index='{{index+1}}'>
+        <view class='comm_left'>
+          <image class='pic09' src="{{item.user_url}}"></image>
+          <view class='comm_nr'>
+            <text class='comm01'>{{item.user_name}}</text>
+            <text class='comm02'>{{item.content}}</text>
+            <text class='comm03'>{{item.creation_time}}</text>
+          </view>
+        </view>
+        <view class='comm_right' wx:if="{{item.collected==1}}">
+          <!-- 点赞过 -->
+          <image class='pic001' catchtap='onCollectionTap' src="../images/great-select.png" data-index='{{index}}'></image>
+          <text class='comm04'>{{item.thumbs}}</text>
+        </view>
+        <view class='comm_right' wx:else>
+          <!-- 未点赞 -->
+          <image class='pic001' src="../images/great.png" catchtap='onCollectionTap' data-index='{{index}}'></image>
+          <text class='comm04'>{{item.thumbs}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+<view class='interval'></view>
+<view class='bottom' id="test">
+   <input class='pinlun' placeholder="写评论..."  focus="{{focus}}" bindinput='pinlun' value="{{counts}}"/>
+   <button class='pin_btn' bindtap='pbtn'>发送</button>
+</view>
+

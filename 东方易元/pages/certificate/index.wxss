@@ -1,0 +1,42 @@
+/* pages/certificate/index.wxss */
+.weui-grids {
+	overflow: hidden
+}
+.weui-grids04 .weui-grid{ width: 100%; padding: 10px 0}
+.weui-grid {
+	position: relative;
+	float: left;
+	padding: 20px 10px;
+	width: 25%;
+	box-sizing: border-box;
+}
+.weui-grids04 .weui-grid__icon{ width: 706rpx; height: 394rpx; overflow: hidden;}
+.weui-grid__icon {
+	display: block;
+	width: 45px;
+	height: 45px;
+	margin: 0 auto
+}
+.weui-grids03 .weui-grid__label,.weui-grids04 .weui-grid__label{ text-align: left}
+.weui-grid__label {
+	margin-top: 9px;
+	display: block;
+	text-align: center;
+	color: #333;
+	font-size: 14px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden
+}
+
+.warp{ width: 100%; box-sizing: border-box; padding: 0 3%;}
+/* CSS Document */
+.adders_right{ float: right;}
+.adders_left,.pic,.words,.pic01{ float: left;}
+.adders_right,.words{ font-size: 24rpx; color: #999; line-height: 40rpx;}
+.pic{ width: 9px; height: 10px;}
+.pic01{ width: 1px; height: 20rpx;}
+.pic,.words,.pic01{ margin-right: 14rpx;}
+.pic01{ margin-top: 11rpx;}
+.pic{ margin-top: 12rpx;}
+.weui-grids04, .weui-grids04 .weui-grid__icon{ position: relative}

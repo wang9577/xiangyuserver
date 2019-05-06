@@ -1,0 +1,34 @@
+<!--pages/Branchdet/index.wxml-->
+<import src="../wxParse/wxParse.wxml"/>
+<swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+  <block wx:for="{{branch[0].carousel}}">
+    <swiper-item>
+      <image src="{{url}}/imgfile/{{item.image_id}}" mode='scaleToFill' class="slide-image"/>
+    </swiper-item>
+  </block>
+</swiper>
+<view class='tried'>
+  <view class='tried_bt'>{{branch[0].branchName}}</view>
+  <view class='tried01'>
+    <view class='tried01_left'>
+      <image class='pic05' src='../images/pic002_03.jpg'></image>
+      <view class='tried01_left01'>
+        <text class='words05' bindtap="sumber">{{branch[0].city}}-{{branch[0].address}}</text>
+        <image class='pic06' src='../images/piuc001_10.jpg'></image>
+        <text class='words06'>距您{{yfgs}}千米</text>
+      </view>
+    </view>
+    <view class='tried01_right'>
+      <image class='pic07' src='../images/pic003_06.jpg'></image>
+      <navigator url=''>
+        <image class='pic08' src='../images/pic004_06.jpg' bindtap="phone"></image>
+      </navigator>
+    </view>
+  </view>
+</view>
+<view class='tried02'>
+  <view class='tried_bt01'>营业时间</view>
+  <text class='tried02_nr'>周一至周日 {{branch[0].isAsc}}</text>
+  <view class='tried_bt01'>服务内容</view>
+  <view class='tried02_nr'><template is="wxParse" data="{{wxParseData:article.nodes}}"/></view>
+</view>

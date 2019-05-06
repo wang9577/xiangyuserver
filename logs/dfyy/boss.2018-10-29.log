@@ -1,0 +1,234 @@
+14:06:02.627 [main] INFO  com.dfyy.DfyyiApplication - Starting DfyyiApplication on shijieX with PID 11172 (E:\workspaces\dfyy\target\classes started by Administrator in E:\workspaces\dfyy)
+14:06:02.633 [main] DEBUG com.dfyy.DfyyiApplication - Running with Spring Boot v1.5.10.RELEASE, Spring v4.3.14.RELEASE
+14:06:02.634 [main] INFO  com.dfyy.DfyyiApplication - The following profiles are active: druid
+14:06:02.912 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.6.Final
+14:06:04.169 [main] INFO  org.apache.shiro.cache.ehcache.EhCacheManager - Cache with name 'com.dfyy.framework.shiro.realm.UserRealm.authorizationCache' does not yet exist.  Creating now.
+14:06:04.170 [main] INFO  org.apache.shiro.cache.ehcache.EhCacheManager - Added EhCache named [com.dfyy.framework.shiro.realm.UserRealm.authorizationCache]
+14:06:05.090 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+14:06:05.894 [main] INFO  org.apache.shiro.cache.ehcache.EhCacheManager - Using existing EHCache named [loginRecordCache]
+14:06:06.738 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+14:06:06.739 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.27
+14:06:06.828 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:06:08.385 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+14:06:08.401 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+14:06:08.401 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.0 created.
+14:06:08.414 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'dfyyScheduler' with instanceId 'shijieX1540793168388'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 20 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+14:06:08.414 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'dfyyScheduler' initialized from an externally provided properties instance.
+14:06:08.415 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.0
+14:06:08.416 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@f5bf288
+14:06:08.458 [main] DEBUG com.dfyy.project.monitor.job.dao.IJobDao.selectJobAll - ==>  Preparing: SELECT job_id, job_name, job_group, method_name, params, cron_expression, status, create_by, create_time FROM sys_job 
+14:06:08.560 [main] DEBUG com.dfyy.project.monitor.job.dao.IJobDao.selectJobAll - ==> Parameters: 
+14:06:08.611 [main] DEBUG com.dfyy.project.monitor.job.dao.IJobDao.selectJobAll - <==      Total: 1
+14:06:10.520 [main] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+14:06:11.483 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8085"]
+14:06:11.504 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8085"]
+14:06:11.524 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+14:06:11.543 [main] INFO  com.dfyy.DfyyiApplication - Started DfyyiApplication in 9.234 seconds (JVM running for 9.694)
+14:06:12.769 [Quartz Scheduler [dfyyScheduler]] INFO  org.quartz.core.QuartzScheduler - Scheduler dfyyScheduler_$_shijieX1540793168388 started.
+14:06:22.438 [http-nio-8085-exec-4] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+14:06:22.515 [http-nio-8085-exec-4] INFO  org.apache.shiro.session.mgt.AbstractValidatingSessionManager - Enabling session validation scheduler...
+14:06:22.515 [http-nio-8085-exec-4] DEBUG com.dfyy.framework.shiro.web.session.SpringSessionValidationScheduler - Scheduling session validation job using Spring Scheduler with session validation interval of [600000]ms...
+14:06:22.516 [http-nio-8085-exec-4] DEBUG com.dfyy.framework.shiro.web.session.SpringSessionValidationScheduler - Session validation job successfully scheduled with Spring Scheduler.
+14:06:22.609 [http-nio-8085-exec-3] DEBUG com.dfyy.project.module.video.dao.IVideoDao.selectVideoListA - ==>  Preparing: SELECT vi.id, vi.video_number, vi.video_name, vi.pictureurl, (SELECT cl.content FROM classify cl WHERE cl.id=vi.classify_id) classifyType, ( SELECT COUNT(*) FROM playrecord pr WHERE pr.video_id = vi.id ) counts, vi.create_time, vi.videourl, vi.intro FROM video vi where 1 = 1 AND vi.classify_id = ? order by classifyType,vi.id desc 
+14:06:22.614 [http-nio-8085-exec-6] DEBUG com.dfyy.project.module.companynews.dao.ICompanynewsDao.selectCompanynewsList - ==>  Preparing: select picture.url as pictureNum,id , companynews_num , title , content , DATE_FORMAT( picture.create_time, '%Y-%m-%d %H:%i' ) create_time , sort , readsum , status from companynews left join picture on picture.content_id = companynews.pictureNum WHERE status = ? order by sort 
+14:06:22.616 [http-nio-8085-exec-3] DEBUG com.dfyy.project.module.video.dao.IVideoDao.selectVideoListA - ==> Parameters: 12(Integer)
+14:06:22.620 [http-nio-8085-exec-6] DEBUG com.dfyy.project.module.companynews.dao.ICompanynewsDao.selectCompanynewsList - ==> Parameters: 1(Integer)
+14:06:22.670 [http-nio-8085-exec-3] DEBUG com.dfyy.project.module.video.dao.IVideoDao.selectVideoListA - <==      Total: 4
+14:06:22.671 [http-nio-8085-exec-2] DEBUG com.dfyy.project.module.activity.dao.IActivityDao.selectActivityListA - ==>  Preparing: SELECT id, picture.url as picture, ta.activity_num activityNum, ta.activity_name activityName, (SELECT cl.content FROM classify cl WHERE cl.id=ta.activity_type) activityType, REPLACE(RIGHT(SUBSTRING_INDEX(ta.city ,'-' ,2), LOCATE('-' ,ta.city)),'-','')citys, ta.city, ta.place, ta.activity_introduce activityIntroduce, ta.lecturer, DATE_FORMAT( ta.create_time, '%Y-%m-%d %H:%i:%s' ) createTime, DATE_FORMAT( ta.activity_time, '%Y-%m-%d %H:%i' ) activityTime, DATE_FORMAT( ta.activity_time, '%m-%d' ) activityTimes, DATE_FORMAT( ta.registration_start, '%Y-%m-%d' ) registrationStart, DATE_FORMAT( ta.registration_end, '%Y-%m-%d' ) registrationEnd, ta.activity_status activityStatus, ta.is_release isRelease, ta.activity_qrcode activityQrcode, ta.activity_money activityMoney, ( SELECT COUNT(tae.id) FROM t_activity_enroll tae WHERE tae.activity_id = ta.id ) enroll, ( SELECT COUNT(tae.id) FROM t_activity_enroll tae WHERE tae.activity_id = ta.id AND tae.money_status = 1 ) paid FROM t_activity ta left join picture on picture.content_id = ta.picture WHERE 1 = 1 ORDER BY ta.activity_status 
+14:06:22.685 [http-nio-8085-exec-2] DEBUG com.dfyy.project.module.activity.dao.IActivityDao.selectActivityListA - ==> Parameters: 
+14:06:22.695 [http-nio-8085-exec-6] DEBUG com.dfyy.project.module.companynews.dao.ICompanynewsDao.selectCompanynewsList - <==      Total: 3
+14:06:22.696 [http-nio-8085-exec-1] DEBUG com.dfyy.project.module.carousel.dao.ICarouselDao.appSelectPicture - ==>  Preparing: SELECT ( SELECT url FROM picture WHERE picture.content_id = carousel.image_id ) img FROM carousel where type=0 order by sort 
+14:06:22.698 [http-nio-8085-exec-1] DEBUG com.dfyy.project.module.carousel.dao.ICarouselDao.appSelectPicture - ==> Parameters: 
+14:06:22.736 [http-nio-8085-exec-1] DEBUG com.dfyy.project.module.carousel.dao.ICarouselDao.appSelectPicture - <==      Total: 3
+14:06:22.738 [http-nio-8085-exec-2] DEBUG com.dfyy.project.module.activity.dao.IActivityDao.selectActivityListA - <==      Total: 7
+14:06:22.741 [http-nio-8085-exec-5] DEBUG com.dfyy.project.module.coach.dao.ICoachDao.selectCoachList - ==>  Preparing: select a.coach_id , a.intro,a.coach_number , a.name , a.phone , a.wx , a.status , a.image_url , a.sex ,sort,(select count(1) from t_user b where b.coach_id = a.coach_id) as number, (select count(DISTINCT t.id)as numbers from t_user t join practice p on p.user_id = t.id and p.type = '2' where t.coach_id = a.coach_id)as numbers, (select count(DISTINCT t.id)as numbers from t_user t join practice p on p.user_id = t.id and p.type = '3' where t.coach_id = a.coach_id)as numberx from coach a 
+14:06:22.746 [http-nio-8085-exec-5] DEBUG com.dfyy.project.module.coach.dao.ICoachDao.selectCoachList - ==> Parameters: 
+14:06:22.749 [http-nio-8085-exec-4] DEBUG com.dfyy.project.module.video.dao.IVideoDao.selectVideoListA - ==>  Preparing: SELECT vi.id, vi.video_number, vi.video_name, vi.pictureurl, (SELECT cl.content FROM classify cl WHERE cl.id=vi.classify_id) classifyType, ( SELECT COUNT(*) FROM playrecord pr WHERE pr.video_id = vi.id ) counts, vi.create_time, vi.videourl, vi.intro FROM video vi where 1 = 1 AND vi.classify_id != '12' order by classifyType,vi.id desc 
+14:06:22.751 [http-nio-8085-exec-4] DEBUG com.dfyy.project.module.video.dao.IVideoDao.selectVideoListA - ==> Parameters: 
+14:06:22.786 [http-nio-8085-exec-5] DEBUG com.dfyy.project.module.coach.dao.ICoachDao.selectCoachList - <==      Total: 3
+14:06:22.799 [http-nio-8085-exec-4] DEBUG com.dfyy.project.module.video.dao.IVideoDao.selectVideoListA - <==      Total: 4
+14:06:23.517 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+14:06:23.524 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+14:06:23.526 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2018-10-29 13:36:23(String)
+14:06:23.560 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 0
+14:06:23.561 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. No sessions were stopped.
+14:06:30.826 [http-nio-8085-exec-4] DEBUG com.dfyy.project.module.user.dao.IAppUserDao.selectMemberList - ==>  Preparing: SELECT u.avatarUrl,u.username,u.grade,IFNULL(u.advance,0.00) AS advance ,IFNULL(u.revenue,0.00) AS revenue FROM t_user u WHERE u.id=? 
+14:06:30.827 [http-nio-8085-exec-4] DEBUG com.dfyy.project.module.user.dao.IAppUserDao.selectMemberList - ==> Parameters: 2(Integer)
+14:06:30.862 [http-nio-8085-exec-4] DEBUG com.dfyy.project.module.user.dao.IAppUserDao.selectMemberList - <==      Total: 1
+14:06:38.973 [http-nio-8085-exec-1] DEBUG com.dfyy.project.module.user.dao.IAppUserDao.selectMemberList - ==>  Preparing: SELECT u.avatarUrl,u.username,u.grade,IFNULL(u.advance,0.00) AS advance ,IFNULL(u.revenue,0.00) AS revenue FROM t_user u WHERE u.id=? 
+14:06:38.974 [http-nio-8085-exec-1] DEBUG com.dfyy.project.module.user.dao.IAppUserDao.selectMemberList - ==> Parameters: 2(Integer)
+14:06:39.019 [http-nio-8085-exec-1] DEBUG com.dfyy.project.module.user.dao.IAppUserDao.selectMemberList - <==      Total: 1
+14:06:51.069 [http-nio-8085-exec-7] DEBUG com.dfyy.project.module.user.dao.IAppUserDao.selectMemberList - ==>  Preparing: SELECT u.avatarUrl,u.username,u.grade,IFNULL(u.advance,0.00) AS advance ,IFNULL(u.revenue,0.00) AS revenue FROM t_user u WHERE u.id=? 
+14:06:51.070 [http-nio-8085-exec-7] DEBUG com.dfyy.project.module.user.dao.IAppUserDao.selectMemberList - ==> Parameters: 2(Integer)
+14:06:51.103 [http-nio-8085-exec-7] DEBUG com.dfyy.project.module.user.dao.IAppUserDao.selectMemberList - <==      Total: 1
+14:16:23.526 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+14:16:23.529 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+14:16:23.530 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2018-10-29 13:46:23(String)
+14:16:23.576 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 0
+14:16:23.577 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. No sessions were stopped.
+14:19:00.293 [http-nio-8085-exec-3] DEBUG com.dfyy.project.module.user.dao.IAppUserDao.selectMemberList - ==>  Preparing: SELECT u.avatarUrl,u.username,u.grade,IFNULL(u.advance,0.00) AS advance ,IFNULL(u.revenue,0.00) AS revenue FROM t_user u WHERE u.id=? 
+14:19:00.294 [http-nio-8085-exec-3] DEBUG com.dfyy.project.module.user.dao.IAppUserDao.selectMemberList - ==> Parameters: 2(Integer)
+14:19:00.383 [http-nio-8085-exec-3] DEBUG com.dfyy.project.module.user.dao.IAppUserDao.selectMemberList - <==      Total: 1
+14:26:23.537 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+14:26:23.539 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+14:26:23.540 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2018-10-29 13:56:23(String)
+14:26:23.585 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 0
+14:26:23.586 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. No sessions were stopped.
+14:36:23.547 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+14:36:23.582 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+14:36:23.583 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2018-10-29 14:06:23(String)
+14:36:23.617 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 0
+14:36:23.620 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. No sessions were stopped.
+14:46:23.556 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+14:46:23.562 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+14:46:23.564 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2018-10-29 14:16:23(String)
+14:46:23.612 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 0
+14:46:23.615 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. No sessions were stopped.
+14:56:23.567 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+14:56:23.571 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+14:56:23.572 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2018-10-29 14:26:23(String)
+14:56:23.606 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 0
+14:56:23.609 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. No sessions were stopped.
+15:06:23.576 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+15:06:23.579 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+15:06:23.580 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2018-10-29 14:36:23(String)
+15:06:23.625 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 0
+15:06:23.626 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. No sessions were stopped.
+15:16:23.586 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+15:16:23.589 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+15:16:23.590 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2018-10-29 14:46:23(String)
+15:16:23.636 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 0
+15:16:23.637 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. No sessions were stopped.
+15:26:23.597 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+15:26:23.600 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+15:26:23.601 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2018-10-29 14:56:23(String)
+15:26:23.646 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 0
+15:26:23.648 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. No sessions were stopped.
+15:36:23.606 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+15:36:23.609 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+15:36:23.610 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2018-10-29 15:06:23(String)
+15:36:23.737 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 0
+15:36:23.738 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. No sessions were stopped.
+15:46:23.616 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+15:46:23.619 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+15:46:23.620 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2018-10-29 15:16:23(String)
+15:46:23.654 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 0
+15:46:23.654 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. No sessions were stopped.
+15:56:23.626 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+15:56:23.629 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+15:56:23.631 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2018-10-29 15:26:23(String)
+15:56:23.671 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 1
+15:56:23.673 [pool-2-thread-1] INFO  org.apache.shiro.cache.ehcache.EhCacheManager - Using existing EHCache named [shiro-activeSessionCache]
+15:56:23.679 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineById - ==>  Preparing: select * from sys_user_online where sessionid = ? 
+15:56:23.681 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineById - ==> Parameters: 540795e1-1bf4-4835-9232-d729b8e9f9bb(String)
+15:56:23.719 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineById - <==      Total: 1
+15:56:23.721 [pool-2-thread-1] DEBUG com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Invalidated session with id [540795e1-1bf4-4835-9232-d729b8e9f9bb] (stopped)
+15:56:23.723 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineById - ==>  Preparing: select * from sys_user_online where sessionid = ? 
+15:56:23.724 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineById - ==> Parameters: 540795e1-1bf4-4835-9232-d729b8e9f9bb(String)
+15:56:23.762 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineById - <==      Total: 1
+15:56:23.764 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.deleteOnlineById - ==>  Preparing: delete from sys_user_online where sessionId = ? 
+15:56:23.766 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.deleteOnlineById - ==> Parameters: 540795e1-1bf4-4835-9232-d729b8e9f9bb(String)
+15:56:23.804 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.deleteOnlineById - <==    Updates: 1
+15:56:23.805 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. [1] sessions were stopped.
+16:06:23.636 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+16:06:23.639 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+16:06:23.641 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2018-10-29 15:36:23(String)
+16:06:23.676 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 1
+16:06:23.679 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineById - ==>  Preparing: select * from sys_user_online where sessionid = ? 
+16:06:23.680 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineById - ==> Parameters: 378ef566-f8fb-46c7-913c-5f374af8fe02(String)
+16:06:23.715 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineById - <==      Total: 1
+16:06:23.716 [pool-2-thread-1] DEBUG com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Invalidated session with id [378ef566-f8fb-46c7-913c-5f374af8fe02] (stopped)
+16:06:23.717 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineById - ==>  Preparing: select * from sys_user_online where sessionid = ? 
+16:06:23.718 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineById - ==> Parameters: 378ef566-f8fb-46c7-913c-5f374af8fe02(String)
+16:06:23.752 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineById - <==      Total: 1
+16:06:23.754 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.deleteOnlineById - ==>  Preparing: delete from sys_user_online where sessionId = ? 
+16:06:23.755 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.deleteOnlineById - ==> Parameters: 378ef566-f8fb-46c7-913c-5f374af8fe02(String)
+16:06:23.789 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.deleteOnlineById - <==    Updates: 1
+16:06:23.789 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. [1] sessions were stopped.
+16:16:23.646 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+16:16:23.648 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+16:16:23.649 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2018-10-29 15:46:23(String)
+16:16:23.683 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 0
+16:16:23.684 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. No sessions were stopped.
+16:26:23.656 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+16:26:23.659 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+16:26:23.660 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2018-10-29 15:56:23(String)
+16:26:23.693 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 0
+16:26:23.695 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. No sessions were stopped.
+16:36:23.666 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+16:36:23.669 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+16:36:23.670 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2018-10-29 16:06:23(String)
+16:36:23.711 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 2
+16:36:23.713 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineById - ==>  Preparing: select * from sys_user_online where sessionid = ? 
+16:36:23.714 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineById - ==> Parameters: 7c54641d-bb95-4203-856e-dba4bed3481e(String)
+16:36:23.752 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineById - <==      Total: 1
+16:36:23.753 [pool-2-thread-1] DEBUG com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Invalidated session with id [7c54641d-bb95-4203-856e-dba4bed3481e] (stopped)
+16:36:23.754 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineById - ==>  Preparing: select * from sys_user_online where sessionid = ? 
+16:36:23.755 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineById - ==> Parameters: 149cd2e8-c061-4e74-8b35-2a6167e7c742(String)
+16:36:23.794 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineById - <==      Total: 1
+16:36:23.795 [pool-2-thread-1] DEBUG com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Invalidated session with id [149cd2e8-c061-4e74-8b35-2a6167e7c742] (stopped)
+16:36:23.796 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineById - ==>  Preparing: select * from sys_user_online where sessionid = ? 
+16:36:23.797 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineById - ==> Parameters: 7c54641d-bb95-4203-856e-dba4bed3481e(String)
+16:36:23.836 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineById - <==      Total: 1
+16:36:23.838 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.deleteOnlineById - ==>  Preparing: delete from sys_user_online where sessionId = ? 
+16:36:23.839 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.deleteOnlineById - ==> Parameters: 7c54641d-bb95-4203-856e-dba4bed3481e(String)
+16:36:23.876 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.deleteOnlineById - <==    Updates: 1
+16:36:23.880 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineById - ==>  Preparing: select * from sys_user_online where sessionid = ? 
+16:36:23.881 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineById - ==> Parameters: 149cd2e8-c061-4e74-8b35-2a6167e7c742(String)
+16:36:23.918 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineById - <==      Total: 1
+16:36:23.919 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.deleteOnlineById - ==>  Preparing: delete from sys_user_online where sessionId = ? 
+16:36:23.920 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.deleteOnlineById - ==> Parameters: 149cd2e8-c061-4e74-8b35-2a6167e7c742(String)
+16:36:23.957 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.deleteOnlineById - <==    Updates: 1
+16:36:23.958 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. [2] sessions were stopped.
+16:46:23.675 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+16:46:23.678 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+16:46:23.680 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2018-10-29 16:16:23(String)
+16:46:23.718 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 0
+16:46:23.719 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. No sessions were stopped.
+16:56:23.685 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+16:56:23.687 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+16:56:23.688 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2018-10-29 16:26:23(String)
+16:56:23.726 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 0
+16:56:23.727 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. No sessions were stopped.
+17:06:23.696 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+17:06:23.699 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+17:06:23.700 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2018-10-29 16:36:23(String)
+17:06:23.738 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 0
+17:06:23.739 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. No sessions were stopped.
+17:16:23.705 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+17:16:23.708 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+17:16:23.709 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2018-10-29 16:46:23(String)
+17:16:23.743 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 0
+17:16:23.744 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. No sessions were stopped.
+17:26:23.715 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+17:26:23.718 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+17:26:23.719 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2018-10-29 16:56:23(String)
+17:26:23.753 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 0
+17:26:23.754 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. No sessions were stopped.
+17:36:23.725 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+17:36:23.728 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+17:36:23.729 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2018-10-29 17:06:23(String)
+17:36:23.764 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 0
+17:36:23.765 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. No sessions were stopped.
+17:46:23.735 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+17:46:23.738 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+17:46:23.739 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2018-10-29 17:16:23(String)
+17:46:23.773 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 0
+17:46:23.774 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. No sessions were stopped.
+17:56:23.745 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+17:56:23.748 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+17:56:23.748 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2018-10-29 17:26:23(String)
+17:56:23.785 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 0
+17:56:23.787 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. No sessions were stopped.
+18:06:23.755 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+18:06:23.759 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+18:06:23.760 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - ==> Parameters: 2018-10-29 17:36:23(String)
+18:06:23.797 [pool-2-thread-1] DEBUG com.dfyy.project.monitor.online.dao.IUserOnlineDao.selectOnlineByExpired - <==      Total: 0
+18:06:23.798 [pool-2-thread-1] INFO  com.dfyy.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. No sessions were stopped.

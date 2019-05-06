@@ -1,0 +1,17 @@
+<!--pages/Message/index.wxml-->
+<view class='dyna'>
+  <view class='comment01' wx:for="{{viewpoint}}" data-index='{{item.id}}'>
+    <view class='comm_left'>
+      <image class='pic09' src="{{item.user_url}}"></image>
+      <view class='comm_nr'>
+        <text class='comm01'>{{item.user_name}}</text>
+        <text class='comm02'>{{item.content}}</text>
+        <text class='comm03'>{{item.creation_time}}</text>
+      </view>
+    </view>
+    <view class='comm_right'>
+      <image class='pic003' wx:if="{{item.type == 1}}" src="{{url}}/imgfile/{{item.count}}" ></image>
+      <view class='pic003_wenzi' wx:if="{{item.type == 0}}">{{item.count}}</view>
+    </view>
+  </view>
+</view>

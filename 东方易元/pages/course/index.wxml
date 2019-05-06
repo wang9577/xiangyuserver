@@ -1,0 +1,5 @@
+<!--pages/course/index.wxml-->
+<navigator wx:for="{{curriculum}}" url='../Small/index?url={{url}}/imgfile/{{item.url}}&id={{item.curriculumId}}' class='pic07'>
+  <image class='pic06' mode='widthFix' src='{{url}}/imgfile/{{item.url}}'></image>
+</navigator>
+

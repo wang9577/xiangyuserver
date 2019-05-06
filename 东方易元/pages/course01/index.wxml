@@ -1,0 +1,27 @@
+<!--pages/course01/index.wxml-->
+<view class='curri' wx:for="{{course}}" wx:for-item="course">
+ <navigator url="../Practice/index?practiceId={{course.id}}&practiceName={{course.content}}" >
+  <view class='curri01'>
+    <image class='curri_pic' src='../images/red.png'></image>
+    <view class='curri_zt'  wx:if="{{course.type == 1}}"> <text >待学习 </text></view>
+    <view class='curri_zt'  wx:if="{{course.type == 2}}"> <text >进行中 </text></view>
+    <view class='curri_zt'  wx:if="{{course.type == 3}}"> <text >已完成 </text></view>
+    <text class='curri_zt01'>{{course.content}}</text>
+  </view>
+  <view class='curri02'>
+    <text class='curri_left'>开始时间：</text>
+    <view class='curri_right'  wx:if="{{course.start_time == null}}"> <text >-- </text></view>
+    <view class='curri_right'  wx:if="{{course.start_time != null}}"> <text >{{course.start_time}} </text></view>
+  </view>
+  <view class='curri02'>
+    <text class='curri_left'>完成时间：</text>
+    <view class='curri_right'  wx:if="{{course.end_time == null}}"> <text >-- </text></view>
+    <view class='curri_right'  wx:if="{{course.end_time != null}}"> <text >{{course.end_time}} </text></view>
+    <!-- <text class='curri_right'>{{course.end_time}}</text> -->
+  </view>
+  <view class='curri02'>
+    <text class='curri_left'>我的教练：</text>
+    <text class='curri_right'>{{course.coachName}}</text>
+  </view>
+  </navigator>
+</view>

@@ -1,0 +1,24 @@
+/* pages/course01/index.wxss */
+.curri,.curri01,.curri02,.record,.record01,.record02,.record03,.record05,.Profit{ float: left; width: 100%; box-sizing: border-box; overflow: hidden;}
+.curri_left,.curri_zt,.curri_right,.curri_zt01,.curri_pic,.curri_pic01,.record_time,.record04,.record_left,.record_right,.Profit_left,.Profit_right{ float: left;}
+.curri,.Profit{ border-bottom: 1px solid #eee;}
+.curri,.record{ padding: 15px;}
+.Profit{ padding:20px 15px;}
+.Profit_right{ font-size: 20px;}
+.curri_zt01{ font-size: 17px;}
+.curri02,.record_time,.record_left,.record_right,.Profit_left{ font-size: 14px;}
+.curri_zt,.indi{ font-size: 12px;}
+.curri02{ letter-spacing: 2rpx;}
+.curri02,.curri01,.Profit{ line-height: 50rpx;}
+.record05{ line-height: 40rpx;}
+.curri_left,.record_right,.Profit_left{ color: #999;}
+.indi{ color: #666;}
+.curri_right,.curri_zt01,.record_time,.record_left,.Profit_right{ color: #333}
+.curri_zt{ color: #fff;}
+.curri_zt01,.Profit_right{ margin-left: 20rpx;}
+.record_time{ margin-left: 16rpx;}
+.record05{ margin: 10rpx 0;}
+.record01{ margin-top: 20rpx;}
+.curri_pic{ width: 44px; height: 16px; margin-top: 10rpx;}
+.curri_zt{ margin-left: -80rpx;}
+.curri_pic01{ width: 15px; height: 17px;}

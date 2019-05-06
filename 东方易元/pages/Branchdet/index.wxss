@@ -1,0 +1,31 @@
+/* pages/Branchdet/index.wxss */
+page{ background: #f5f5f5;}
+.tried,.tried02{ background:#fff;}
+.tried,.tried01_left01,.tried02{ box-sizing: border-box;}
+.tried,.tried02{ padding: 15px;}
+.tried{ border-radius: 10px 10px 0 0;}
+.tried{ margin-top: -6px;}
+.tried{ z-index: 9; position: relative}
+.tried_bt{ border-bottom: 1px solid #eee}
+.tried_bt,.tried_bt01{ color: #333; font-size: 17px; padding: 5px 0 15px 0;}
+.tried01{ padding-top: 15px;}
+.tried01,.tried,.tried_bt,.tried02,.tried_bt01,.tried02_nr{ width: 100%}
+.tried01_left,.pic05,.tried01,.tried,.tried_bt,.pic07,.tried02,.tried_bt01,.tried02_nr{ float: left;}
+.tried01_right,.pic08{ float: right;}
+.pic05{ width: 14px; height: 16px; margin-top: 7px;}
+.tried01_left{ width: 85%; overflow: hidden;}
+.tried01_left01{ width: 90%; overflow: hidden;}
+.tried01_right{ width: 15%; overflow: hidden;}
+.tried01_left01{ padding: 0 10px;}
+.words06,.words05{ font-size: 15px;}
+.tried02_nr{ font-size: 14px;}
+.words05{ color: #333;}
+.tried02_nr{ color: #666;}
+.words06{ color: #999}
+.words05,.pic06,.words06{ margin-right: 10px;}
+.pic06{ width: 1px; height: 15px;}
+.pic07{ width: 1px; height: 36px;}
+.pic08{ width: 24px; height: 24px; margin-top: 5px; margin-right: 16%;}
+.tried01_right{ margin-top: 10px;}
+.tried02{ margin-top: 15px;}
+.tried02_nr{ line-height: 24px; margin-bottom: 15px;}
