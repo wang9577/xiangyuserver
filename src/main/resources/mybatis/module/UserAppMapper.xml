@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dfyy.project.module.user.dao.IUserAppDao">
+    
+    <resultMap type="UserApp" id="UserResult">
+                <result property="id"    column="id"    />
+                <result property="username"    column="username"    />
+                <result property="password"    column="password"    />
+                <result property="type"    column="type"    />
+                <result property="createTime"    column="create_time"    />
+                <result property="isdel"    column="isdel"    />
+                <result property="institutionId"    column="institution_id"    />
+            <result property="name"    column="name"    />
+
+    </resultMap>
+    
+    <select id="selectUserById" parameterType="Integer" resultMap="UserResult">
+        select  id , username , password , type , create_time , isdel , institution_id  from t_user
+        where id = #{id}
+    </select>
+    
+    <select id="selectUserList" parameterType="User" resultMap="UserResult">
+        select  id , username , password , type , create_time , isdel , institution_id  from t_user
+        <where>  
+                        <if test="id != null and id != ''"> and id = #{id} </if>
+                        <if test="username != null and username != ''"> and username = #{username} </if>
+                        <if test="password != null and password != ''"> and password = #{password} </if>
+                        <if test="type != null and type != ''"> and type = #{type} </if>
+                        <if test="createTime != null and createTime != ''"> and create_time = #{createTime} </if>
+                        <if test="isdel != null and isdel != ''"> and isdel = #{isdel} </if>
+                        <if test="institutionId != null and institutionId != ''"> and institution_id = #{institutionId} </if>
+                    </where>
+    </select>
+    
+    <insert id="insertUser" parameterType="User">
+        insert into t_user
+        (
+                                    id,                                                 username,                                                 password,                                                 type,                                                 create_time,                                                 isdel,                                                 institution_id                            )
+        values
+        (
+                                    #{id},                                                 #{username},                                                 #{password},                                                 #{type},                                                 #{createTime},                                                 #{isdel},                                                 #{institutionId}                    		)
+    </insert>
+	 
+    <update id="updateUser" parameterType="User">
+        update t_user 
+        <set>
+                                                    <if test="username != null">`username` = #{username}, </if>
+                                            <if test="password != null">`password` = #{password}, </if>
+                                            <if test="type != null">`type` = #{type}, </if>
+                                            <if test="createTime != null">`create_time` = #{createTime}, </if>
+                                            <if test="isdel != null">`isdel` = #{isdel}, </if>
+                                            <if test="institutionId != null">`institution_id` = #{institutionId}</if>
+                            </set>
+        where id = #{id}
+    </update>
+	
+    <delete id="deleteUserById" parameterType="Integer">
+        delete from t_user where id = #{value}
+    </delete>
+	
+    <delete id="batchDeleteUser" parameterType="Integer">
+        delete from t_user where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+        #{id}
+        </foreach>
+    </delete>
+
+    <select id="selectisuser" parameterType="String" resultType="Integer">
+        select count(1) from t_user where username = #{userName}
+    </select>
+
+    <select id="selectUserName" parameterType="map" resultMap="UserResult">
+        select  id , username , password , type,name from t_user where username = #{userName} and password = #{passWord}
+</select>
+
+    <select id="selectPlan" resultType="map" parameterType="Integer">
+        SELECT t2.id, min(timestampdiff(SECOND,NOW(),t2.end_time)) as time
+        from t_teacher_course t1 LEFT JOIN t_teach_plan t2 on t1.id = t2.tc_id
+         WHERE t1.user_id=#{id} AND timestampdiff(SECOND,NOW(),t2.end_time)>0
+    </select>
+
+
+    <select id="selectCourseName" resultType="map" parameterType="Integer">
+SELECT DATE_FORMAT(t1.start_time,"%Y/%m/%d %H:%m") as start_time,DATE_FORMAT(t1.end_time,"%Y/%m/%d %H:%m") as end_time,t3.course_name  FROM t_teach_plan t1 LEFT JOIN t_teacher_course t2 on t1.tc_id=t2.id LEFT JOIN t_course t3 on t2.course_id=t3.id
+where t1.id=#{id}
+    </select>
+
+    <select id="selectStudent" resultType="map" parameterType="Integer">
+SELECT t4.id,t4.name FROM t_teach_plan t1 LEFT JOIN t_teacher_course t2 on t1.tc_id=t2.id LEFT JOIN t_plan_student t3 on t2.id=t3.tp_id
+LEFT JOIN t_user t4 on t3.stu_id=t4.id where t1.id=#{id}
+
+    </select>
+
+    <select id="selectMoreCourse" resultType="map" parameterType="Integer">
+SELECT t1.id,t2.course_name as name from t_teacher_course t1
+LEFT JOIN t_course t2 on t1.course_id=t2.id WHERE t1.user_id=#{id}
+    </select>
+
+    <select id="selectMorePlan" resultType="map" parameterType="Integer">
+SELECT id,DATE_FORMAT(start_time,"%Y/%m/%d %H:%m") as start_time,DATE_FORMAT(end_time,"%Y/%m/%d %H:%m") as end_time
+ FROM t_teach_plan where tc_id=#{id} ORDER BY DATE_FORMAT(end_time,"%Y/%m/%d %H:%m")
+    </select>
+</mapper>

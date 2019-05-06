@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dfyy.project.module.userCheck.dao.IUserCheckDao">
+
+    <resultMap type="UserCheck" id="UserCheckResult">
+        <result property="id"    column="id"    />
+        <result property="pId"    column="p_id"    />
+        <result property="stuId"    column="stu_id"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="type"    column="type"    />
+    </resultMap>
+
+    <select id="selectUserCheckById" parameterType="Integer" resultMap="UserCheckResult">
+        select  id , p_id , stu_id , create_time , type  from t_user_check
+        where id = #{id}
+    </select>
+
+    <select id="selectUserCheckList" parameterType="UserCheck" resultMap="UserCheckResult">
+        select  id , p_id , stu_id , create_time , type  from t_user_check
+        <where>
+            <if test="id != null and id != ''"> and id = #{id} </if>
+            <if test="pId != null and pId != ''"> and p_id = #{pId} </if>
+            <if test="stuId != null and stuId != ''"> and stu_id = #{stuId} </if>
+            <if test="createTime != null and createTime != ''"> and create_time = #{createTime} </if>
+            <if test="type != null and type != ''"> and type = #{type} </if>
+        </where>
+    </select>
+
+    <insert id="insertUserCheck" parameterType="UserCheck">
+        insert into t_user_check
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="pId != null and pId != '' ">p_id,</if>
+            <if test="stuId != null and stuId != '' ">stu_id,</if>
+            <if test="type != null and type != '' ">type,</if>
+            create_time,
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="pId != null and pId != '' ">#{pId},</if>
+            <if test="stuId != null and stuId != '' ">#{stuId},</if>
+            <if test="type != null and type != '' ">#{type},</if>
+            now(),
+        </trim>
+    </insert>
+
+    <update id="updateUserCheck" parameterType="UserCheck">
+        update t_user_check
+        <set>
+            <if test="pId != null">`p_id` = #{pId}, </if>
+            <if test="stuId != null">`stu_id` = #{stuId}, </if>
+            <if test="createTime != null">`create_time` = #{createTime}, </if>
+            <if test="type != null">`type` = #{type}</if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteUserCheckById" parameterType="Integer">
+        delete from t_user_check where id = #{value}
+    </delete>
+
+    <delete id="batchDeleteUserCheck" parameterType="Integer">
+        delete from t_user_check where id in
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+
+    <select id="selectAppinfo" parameterType="map" resultType="UserCheck">
+      select id,type from t_user_check where p_id=#{pId} and stu_id = #{stuId}
+    </select>
+
+    <select id="pie" parameterType="Integer" resultType="map">
+SELECT count(stu_id) as num,case when type=1 then '出勤' when type=2 then '迟到' when type=3 then '旷课' when type=4 then '请假' end as type
+ from t_user_check WHERE p_id=#{id} GROUP BY type;
+    </select>
+
+    <select id="totalNum" resultType="Integer" parameterType="Integer">
+SELECT COUNT(1) from t_plan_student t1 LEFT JOIN t_teacher_course t2 on t1.tp_id = t2.id LEFT JOIN t_teach_plan t3 on
+t2.id = t3.tc_id where t3.id=#{id};
+    </select>
+
+    <select id="checkNum" resultType="Integer" parameterType="Integer">
+    SELECT COUNT(1) from t_user_check WHERE p_id=#{id};
+    </select>
+
+    <select id="selectCheckList" resultType="map" parameterType="Integer">
+SELECT case when t1.type=1 then '出勤' when t1.type=2 then '迟到' when t1.type=3 then '旷课' when t1.type=4 then '请假' end as type,DATE_FORMAT(t1.create_time,"%Y-%m-%d %H:%m:%s") as create_time,t4.course_name FROM t_user_check t1 LEFT JOIN t_teach_plan t2 on t1.p_id = t2.id LEFT JOIN t_teacher_course t3 on t3.id = t2.tc_id
+LEFT JOIN t_course t4 on t3.course_id=t4.id WHERE t1.stu_id=#{id} order by DATE_FORMAT(t1.create_time,"%Y-%m-%d %H:%m:%s") desc ;
+    </select>
+</mapper>

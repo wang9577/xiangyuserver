@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dfyy.project.module.institution.dao.IInstitutionDao">
+    
+    <resultMap type="Institution" id="InstitutionResult">
+                <result property="id"    column="id"    />
+                <result property="name"    column="name"    />
+                <result property="createTime"    column="create_time"    />
+                <result property="isDel"    column="isDel"    />
+            </resultMap>
+    
+    <select id="selectInstitutionById" parameterType="Integer" resultMap="InstitutionResult">
+        select  id , name , create_time , isDel  from institution
+        where id = #{id}
+    </select>
+    
+    <select id="selectInstitutionList" parameterType="Institution" resultMap="InstitutionResult">
+        select  id , name , create_time , isDel  from institution
+        where 1=1
+                        <if test="id != null and id != ''"> and id = #{id} </if>
+                        <if test="name != null and name != ''"> and name = #{name} </if>
+                        <if test="createTime != null and createTime != ''"> and create_time = #{createTime} </if>
+                        <if test="isDel != null and isDel != ''"> and isDel = #{isDel} </if>
+        <if test="searchValue != null and searchValue != ''">
+            AND (name like '%${searchValue}%')
+        </if>
+    </select>
+    
+    <insert id="insertInstitution" parameterType="Institution">
+        insert into institution
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="name != null and name != '' ">name,</if>
+            create_time,
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="name != null and name != '' ">#{name},</if>
+            now(),
+        </trim>
+    </insert>
+	 
+    <update id="updateInstitution" parameterType="Institution">
+        update institution 
+        <set>
+                                                    <if test="name != null">`name` = #{name}, </if>
+                                            <if test="createTime != null">`create_time` = #{createTime}, </if>
+                                            <if test="isDel != null">`isDel` = #{isDel}</if>
+                            </set>
+        where id = #{id}
+    </update>
+	
+    <delete id="deleteInstitutionById" parameterType="Integer">
+        delete from institution where id = #{value}
+    </delete>
+	
+    <delete id="batchDeleteInstitution" parameterType="Integer">
+        delete from institution where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+        #{id}
+        </foreach>
+    </delete>
+    
+</mapper>
