@@ -44,7 +44,3 @@
 
 ![操作日志](https://static.oschina.net/uploads/space/2018/0424/234055_8omc_1438828.png)
 
-
-## 东方易元交流群
-
-QQ群： [![加入QQ群](https://img.shields.io/badge/QQ群-1389287-blue.svg)](http://shang.qq.com/wpa/qunwpa?idkey=9a7d9f3274e4bfbf7e40e4a485ff6dc2adbeee8086ce39e40667ed4387414f12) 或 [![加入QQ群](https://img.shields.io/badge/QQ群-1389287-blue.svg)](https://jq.qq.com/?_wv=1027&k=5ONbr1w)，推荐点击按钮入群，当然如果无法成功操作，请自行搜索群号`1389287`进行添加
