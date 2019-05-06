@@ -1,0 +1,9 @@
+Application Version: ${dfyy.version}
+Spring Boot Version: ${spring-boot.version}
+ (♥◠‿◠)ﾉﾞ  我的LOL皮肤开始启动   ლ(´ڡ`ლ)ﾞ
+ --
+ --
+ --  ---
+ ---
+    ---        ----        ----
+        -------       -------                                                 

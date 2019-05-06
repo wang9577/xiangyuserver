@@ -1,0 +1,135 @@
+<head th:fragment="header">
+	<style>
+		*{
+			margin:0;padding:0;
+		}
+		html,body{
+			 font-family:Arial,Helvetica,sans-serif;
+		}
+		li{
+			list-style: none;
+		}
+		img{
+			border:none;display: block
+		}
+		.box{
+			width: 1024px;margin: 50px auto;
+		}
+		.imgFileUploade{
+			width: 100%;padding: 10px;
+		}
+		.imgFileUploade .header{
+			height: 50px;width: 100%;line-height:50px;
+		}
+		.imgFileUploade .header span{
+			display: block;float:left;
+		}
+		.imgFileUploade .header span.imgTitle{
+			line-height:50px;
+		}
+		.imgFileUploade .header span.imgTitle b{
+			color:red;margin:0 5px;line-height: 57px;display: block;float: right;font-size: 20px;
+		}
+		.imgFileUploade .header span.imgClick{
+			width: 50px;height: 50px;margin-left: 10px;cursor: pointer;
+			background: url(/imgFileupload/img/addUpload.png) no-repeat center center;background-size:cover; 
+		}
+		.imgFileUploade .header span.imgcontent{
+			color:#999;margin-left:120px;line-height: 50px;
+		}
+		.imgFileUploade .imgAll{
+			width: 100%;    margin-top: 5px;
+		}
+		.imgFileUploade .imgAll ul:after{ 
+				visibility: hidden;  display: block; font-size: 0; content: ".";  clear: both; height: 0
+		} 
+		.imgFileUploade .imgAll li{
+			width: 100px;height: 100px;border:solid 1px #ccc;margin:8px 5px;float: left;position: relative;box-shadow: 0 0 10px #eee;
+		}
+		.imgFileUploade .imgAll li img{
+			position: absolute;top:0;left:0;width: 100%;height: 100%;display: block;
+		}
+		.delImg{
+			position: absolute;top:-10px;right:-7px;width: 22px;height: 22px;background: #000;border-radius: 50%;display: block;text-align:  center;line-height: 22px;color:#fff;font-weight: 700;font-style:normal;cursor: pointer;
+		}
+		.box,.box2,.box3,.box4{
+			border:solid 1px #ccc;
+		}
+	</style>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<link rel="shortcut icon" href="favicon.ico">
+ 	 <link href="../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" rel="stylesheet"/> 
+	<link href="../static/css/font-awesome.css" th:href="@{/css/font-awesome.css}" rel="stylesheet"/> 
+	<!-- bootstrap-table 表格插件样式 -->
+	<link href="../static/ajax/libs/bootstrap-table/bootstrap-table.min.css" th:href="@{/ajax/libs/bootstrap-table/bootstrap-table.min.css}" rel="stylesheet"/>
+	<link href="../static/ajax/libs/jqTreeGrid/jquery.treegrid.css" th:href="@{/ajax/libs/jqTreeGrid/jquery.treegrid.css}" rel="stylesheet"/>
+	<link href="../static/css/animate.css" th:href="@{/css/animate.css}" rel="stylesheet"/>
+	<link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet"/>
+	<link href="../static/css/checkbox.css" th:href="@{/css/checkbox.css}" rel="stylesheet"/>
+	<link href="../static/css/bootstrap-select.min.css" th:href="@{/css/bootstrap-select.min.css}" rel="stylesheet"/>
+	<link href="../static/css/style1.css" th:href="@{/css/style1.css}" rel="stylesheet"/>
+	<!-- <link href="../static/city/css/bootstrap.css" th:href="@{/city/css/bootstrap.css}" rel="stylesheet"/> -->
+	<link href="../static/city/css/city-picker.css" th:href="@{/city/css/city-picker.css}" rel="stylesheet"/>
+	<!-- <link href="../static/city/css/main.css" th:href="@{/city/css/main.css}" rel="stylesheet"/> -->
+	<!-- timePicker插件 -->
+	<link href="../static/timePicker/css/timePicker.css" th:href="@{/timePicker/css/timePicker.css}" rel="stylesheet"/>
+
+	<!-- 日历控件 -->
+	<link href="../static/jeDate/test/jeDate-test.css" rel="stylesheet" th:href="@{/jeDate/test/jeDate-test.css}">
+    <link href="../static/jeDate/skin/jedate.css" rel="stylesheet" th:href="@{/jeDate/skin/jedate.css}">
+
+ 
+</head>
+<div th:fragment="footer">
+<script src="../static/js/jquery.min.js" th:src="@{/js/jquery.min.js}"></script>
+<script src="../static/js/qrcode.min.js" th:src="@{/js/qrcode.min.js}"></script>
+	<script src="../static/js/bootstrap-select.js" th:src="@{/js/bootstrap-select.js}"></script>
+
+	<script src="../static/js/echarts-all.js" th:src="@{/js/echarts-all.js}"></script>
+
+	<!-- 图片上传 -->
+	<script src="../static/imgFileupload/imgFileupload.js" th:src="@{/imgFileupload/imgFileupload.js}"></script>
+	
+	<script src="../static/js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script> 
+	
+	<script src="../static/jeDate/src/jedate.js" th:src="@{/jeDate/src/jedate.js}"></script>
+	<!-- 百度编辑器配置文件-->
+    <script src="../static/utf8-jsp/ueditor.config.js" th:src="@{/utf8-jsp/ueditor.config.js}"></script>
+    <!-- 编辑器源码文件 -->
+    <script src="../static/utf8-jsp/ueditor.all.js" th:src="@{/utf8-jsp/ueditor.all.js}"></script>
+
+<!--	 百度编辑器配置文件
+	<script src="../static/ueditor/ueditor.config.js" th:src="@{/ueditor/ueditor.config.js}"></script>
+	&lt;!&ndash; 编辑器源码文件 &ndash;&gt;
+	<script src="../static/ueditor/ueditor.all.js" th:src="@{/ueditor/ueditor.all.js}"></script>-->
+	<!-- bootstrap-table 表格插件 -->
+	<script src="../static/ajax/libs/bootstrap-table/bootstrap-table.min.js" th:src="@{/ajax/libs/bootstrap-table/bootstrap-table.min.js}"></script>
+	<script src="../static/ajax/libs/bootstrap-table/locale/bootstrap-table-zh-CN.min.js" th:src="@{/ajax/libs/bootstrap-table/locale/bootstrap-table-zh-CN.min.js}"></script>
+	<script src="../static/ajax/libs/bootstrap-table/extensions/mobile/bootstrap-table-mobile.min.js" th:src="@{/ajax/libs/bootstrap-table/extensions/mobile/bootstrap-table-mobile.min.js}"></script>
+	<script src="../static/ajax/libs/bootstrap-table/extensions/toolbar/bootstrap-table-toolbar.min.js" th:src="@{/ajax/libs/bootstrap-table/extensions/toolbar/bootstrap-table-toolbar.min.js}"></script>
+	<!-- jquery-validate 表单验证插件 -->
+	<script src="../static/ajax/libs/validate/jquery.validate.min.js" th:src="@{/ajax/libs/validate/jquery.validate.min.js}"></script>
+	<script src="../static/ajax/libs/validate/messages_zh.min.js" th:src="@{/ajax/libs/validate/messages_zh.min.js}"></script>
+	<!-- jquery-validate 表单树插件 -->
+	<script src="../static/ajax/libs/jqTreeGrid/jquery.treegrid.min.js" th:src="@{/ajax/libs/jqTreeGrid/jquery.treegrid.min.js}"></script>
+	<script src="../static/ajax/libs/jqTreeGrid/jquery.treegrid.extension.js" th:src="@{/ajax/libs/jqTreeGrid/jquery.treegrid.extension.js}"></script>
+	<!-- jquery-export 表格导出插件 -->
+	<script src="../static/ajax/libs/bootstrap-table/extensions/export/bootstrap-table-export.js" th:src="@{/ajax/libs/bootstrap-table/extensions/export/bootstrap-table-export.js}"></script>
+	<script src="../static/ajax/libs/bootstrap-table/extensions/export/tableExport.js" th:src="@{/ajax/libs/bootstrap-table/extensions/export/tableExport.js}"></script>
+	<script src="../static/ajax/libs/layer/layer.min.js" th:src="@{/ajax/libs/layer/layer.min.js}"></script>
+	<script src="../static/dfyy/js/common.js?v=1.1.1" th:src="@{/dfyy/js/common.js?v=1.1.1}"></script>
+	<script src="../static/dfyy/js/ry-ui.js?v=1.1.1" th:src="@{/dfyy/js/ry-ui.js?v=1.1.1}"></script>
+	
+	<!-- jQuery省市区三级联动插件city-picker -->
+	<script src="../static/city/js/city-picker.data.js" th:src="@{/city/js/city-picker.data.js}"></script>
+	<script src="../static/city/js/city-picker.js" th:src="@{/city/js/city-picker.js}"></script>
+
+	
+	<!-- <script src="../static/dfyy/js/uedit.js" th:src="@{/dfyy/js/uedit.js}"></script> -->
+	<script th:inline="javascript"> var ctx = [[@{/}]]; </script>
+	<script src="http://tajs.qq.com/stats?sId=62048022"></script>
+</div>
