@@ -1,7 +1,0 @@
-/* pages/Feedback01/index.wxss */
-.Read_02{ color: #999;}
-.dyna_bt{ font-size: 18px;}
-.Read{ border-bottom: 1px solid #eee; padding-bottom: 15px; margin-top: 10px;}
-.dyna{ border-radius: 10px 10px 0 0; margin-top: -5px;}
-.shipin{ float: left; width: 100%;}
-.weui-article__p{ margin-bottom: 0; font-size: 14px; line-height: 23px;}

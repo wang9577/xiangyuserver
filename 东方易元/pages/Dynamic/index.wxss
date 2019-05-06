@@ -1,3 +1,0 @@
-/* pages/Dynamic/index.wxss */
-.jianggeg{ width: 100%; box-sizing: border-box; overflow: hidden; float: left;}
-.wxParse-p{ overflow: hidden}

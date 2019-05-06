@@ -1,4 +1,0 @@
-/* pages/Profit/index.wxss */
-.Tutor08_ts{ color: #df4239;}
-.indi{ border: 1px solid #bbb; border-radius: 6rpx; padding: 3rpx 8rpx; margin-left: 10rpx;}
-.indi{ font-size: 12px;}
