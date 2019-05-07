@@ -3,15 +3,11 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/qtkj_dfyy?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
-    username: root
-    password: liuxiangyu
+    url: yoururl
+    username: username
+    password: password
 
-    #url: jdbc:mysql://10.213.24.45:3306/ry?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
-#    url: jdbc:mysql://114.55.86.57:30066/qtkj_dfyy?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
-#    url: jdbc:mysql://114.55.86.57:30066/dfyy2?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
- #   username: qtkjdfyy
- #   password: dfyyproject
+ 
     # 初始化大小，最小，最大
     initialSize: 1
     minIdle: 3
